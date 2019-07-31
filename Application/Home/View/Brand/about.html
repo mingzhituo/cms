@@ -1,0 +1,83 @@
+<extend name="Public:base-content" />
+<block name="webtitle"><title>{$now.cat_name}-{$config2.store_title}</title></block>
+  <block name="jianjie" >
+  <div class="subcolumn_nav_met_21_1_39" m-id='39' m-type='nocontent'>
+        <div class="container">
+          <div class="row">
+            <div class="clearfix">
+        
+              <div class="subcolumn-nav-location clearfix ulstyle">
+                <li class="location">
+                  您的位置： </li>
+                <li>
+                  <a href="/" title="网站首页">
+                    网站首页 </a>
+                  <i class="fa fa-angle-right"></i>
+                </li>
+                <li>
+                  <a href="" target='_self' title="新闻动态">{$now.cat_name}</a>
+                  <i class="fa fa-angle-right"></i>
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- <div class="location_met_21_1_50 met-crumbs" m-id='50'>
+      <div class="container">
+        <div class="row">
+          <div class="title-box">
+            专利复审请求书是如何申请的？ </div>
+          <ol class="breadcrumb m-b-0 subcolumn-crumbs">
+            <li class='breadcrumb-item'>
+              <a href="#">您现在所在位置：</a>
+            </li>
+            <li class='breadcrumb-item'>
+              <a href="/" title="网站首页">网站首页</a>
+            </li>
+         
+                <li>
+                  <a href="" target='_self' title="新闻动态">{$now.cat_name}</a>
+                  <i class="fa fa-angle-right"></i>
+                </li>
+          </ol>
+        </div>
+      </div>
+    </div> -->
+
+
+      <main class="news_list_detail_met_16_1_51  animsition     left">
+        <div class="container">
+          <div class="row sm0">
+            <div class="col-md-9 met-shownews-body" m-id='51'>
+              <div class="row">
+                <section >
+                  <h1 style="text-align: center;" >{$article.title}</h1>
+                  <div class="info font-weight-300 " style="display: center;">
+                 <!--    <span>      {$on.publish_time|date="y-m-d  h:i:s",###}</span>
+                 <span>
+                   <i class="icon wb-eye m-r-5" aria-hidden="true"></i>
+                   {$on.click}</span> -->
+                  </div>
+                </section>
+                <section class="met-editor clearfix">
+                 {$article['content']|htmlspecialchars_decode}
+                  <p><br /></p>
+                </section>
+                <div class='met-page p-y-30 border-top1'>
+            
+                </div>
+              </div>
+            </div>
+
+        <include file="Public/cright" />
+
+
+
+
+          </div>
+        </div>
+      </main>
+
+</block>
+  

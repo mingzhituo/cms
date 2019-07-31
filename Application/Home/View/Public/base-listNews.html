@@ -1,0 +1,159 @@
+<!DOCTYPE HTML>
+<html class="">
+  <head>
+    <link rel="stylesheet" type="text/css" href="[CSS]/news_cn.css">
+   <include file="Public/header" />
+   <div class="banner_met_16_3_71box">
+        <div class="banner_met_16_3_71 page-bg" data-height='' style='' m-id='71' m-type='banner'>
+          <div class="slick-slide">
+            <img class="cover-image" src="{$banner2.ad_code}" srcset='{$banner2.ad_code}'
+             sizes="(max-width: 767px) 767px" alt="" data-height='0|0|0'>
+          </div>
+        </div>
+        <div class="met-index-case">
+          <div class="container">
+            <div class="case" id="case">
+              <ul class="sliderbox row">
+                <foreach name="news2" item="v">
+                <li class="a-list">
+                  <a href="">{$v.title}?</a>
+                </li>
+                </foreach>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="subcolumn_nav_met_21_1_39" m-id='39' m-type='nocontent'>
+        <div class="container">
+          <div class="row">
+            <div class="clearfix">
+              <div class="subcolumn-nav text-xs-left">
+                <ul class="subcolumn_nav_met_21_1_39-ul m-b-0 p-y-10 p-x-0 ulstyle">
+
+                  <li>
+                    <a href="{:U('News/index',array("catid"=>"00"))}" title="全部" class="active link">全部</a>
+                  </li>
+                  <foreach name="location" item="v">
+                  <li>
+                    <a href="{:U('News/index',array("catid"=>$v['cat_id']))}" title="{$v.cat_name}" class='link'>{$v.cat_name}</a>
+                  </li>
+                  </foreach>
+                </ul>
+              </div>
+              <div class="subcolumn-nav-location clearfix ulstyle">
+                <li class="location">
+                  您的位置： </li>
+                <li>
+                  <a href="/" title="网站首页">
+                    网站首页 </a>
+                  <i class="fa fa-angle-right"></i>
+                </li>
+                <li>
+                  <a href="" target='_self' title="新闻动态">{$now.cat_name}</a>
+                  <i class="fa fa-angle-right"></i>
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- 
+      <div class="para_search_met_16_1_77" m-id='77'>
+        <div class="    container">
+          <div class="">
+            <div class="clearfix p-y-10">
+              <ul class="order inline-block p-0 m-y-10 m-r-10">
+                <li class="order-list inline-block m-r-10"><a href="https://mb.mituo.cn/mui618/news/index.php?class1=3&page=&search=search&order=com"
+                   class="p-x-10 p-y-5">推荐<i class="icon wb-triangle-up" aria-hidden="true"></i></a></li>
+                <li class="order-list inline-block m-r-10"><a href="https://mb.mituo.cn/mui618/news/index.php?class1=3&page=&search=search&order=hit"
+                   class="p-x-10 p-y-5">热门<i class="icon wb-triangle-up" aria-hidden="true"></i></a></li>
+                <li class="order-list inline-block m-r-10"><a href="https://mb.mituo.cn/mui618/news/index.php?class1=3&page=&search=search&order=new"
+                   class="p-x-10 p-y-5">最新<i class="icon wb-triangle-up" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+
+      <main class="news_list_page_met_21_3_69 met-news" m-id='69'>
+        <div class="container">
+          <div class="row">
+            <div class="news-title-bor">
+              <div class="">
+                <div class="news-title-con">
+                  <span class="news-top">新闻动态</span>
+                  <span class="news-hr"></span>
+                  <p class="news-xs"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="met-news-list">
+              <ul class="ulstyle met-pager-ajax imagesize invisible" data-scale='266x457' m-id='69' data-plugin="appear"
+               data-animate="slide-bottom50" data-repeat="false">
+               <foreach name="list" item="v">
+          
+                <li class='border-bottom1'>
+                  <h4>
+                    <a href="{:U('Home/News/page',array('id'=>$v['article_id']))}" title="{$v.title}" target=_self>{$v.title}</a>
+                  </h4>
+                  <div class="time">
+                    <span class="author"> </span>
+                    <span class="times">{$v.publish_time|date="y-m-d h:i:s",###} 发表</span>
+                  </div>
+                  <p class="des font-weight-300">{$v.description|mb_substr=###,0,100,'utf-8'}</p>
+                  <p class="info font-weight-300">
+                    <span><i class="icon wb-eye m-r-5 font-weight-300" aria-hidden="true"></i>{$v.click}人看过</span>
+                  </p>
+                </li>
+              </foreach>
+
+              </ul>
+              <div class='m-t-20 text-xs-center hidden-sm-down' m-type="nosysdata">
+                <div class='met_pager'>
+                  {$page}
+           <!--        <span class='PreSpan'>上一页</span><a href='https://mb.mituo.cn/mui618/news/news.php?class1=3'
+            class='Ahover'>1</a><a href='https://mb.mituo.cn/mui618/news/index.php?class1=3&page=2'>2</a><a href='https://mb.mituo.cn/mui618/news/index.php?class1=3&page=3'>3</a><a
+            href='https://mb.mituo.cn/mui618/news/index.php?class1=3&page=4'>4</a><a href='https://mb.mituo.cn/mui618/news/index.php?class1=3&page=2'
+            class='NextA'>下一页</a>
+           <span class='PageText'>转至第</span>
+           <input type='text' id='metPageT' data-pageurl='index.php?lang=cn&class1=3&page=||4' value='1' />
+           <input type='button' id='metPageB' value='页' /> -->
+                </div>
+
+
+              </div>
+              <div class="met_pager met-pager-ajax-link hidden-md-up" data-plugin="appear" data-animate="slide-bottom"
+               data-repeat="false" m-type="nosysdata">
+                <button type="button" class="btn btn-primary btn-block btn-squared ladda-button" id="met-pager-btn" data-plugin="ladda"
+                 data-style="slide-left" data-url="" data-page="1">
+                  <i class="icon wb-chevron-down m-r-5" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+
+<include file="Public/footer" />
+      <script>
+        var metpagejs = "[JS]/product_cn.js";
+        if (typeof jQuery != "undefined") {
+          metPageJs(metpagejs);
+        } else {
+          var metPageInterval = setInterval(function() {
+            if (typeof jQuery != "undefined") {
+              metPageJs(metpagejs);
+              clearInterval(metPageInterval);
+            }
+          }, 50)
+        }
+      </script>
+    </body>
+
+</html>

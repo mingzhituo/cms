@@ -1,0 +1,106 @@
+ <!DOCTYPE HTML>
+<html>
+<head>
+<meta name="renderer" content="webkit">
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+<meta name="generator" content=""  data-variable=""/>
+<title>{$config2.store_title}</title>
+<meta name="keywords" content="{$config2.store_keyword}">
+<meta name="description" content="{$config2.store_desc}">
+<link rel="stylesheet" href="[CSS]/10ada1bfe8283ab1.css">
+<link rel="stylesheet" href="[CSS]/common.css">
+<!--[if lt IE 10]>
+<script src="static/js/media.match.min.js"></script>
+<script src="static/js/respond.min.js"></script>
+<script src="static/js/classlist.min.js"></script>
+<![endif]-->
+
+</head>
+<body class="met-navfixed">
+<!--[if lte IE 8]>
+  <div class="text-center padding-top-50 padding-bottom-50 bg-blue-grey-100">
+  <p class="browserupgrade font-size-18">你正在使用一个<strong>过时</strong>的浏览器。请<a href="http://browsehappy.com/" target="_blank">升级您的浏览器</a>，以提高您的体验。</p>
+  </div>
+<![endif]--> 
+<include file="Public/header" />
+
+<section class="met-shownews animsition">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9 met-shownews-body">
+        <div class="row">
+<div style="font-size: 18px;">搜索<font style="color:red; margin:0 5px;">{$keyword}</font>结果(共{$count}条记录)：</div>
+
+          <div class="met-shownews-header" style="text-align: center;">
+          	
+          	   <if condition="$keyword neq ''">
+
+     
+        <foreach name="serRes" item="art">
+            <h1 ><a href="{:U('Home/News/page',array('id'=>$art['article_id'],'catid'=>$catid))}"  >{$art.title}</a></h1>
+            <a href="{:U('Home/News/page',array('id'=>$art['article_id'],'catid'=>$catid))}"><img src="{$art['thumb']}" alt="{$art.title}" width="300"></a>
+            <div class="info"> <span> {$art.time|date="Y-m-d",###} </span> <span> {$config2.company_name} </span> <span> <i class="icon wb-eye margin-right-5" aria-hidden="true"></i><script src="[JS]/count.js" type='text/javascript' language="javascript"></script> </span> </div>
+            <p> {$art.desc}</p>
+             </foreach>  
+
+             <else>
+             没有更多结果
+             </if>       
+               
+             
+
+            <div class="center-block met_tools_code"></div>
+             {$page}
+          </div>
+
+          <!-- <div class="met-shownews-footer">
+            <ul class="pager pager-round">
+            
+                 <if condition="$prev eq null">
+                        <li class="previous"><a  href="javascript:void(0);" >上一篇：没有了</a></li>
+                    <else />
+                        <li class="previous"><a  href="{:U('Home/News/page','id='.$prev['article_id'])}" >上一篇：{$prev.title}</a></li>
+                    </if>
+                    <if condition="$next eq null">
+                        <li class="next"><a  href="javascript:void(0);" >下一篇：没有了</a> </li>
+                    <else />
+                        <li class="next"><a class="previous " href="{:U('Home/News/page','id='.$next['article_id'])}" class="next">下一篇：{$next.title}</a></li>
+                    </if>
+            </ul>
+          </div> -->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="row">
+          <div class="met-news-bar">
+            <form  name="Search" action="/Home/News/serch">
+              <input type="hidden" name="kwtype" value="0" />
+              <div class="form-group">
+                <div class="input-search">
+                  <button type="submit" class="input-search-btn"><i class="icon wb-search" aria-hidden="true"></i></button>
+                  <input type="text" class="form-control" name="keyword" placeholder="Search">
+                </div>
+              </div>
+            </form>
+             <ul class="column">
+
+              <foreach name="location" item="vo">
+              <li> <a href="{:U('Home/News/column','catid='.$vo['cat_id'])}" title="" class="link " <if condition="($vo['id'] eq $catid) OR ($vo['id'] eq $now['parent_id'])">style = "color:#2699EB";</if>>{$vo.cat_name}</a></li>
+               </foreach>
+            
+              
+            </ul>
+        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<include file="Public/footer" />
+<script src="[JS]/58aef1327c6bc52f.js"></script>
+</body>
+</html>

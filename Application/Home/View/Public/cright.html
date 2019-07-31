@@ -1,0 +1,55 @@
+    <div class="col-md-3">
+              <div class="row">
+                <aside class="sidebar_met_16_3_52 met-sidebar panel-body m-b-0     " boxmh-h m-id='52' m-type='nocontent'>
+                  <h2 class="sidebar-tile">
+                    <a href="" tite="新闻动态" class="    " target='_self'>新闻动态 </a>
+                  </h2>
+                  <ul class="sidebar-column list-icons panel-group">
+                  <foreach name="location" item="v">
+                  <li>
+                    <a href="{:U('News/index',array("catid"=>$v['cat_id']))}" title="{$v.cat_name}" class='link'>{$v.cat_name}</a>
+                  </li>
+                  </foreach>
+                  </ul>
+                  <h2 class="sidebar-tile"><span>联系我们</span></h2>
+                  <div class="side-tel met-editor">
+                    <p style="white-space: normal; text-align: center;"><img src="[IMG]/1560239237281878.jpg" title="图片关键词" alt="图片关键词" /></p>
+                    <ul class=" list-paddingleft-2" style="width: 796.094px; white-space: normal;">
+                      <li>
+                        <p><span style="font-size: 14px;">{$config2.company_name}</span></p>
+                      </li>
+                      <li>
+                        <p><span style="font-size: 14px;">联系人：{$cinfig2.contact}</span></p>
+                      </li>
+                   
+                      <li>
+                        <p><span style="font-size: 14px;">座机：{$config2.phone}</span></p>
+                      </li>
+                      <li>
+                        <p><span style="font-size: 14px;">手机：{$config2.mobile}</span></p>
+                      </li>
+                      <li>
+                        <p><span style="font-size: 14px;">邮箱：{$config2.email}</span></p>
+                      </li>
+                      <li>
+                        <p><span style="font-size: 14px;">地址：{$place[$config2['province']]}{$place[$config2['city']]}{$place[$config2['district']]}{$config2['address']}</span></p>
+                        <div><br /></div>
+                      </li>
+                    </ul>
+                  </div>
+              <!--     <h2 class="sidebar-tile m-t-25"><span>搜索</span></h2>
+              <form class='sidebar-search' method='get' action="https://mb.mituo.cn/mui618/search/search.php">
+                <input type='hidden' name='lang' value='cn' />
+                <input type='hidden' name='class1' value='3' />
+                <div class="form-group">
+                  <div class="input-search">
+                    <button type="submit" class="input-search-btn">
+                      <i class="icon wb-search" aria-hidden="true"></i>
+                    </button>
+                    <input type="text" class="form-control" name="searchword" placeholder="search">
+                  </div>
+                </div>
+              </form> -->
+                </aside>
+              </div>
+            </div>

@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<html class="">
+  <head>
+       
+    <include file="Public/header" />
+
+  <div class="banner_met_16_3_71box     ">
+      <div class="banner_met_16_3_71 page-bg" data-height='' style='' m-id='71' m-type='banner'>
+        <div class="slick-slide">
+          <img class="cover-image" src="{$banner2.ad_code}" srcset='{$banner2.ad_code}'
+           sizes="(max-width: 767px) 767px" alt="" data-height='0|0|0'>
+        </div>
+      </div>
+      <div class="met-index-case">
+        <div class="container">
+          <div class="case" id="case">
+            <ul class="sliderbox row">
+  
+           <foreach name="news2" item="v">
+                <li class="a-list">
+                  <a href="">{$v.title}?</a>
+                </li>
+                </foreach>
+          
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  <block name="jianjie" >
+  <div class="subcolumn_nav_met_21_1_39" m-id='39' m-type='nocontent'>
+        <div class="container">
+          <div class="row">
+            <div class="clearfix">
+        
+              <div class="subcolumn-nav-location clearfix ulstyle">
+                <li class="location">
+                  您的位置： </li>
+                <li>
+                  <a href="/" title="网站首页">
+                    网站首页 </a>
+                  <i class="fa fa-angle-right"></i>
+                </li>
+                <li>
+                  <a href="" target='_self' title="新闻动态">{$now.cat_name}</a>
+                  <i class="fa fa-angle-right"></i>
+                </li>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- <div class="location_met_21_1_50 met-crumbs" m-id='50'>
+      <div class="container">
+        <div class="row">
+          <div class="title-box">
+            专利复审请求书是如何申请的？ </div>
+          <ol class="breadcrumb m-b-0 subcolumn-crumbs">
+            <li class='breadcrumb-item'>
+              <a href="#">您现在所在位置：</a>
+            </li>
+            <li class='breadcrumb-item'>
+              <a href="/" title="网站首页">网站首页</a>
+            </li>
+         
+                <li>
+                  <a href="" target='_self' title="新闻动态">{$now.cat_name}</a>
+                  <i class="fa fa-angle-right"></i>
+                </li>
+          </ol>
+        </div>
+      </div>
+    </div> -->
+
+
+      <main class="news_list_detail_met_16_1_51 met-shownews animsition     left">
+        <div class="container">
+          <div class="row sm0">
+            <div class="col-md-9 met-shownews-body" m-id='51'>
+              <div class="row">
+                <section class="details-title border-bottom1">
+                  <h1 class='m-0'>{$on.title}</h1>
+                  <div class="info font-weight-300">
+                    <span>      {$on.publish_time|date="y-m-d  h:i:s",###}</span>
+                    <span>
+                      <i class="icon wb-eye m-r-5" aria-hidden="true"></i>
+                      {$on.click}</span>
+                  </div>
+                </section>
+                <section class="met-editor clearfix">
+                 {$on['content']|htmlspecialchars_decode}
+                  <p><br /></p>
+                </section>
+                <div class='met-page p-y-30 border-top1'>
+                  <div class="container p-t-30 ">
+                    <ul class="pagination block blocks-2"'>
+
+                      <if condition="$prev eq ''">
+        <li class=' page-item m-b-0 '>
+            <a href='#'
+                     title="{$on.title}" class='page-link text-truncate'>
+                      上一页 <span aria-hidden="true" class='hidden-xs-down'>暂无</span>
+         </a>
+        </li>
+        <else/>
+          <li class=' page-item m-b-0 '>
+            <a href='{:U(''.CONTROLLER_NAME.'/page',array('id'=>$prev['article_id']))}'
+                     title="{$on.title}" class='page-link text-truncate'>
+                      上一页 <span aria-hidden="true" class='hidden-xs-down'>{$prev.title}</span>
+         </a>
+        </li>
+        </if>
+
+
+
+                   <if condition="$next eq ''">
+                      <li class='page-item m-b-0 '>
+                        <a href='#' title="暂无" class='page-link pull-xs-right text-truncate'>
+                          下一页 <span aria-hidden="true" class='hidden-xs-down'>: 暂无</span>
+                        </a>
+                      </li>
+                       <else/>
+                         <li class='page-item m-b-0 '>
+                        <a href='{:U(''.CONTROLLER_NAME.'/page',array('id'=>$next['article_id']))}' title="{$next.title}" class='page-link pull-xs-right text-truncate'>
+                          下一页 <span aria-hidden="true" class='hidden-xs-down'>: {$next.title}</span>
+                        </a>
+                      </li>
+                       </if>
+
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+       <include file="Public/cright" />
+
+          </div>
+        </div>
+      </main>
+
+</block>
+ <include file="Public/footer" />
+      <script>
+        var metpagejs = "[JS]/product_cn.js";
+        if (typeof jQuery != "undefined") {
+          metPageJs(metpagejs);
+        } else {
+          var metPageInterval = setInterval(function() {
+            if (typeof jQuery != "undefined") {
+              metPageJs(metpagejs);
+              clearInterval(metPageInterval);
+            }
+          }, 50)
+        }
+      </script>
+    </body>
+
+</html>

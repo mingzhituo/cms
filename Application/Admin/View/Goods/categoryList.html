@@ -1,0 +1,189 @@
+<include file="Public/min-header"/>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 商品 <span class="c-gray en">&gt;</span> 商品分类列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="col-xs-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title" style="padding:0px;"><i class="Hui-iconfont">&#xe681;</i> 商品分类列表</h3>
+        </div>
+        <div class="page-container">
+            <div class="navbar navbar-default"> <span class="r mt-10 mr-20"> <a href="javascript:;" onclick="admin_add('添加商品分类','{:U("Admin/Goods/category_info")}','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加商品分类</a></span> </div>
+            <table class="table table-border table-bordered radius table-hover" id="list-table" style="border-collapse:collapse;">
+                <thead>
+                    <tr class="text-c">
+						<th>分类ID</th>
+						<th>分类名称</th>
+						<th>是否推荐</th>
+						<th>是否显示</th>
+						<th>分组</th>
+						<th>排序</th>
+						<th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <foreach name="cat_list" item="vo" key="k" >
+                    <tr class="{$vo.level} text-c" id="{$vo.level}_{$vo.id}" <if condition="$vo[level] gt 1">style="display:none"</if>>
+                        <td class="va-m">{$vo.id}</td>
+                        <td class="va-m" style="text-align:left; width:300px; padding-left:<?php echo ($vo[level] * 5); ?>em">
+						<if condition="$vo.have_son eq 1">
+		                   <span class="glyphicon glyphicon-plus btn-warning" style="padding:2px; font-size:12px;"  id="icon_{$vo.level}_{$vo.id}" aria-hidden="false" onclick="rowClicked(this)" >
+		       				</span>&nbsp;				    
+						</if>
+                            <span>{$vo.name}</span>                        
+                        </td>
+                        <td class="va-m">
+                        	<img width="20" height="20" src="/Public/images/<if condition='$vo[is_hot] eq 1'>yes.png<else />cancel.png</if>" onclick="changeTableVal('goods_category','id','{$vo.id}','is_hot',this)"/>
+                    	</td>
+                        <td class="va-m">
+                        	<img width="20" height="20" src="__PUBLIC__/images/<if condition='$vo[is_show] eq 1'>yes.png<else />cancel.png</if>" onclick="changeTableVal('goods_category','id','{$vo.id}','is_show',this)"/>
+                        </td>
+                        <td class="va-m">
+							<input type="text" onchange="updateSort('goods_category','id','{$vo.id}','cat_group',this)"  onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')"  size="4"value="{$vo.cat_group}" class="input-sm" />                        	
+                        </td>
+                        <td class="va-m">
+							<input type="text" onchange="updateSort('goods_category','id','{$vo.id}','sort_order',this)"   onkeyup="this.value=this.value.replace(/[^\d]/g,'')" onpaste="this.value=this.value.replace(/[^\d]/g,'')" size="4" value="{$vo.sort_order}" class="input-sm" />	                     
+                        </td>
+                        <td>
+                            <a title="编辑" href="javascript:;" onclick="admin_edit('商品分类编辑','{:U("Admin/Goods/category_info/id/".$vo['id'])}','1','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont btn btn-info radius">&#xe6df;</i></a>
+                            <a title="删除" href="javascript:;" onclick="admin_del('{:U("Admin/Goods/categoryHandle")}',this,{$vo['id']})" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont btn btn-danger radius">&#xe6e2;</i></a>
+                        </td>
+                    </tr>
+                    </foreach>
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-sm-6 text-left"></div>
+                <div class="col-sm-6 text-right">{$page}</div>      
+            </div>            
+        </div>
+    </div>    
+</div>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/Public/Admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/Public/Admin/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/Public/Admin/static/h-ui/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="/Public/Admin/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/Public/Admin/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
+<script type="text/javascript" src="/Public/Admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="/Public/Admin/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+/*
+    参数解释：
+    title   标题
+    url     请求的url
+    id      需要操作的数据id
+    w       弹出层宽度（缺省调默认值）
+    h       弹出层高度（缺省调默认值）
+*/
+/*管理员-增加*/
+function admin_add(title,url,w,h){
+    layer_show(title,url,w,h);
+}
+/*管理员-删除*/
+function admin_del(url,obj,id){
+    layer.confirm('确认要删除吗？',function(index){
+        $.ajax({
+            type: 'POST',
+            url: url,
+            dataType: 'json',
+            data:{act:'del',id:id},
+            success: function(data){
+                if (data.status==1) {
+                    $(obj).parents("tr").remove();
+                    window.location.reload(true);
+                    layer.msg('已删除!',{icon:1,time:1000});
+                }else{
+                    layer.msg(data.msg,{icon:2,time:1000});
+                }
+            },
+            error:function(data) {
+                console.log(data.msg);
+            },
+        });     
+    });
+}
+
+/*管理员-编辑*/
+function admin_edit(title,url,id,w,h){
+    layer_show(title,url,w,h);
+}
+// 以下是 bootstrap 自带的  js
+function rowClicked(obj)
+{
+  span = obj;
+
+  obj = obj.parentNode.parentNode;
+
+  var tbl = document.getElementById("list-table");
+
+  var lvl = parseInt(obj.className);
+
+  var fnd = false;
+  
+  var sub_display = $(span).hasClass('glyphicon-minus') ? 'none' : '' ? 'block' : 'table-row' ;
+  //console.log(sub_display);
+  if(sub_display == 'none'){
+	  $(span).removeClass('glyphicon-minus btn-info');
+	  $(span).addClass('glyphicon-plus btn-warning');
+  }else{
+	  $(span).removeClass('glyphicon-plus btn-info');
+	  $(span).addClass('glyphicon-minus btn-warning');
+  }
+
+  for (i = 0; i < tbl.rows.length; i++)
+  {
+      var row = tbl.rows[i];
+      
+      if (row == obj)
+      {
+          fnd = true;         
+      }
+      else
+      {
+          if (fnd == true)
+          {
+              var cur = parseInt(row.className);
+              var icon = 'icon_' + row.id;
+              if (cur > lvl)
+              {
+                  row.style.display = sub_display;
+                  if (sub_display != 'none')
+                  {
+                      var iconimg = document.getElementById(icon);
+                      $(iconimg).removeClass('glyphicon-plus btn-info');
+                      $(iconimg).addClass('glyphicon-minus btn-warning');
+                  }else{               	    
+                      $(iconimg).removeClass('glyphicon-minus btn-info');
+                      $(iconimg).addClass('glyphicon-plus btn-warning');
+                  }
+              }
+              else
+              {
+                  fnd = false;
+                  break;
+              }
+          }
+      }
+  }
+
+  for (i = 0; i < obj.cells[0].childNodes.length; i++)
+  {
+      var imgObj = obj.cells[0].childNodes[i];
+      if (imgObj.tagName == "IMG")
+      {
+          if($(imgObj).hasClass('glyphicon-plus btn-info')){
+        	  $(imgObj).removeClass('glyphicon-plus btn-info');
+        	  $(imgObj).addClass('glyphicon-minus btn-warning');
+          }else{
+        	  $(imgObj).removeClass('glyphicon-minus btn-warning');
+        	  $(imgObj).addClass('glyphicon-plus btn-info');
+          }
+      }
+  }
+
+} 
+</script>
+</body>
+</html>

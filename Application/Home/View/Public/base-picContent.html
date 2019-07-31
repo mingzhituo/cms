@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html class="">
+  <head>
+    <include file="Public/header" />
+
+ <include file="Public/fuye" />
+
+
+      <div class="location_met_21_1_53 met-crumbs" m-id='53'>
+        <div class="container">
+          <div class="row">
+            <div class="title-box">
+              商标交易 </div>
+            <ol class="breadcrumb m-b-0 subcolumn-crumbs">
+              <li class='breadcrumb-item'>
+                <a href="#">您现在所在位置：</a>
+              </li>
+              <li class='breadcrumb-item'>
+                <a href="/" title="网站首页">网站首页</a>
+              </li>
+              <li class='breadcrumb-item'>
+                <a href="{:U('goods/index')}" title="{$now.name}" class=''>{$now.name}</a>
+              </li>
+              <li class='breadcrumb-item'>
+                <a href="" title="{$goods.goods_name}" class=''>{$goods.goods_name}</a>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- 标准模式 -->
+      <main class="product_list_detail_met_16_1_54 page met-showproduct pagetype1" m-id='54'>
+        <div class="met-showproduct-head page-content block-bg">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class='met-showproduct-list fngallery cover text-xs-center    ' id='met-imgs-slick' m-id='noset' m-type="displayimgs">
+                  <!--fngallery：启用lightGallery插件的类名-->
+                  <div class='slick-slide'>
+                    <a href='https://images.mituo.cn/mui618/upload/mui618/201812/1544355726.jpg' data-size='423x263' data-med='https://images.mituo.cn/mui618/upload/mui618/201812/1544355726.jpg'
+                     data-med-size='423x263' class='lg-item-box' data-src='https://images.mituo.cn/mui618/upload/mui618/201812/1544355726.jpg'
+                     data-exthumbimage="https://images.mituo.cn/mui618/upload/mui618/thumb_src/423_263/1544355726.jpg"
+                     data-sub-html='商标交易'>
+                      <!--类名lg-item-box之前为initPhotoSwipeFromDOM插件所用参数；之后为lightGallery插件所用参数，lg-item-box：lightGallery插件对应的类名-->
+                      <img src="{$goods.original_img}" class='img-fluid' alt='商标交易' />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-5">
+                <div class="product-intro">
+                  <h1 class='m-t-0 font-size-24'>{$goods.goods_name}</h1>
+                  <p class='description'>{$goods.goods_remark|htmlspecialchars_decode}</p>
+                  <div class='met-page p-y-30 border-top1'>
+                    <div class="container p-t-30 ">
+                      <ul class="pagination block blocks-2"'>
+        <li class=' page-item m-b-0 '>
+            <a href=' https://mb.mituo.cn/mui618/product/showproduct.php?id=16'
+                       title="专利交易" class='page-link text-truncate'>
+                        上一页 <span aria-hidden="true" class='hidden-xs-down'>: 专利交易</span>
+                        </a>
+                        </li>
+                        <li class='page-item m-b-0 '>
+                          <a href='https://mb.mituo.cn/mui618/product/showproduct.php?id=14' title="ISO27001信息安全管理体系认证" class='page-link pull-xs-right text-truncate'>
+                            下一页 <span aria-hidden="true" class='hidden-xs-down'>: ISO27001信息安全管理体系认证</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="met-showproduct-body page-content">
+          <div class="container">
+            <div class="row">
+
+              <!-- 内容选项卡 -->
+              <div class="col-lg-9     pull-lg-right">
+
+                <div class="row">
+                  <div class="panel panel-body m-b-0 product-detail" boxmh-mh>
+                    <ul class="nav nav-tabs nav-tabs-line m-b-20 met-showproduct-navtabs">
+                      <li class="nav-item">
+                        <a class='nav-link
+                                                                            active
+                                                                        '
+                         data-toggle="tab" href="#product-content0" data-get="product-details">详细信息</a>
+                      </li>
+                    </ul>
+                    <article class="tab-content">
+
+
+                      <section class="tab-pane met-editor clearfix animation-fade
+                                                                            active
+                                                                        "
+                       id="product-content0">
+                     {$goods.goods_content|htmlspecialchars_decode}
+                      </section>
+                      <div class="tag">
+                        <span></span>
+                        <a href="" title=""></a>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+              <!-- 内容选项卡 -->
+
+
+              <!-- 产品侧栏 -->
+              <div class="col-lg-3     ">
+                <div class="row">
+                  <aside class="panel panel-body m-b-0 product-hot met-sidebar     leftsidebar" boxmh-h>
+                    <div class='sidebar-piclist'>
+                      <h3 class='m-0 font-size-16 font-weight-300'>为您推荐</h3>
+                      <ul class='blocks-2 blocks-md-3 blocks-lg-100 m-t-20 text-xs-center imagesize sidebar-piclist-ul' data-scale='263x423'>
+
+                        <foreach name="hot" item="v">
+                        <li class='masonry-child'>
+                          <a href='{:U('Goods/page',array('goodsid'=>$v['goods_id']))}' title='' class='block m-b-0'>
+                            <img src="{$v.original_img}" class='cover-image' alt='专利代缴年费' height='100'></a>
+                          <h4 class='m-t-10 m-b-0 font-size-14 text-md-center'>
+                            <a href='{:U('Goods/page',array(goodsid=>$v['goods_id']))}' title='专利代缴年费' >专利代缴年费</a>
+                          </h4>
+                        </li>
+                      </foreach>
+                   <!--      <li class='masonry-child'>
+                     <a href='https://mb.mituo.cn/mui618/product/showproduct.php?id=16' title='专利交易' class='block m-b-0' target='_blank'>
+                       <img src="[IMG]/1544356187.jpg" class='cover-image' alt='专利交易' height='100'></a>
+                     <h4 class='m-t-10 m-b-0 font-size-14 text-md-center'>
+                       <a href='https://mb.mituo.cn/mui618/product/showproduct.php?id=16' title='专利交易' target='_blank'>专利交易</a>
+                     </h4>
+                   </li>
+                   
+                   <li class='masonry-child'>
+                     <a href='https://mb.mituo.cn/mui618/product/showproduct.php?id=15' title='商标交易' class='block m-b-0' target='_blank'>
+                       <img src="[IMG]/1544355726.jpg" class='cover-image' alt='商标交易' height='100'></a>
+                     <h4 class='m-t-10 m-b-0 font-size-14 text-md-center'>
+                       <a href='https://mb.mituo.cn/mui618/product/showproduct.php?id=15' title='商标交易' target='_blank'>商标交易</a>
+                     </h4>
+                   </li>
+                   
+                   <li class='masonry-child'>
+                     <a href='https://mb.mituo.cn/mui618/product/showproduct.php?id=14' title='ISO27001信息安全管理体系认证' class='block m-b-0'
+                      target='_blank'>
+                       <img src="[IMG]/1544355386.jpg" class='cover-image' alt='ISO27001信息安全管理体系认证' height='100'></a>
+                     <h4 class='m-t-10 m-b-0 font-size-14 text-md-center'>
+                       <a href='https://mb.mituo.cn/mui618/product/showproduct.php?id=14' title='ISO27001信息安全管理体系认证' target='_blank'>ISO27001信息安全管理体系认证</a>
+                     </h4>
+                   </li>
+                    -->
+
+
+                      </ul>
+                    </div>
+                  </aside>
+                </div>
+              </div>
+              <!-- 产品侧栏 -->
+
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- 标准模式 -->
+
+
+             <script src="[JS]/product_cn.js"></script>
+<include file="Public/footer" />
+    </body>
+
+</html>

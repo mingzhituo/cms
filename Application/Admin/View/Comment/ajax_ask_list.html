@@ -1,0 +1,63 @@
+<form method="post" enctype="multipart/form-data" target="_blank" id="form-order">
+    <table class="table table-border table-bordered radius table-hover" id="list-table" style="border-collapse:collapse;">
+        <thead>
+            <tr class="text-c">
+                <th><input type="checkbox" onclick="$('input[name*=\'selected\']').prop('checked', this.checked);"></th>
+                <th>用户</th>
+                <th>咨询内容</th>
+                <th>商品</th>
+                <th>显示</th>
+                <th>咨询时间</th>
+                <th>ip地址</th>
+                <th>操作</th> 
+            </tr>
+        </thead>
+        <tbody>
+            <volist name="comment_list" id="list">
+            <tr class="text-c">
+                <td class="va-m"><input type="checkbox" name="selected[]" value="{$list.id}"></td>
+                <td class="va-m">{$list.username}</td>
+                <td class="va-m">{$list.content}</td>
+                <td class="va-m"><a target="_blank" href="{:U('Home/Goods/goodsInfo',array('id'=>$list[goods_id]))}">{$goods_list[$list[goods_id]]}</a></td>
+                <td class="va-m">                    
+                    <img width="20" height="20" src="__PUBLIC__/images/<if condition='$list[is_show] eq 1'>yes.png<else />cancel.png</if>" onclick="changeTableVal('goods_consult','id','{$list.id}','is_show',this)"/>
+                </td>
+                <td class="va-m">{$list.add_time|date='Y-m-d H:i:s',###}</td>
+                <td class="va-m">{$list.ip_address}</td>
+                <td>
+                    <a title="编辑" href="javascript:;" onclick="admin_edit('评论编辑','{:U("Admin/Comment/consult_info/id/".$list['id'])}','1','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont btn btn-info radius">&#xe725;</i></a>
+                    <a title="删除" href="javascript:;" onclick="admin_del('{:U("Admin/Comment/del")}',this,{$list['comment_id']})" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont btn btn-danger radius">&#xe6e2;</i></a>
+                </td>
+            </tr>
+            </volist>
+        </tbody>
+    </table>
+</form>
+<div class="row">
+    <div class="col-sm-2 text-left l mt-20">
+        <div class="formControls col-sm-5 mr-10" style="padding:0px;">
+            <span class="select-box">
+                <select name="operate" id="operate" class="select">
+                    <option value="0">操作选择</option>
+                    <option value="show">显示</option>
+                    <option value="hide">隐藏</option>
+                    <option value="del">删除</option>
+                </select>
+            </span>
+        </div>
+        <button type="button" class="btn btn-primary l"onclick="op()"><i class="Hui-iconfont">&#xe665;</i> 确定</button>
+        <form id="op" action="{:U('Comment/ask_handle')}" method="post">
+            <input type="hidden" name="selected">
+            <input type="hidden" name="type">
+        </form>
+    </div>
+    <div class="col-sm-6 text-right r">{$page}</div>      
+</div>  
+<script>
+    // 点击分页触发的事件
+    $(".pagination  a").click(function(){
+        cur_page = $(this).attr('data-p');
+        ajax_get_table('search-form2',cur_page);
+    });
+          
+</script>

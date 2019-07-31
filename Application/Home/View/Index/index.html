@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+<html class="">
+	<head>
+		<include file="Public/header" />
+		
+            <div class="banner_met_16_3_71box     ">
+                <div class="banner_met_16_3_71 page-bg" data-height='' style='' m-id='71' m-type='banner'>
+                    <foreach name="banner" item="v">
+                    <div class="slick-slide">
+                        <img class="cover-image" src="{$v.ad_code}" srcset='{$v.ad_code}'
+                         sizes="(max-width: 767px) 767px" alt="" data-height='0|0|0'>
+                    </div>
+                </foreach>
+            
+                </div>
+                <div class="met-index-case">
+                    <div class="container">
+                        <div class="case" id="case">
+                            <ul class="sliderbox row">
+
+                                <foreach name="newlist" item="v">
+                                <li class="a-list">
+                                    <a href="{:U('News/index',array("id"=>$v['article_id']))}">{$v.title}?</a>
+                                </li>
+                                </foreach>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+			<section class="service_list_met_11_1_8 text-xs-center" m-id="8">
+				<div class="container">
+					<div class="head">
+						<h2 class="m-t-0 font-weight-300 title">业务服务</h2>
+						<p class="subtitle m-b-10 ">Business Services</p>
+						<p class="desc m-b-10 ">以客户需求为中心，提高用户满意体验</p>
+					</div>
+					<ul class="service-list m-t-30" data-resize="3|3|3|1">
+						<li class="item">
+							<a href="{:U('Goods/index')}" title="商标服务" target='_self'>
+								<img src="[IMG]/1560336350.png" alt="商标服务" />
+								<h4>商标服务</h4>
+							</a>
+						</li>
+						<li class="item">
+							<a href="{:U('Goods/index')}" title="专利服务" target='_self'>
+								<img src="[IMG]/1560336122.png" alt="专利服务" />
+								<h4>专利服务</h4>
+							</a>
+						</li>
+						<li class="item">
+							<a href="{:U('Goods/index')}" title="著作权服务" target='_self'>
+								<img src="[IMG]/1560335902.png" alt="著作权服务" />
+								<h4>著作权服务</h4>
+							</a>
+						</li>
+						<li class="item">
+							<a href="{:U('Goods/index')}" title="体系产品认证" target='_self'>
+								<img src="[IMG]/1560335560.png" alt="体系产品认证" />
+								<h4>体系产品认证</h4>
+							</a>
+						</li>
+						<li class="item">
+							<a href="{:U('Goods/index')}" title="项目申请服务" target='_self'>
+								<img src="[IMG]/1560336145.png" alt="项目申请服务" />
+								<h4>项目申请服务</h4>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="product_list_met_11_1_11  text-xs-center" m-id="11">
+				<div class="container">
+					<div class="head">
+						<h2 class="m-t-0 font-weight-300 title">业务领域</h2>
+						<p class="subtitle m-b-10 ">Business area</p>
+						<p class="desc m-b-10 ">提供业界领先技术</p>
+					</div>
+					<div class='nav-tabs-horizontal nav-tabs-inverse nav-tabs-animate'>
+						<ul class="nav nav-tabs nav-tabs-solid flex flex-center">
+							<li class='nav-item'>
+								<a href="{:U('Goods/index')}" title="商标服务" class='nav-link radius0'>
+									<h3 class='m-0 font-size-12'>商标服务</h3>
+								</a>
+							</li>
+							<li class='nav-item'>
+								<a href="{:U('Goods/index')}" title="专利服务" class='nav-link radius0'>
+									<h3 class='m-0 font-size-12'>专利服务</h3>
+								</a>
+							</li>
+							<li class='nav-item'>
+								<a href="{:U('Goods/index')}" title="著作权服务" class='nav-link radius0'>
+									<h3 class='m-0 font-size-12'>著作权服务</h3>
+								</a>
+							</li>
+							<li class='nav-item'>
+								<a href="{:U('Goods/index')}" title="体系产品认证" class='nav-link radius0'>
+									<h3 class='m-0 font-size-12'>体系产品认证</h3>
+								</a>
+							</li>
+							<li class='nav-item'>
+								<a href="{:U('Goods/index')}" title="项目申请服务" class='nav-link radius0'>
+									<h3 class='m-0 font-size-12'>项目申请服务</h3>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<ul class="product-list  m-b-0 m-t-30" data-resize="4|4|2|1">
+						<li class='m-b-30 item'>
+							<div class="card ">
+								<figure class="overlay overlay-hover">
+									<img class="overlay-figure" src="[IMG]/1544355995.jpg" alt="专利代缴年费" />
+									<a href="https://mb.mituo.cn/mui618/product/showproduct.php?id=17" target=_self class="overlay-panel overlay-background overlay-fade overlay-icon"
+									 met-imgmask>
+										<i class="fa fa-search"></i>
+									</a>
+								</figure>
+								<h4 class="card-title p-y-20 p-l-5 font-szie-16 m-b-0">
+									<a href="{:U('Goods/index')}" title="专利代缴年费" class="block text-truncate"
+									 target=_self>专利代缴年费</a>
+								</h4>
+							</div>
+						</li>
+						<li class='m-b-30 item'>
+							<div class="card ">
+								<figure class="overlay overlay-hover">
+									<img class="overlay-figure" src="[IMG]/1544356187.jpg" alt="专利交易" />
+									<a href="{:U('Goods/index')}" target=_self class="overlay-panel overlay-background overlay-fade overlay-icon"
+									 met-imgmask>
+										<i class="fa fa-search"></i>
+									</a>
+								</figure>
+								<h4 class="card-title p-y-20 p-l-5 font-szie-16 m-b-0">
+									<a href="{:U('Goods/index')}" title="专利交易" class="block text-truncate"
+									 target=_self>专利交易</a>
+								</h4>
+							</div>
+						</li>
+						<li class='m-b-30 item'>
+							<div class="card ">
+								<figure class="overlay overlay-hover">
+									<img class="overlay-figure" src="[IMG]/1544355726.jpg" alt="商标交易" />
+									<a href="{:U('Goods/index')}" target=_self class="overlay-panel overlay-background overlay-fade overlay-icon"
+									 met-imgmask>
+										<i class="fa fa-search"></i>
+									</a>
+								</figure>
+								<h4 class="card-title p-y-20 p-l-5 font-szie-16 m-b-0">
+									<a href="{:U('Goods/index')}" title="商标交易" class="block text-truncate"
+									 target=_self>商标交易</a>
+								</h4>
+							</div>
+						</li>
+						<li class='m-b-30 item'>
+							<div class="card ">
+								<figure class="overlay overlay-hover">
+									<img class="overlay-figure" src="[IMG]/1544355386.jpg" alt="ISO27001信息安全管理体系认证" />
+									<a href="{:U('Goods/index')}" target=_self class="overlay-panel overlay-background overlay-fade overlay-icon"
+									 met-imgmask>
+										<i class="fa fa-search"></i>
+									</a>
+								</figure>
+								<h4 class="card-title p-y-20 p-l-5 font-szie-16 m-b-0">
+									<a href="{:U('Goods/index')}" title="ISO27001信息安全管理体系认证" class="block text-truncate"
+									 target=_self>ISO27001信息安全管理体系认证</a>
+								</h4>
+							</div>
+						</li>
+						<li class='m-b-30 item'>
+							<div class="card ">
+								<figure class="overlay overlay-hover">
+									<img class="overlay-figure" src="[IMG]/1544356116.jpg" alt="{:U('Goods/index')}" target=_self class="overlay-panel overlay-background overlay-fade overlay-icon"
+									 met-imgmask>
+										<i class="fa fa-search"></i>
+									</a>
+								</figure>
+								<h4 class="card-title p-y-20 p-l-5 font-szie-16 m-b-0">
+									<a href="{:U('Goods/index')}" title="IATF16949汽车行业质量管理体系认证" class="block text-truncate"
+									 target=_self>IATF16949汽车行业质量管理体系认证</a>
+								</h4>
+							</div>
+						</li>
+						<li class='m-b-30 item'>
+							<div class="card ">
+								<figure class="overlay overlay-hover">
+									<img class="overlay-figure" src="[IMG]/1544355780.jpg" alt="ISO18001职业健康安全管理体系认证" />
+									<a href="{:U('Goods/index')}" target=_self class="overlay-panel overlay-background overlay-fade overlay-icon"
+									 met-imgmask>
+										<i class="fa fa-search"></i>
+									</a>
+								</figure>
+								<h4 class="card-title p-y-20 p-l-5 font-szie-16 m-b-0">
+									<a href="{:U('Goods/index')}" title="ISO18001职业健康安全管理体系认证" class="block text-truncate"
+									 target=_self>ISO18001职业健康安全管理体系认证</a>
+								</h4>
+							</div>
+						</li>
+						<li class='m-b-30 item'>
+							<div class="card ">
+								<figure class="overlay overlay-hover">
+									<img class="overlay-figure" src="[IMG]/1544355934.jpg" alt="ISO14001环境管理体系认证" />
+									<a href="{:U('Goods/index')}" target=_self class="overlay-panel overlay-background overlay-fade overlay-icon"
+									 met-imgmask>
+										<i class="fa fa-search"></i>
+									</a>
+								</figure>
+								<h4 class="card-title p-y-20 p-l-5 font-szie-16 m-b-0">
+									<a href="{:U('Goods/index')}" title="ISO14001环境管理体系认证" class="block text-truncate"
+									 target=_self>ISO14001环境管理体系认证</a>
+								</h4>
+							</div>
+						</li>
+						<li class='m-b-30 item'>
+							<div class="card ">
+								<figure class="overlay overlay-hover">
+									<img class="overlay-figure" src="[IMG]/1544354617.jpg" alt="ISO9001质量管理体系认证" />
+									<a href="{:U('Goods/index')}" target=_self class="overlay-panel overlay-background overlay-fade overlay-icon"
+									 met-imgmask>
+										<i class="fa fa-search"></i>
+									</a>
+								</figure>
+								<h4 class="card-title p-y-20 p-l-5 font-szie-16 m-b-0">
+									<a href="{:U('Goods/index')}" title="ISO9001质量管理体系认证" class="block text-truncate"
+									 target=_self>ISO9001质量管理体系认证</a>
+								</h4>
+							</div>
+						</li>
+					</ul>
+					<div class="control-label">
+						<div class="control-prev">
+							<i class="fa fa-angle-left"></i>
+						</div>
+						<a href="/" title="业务领域" class="more">MORE</a>
+						<div class="control-next" ">
+             <i class=" fa fa-angle-right"></i>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<main class="about_list_met_28_8_13 page-content" m-id='13'>
+				<div class="container">
+					<div class="row">
+						<div class="title">
+							<h3 class="invisible" data-plugin="appear" data-animate="slide-bottom50" data-repeat="false">公司简介</h3>
+							<p class="invisible" data-plugin="appear" data-animate="slide-bottom50" data-repeat="false">Company Profile</p>
+						</div>
+						<div class="show_item clearfix">
+							<div class="show_item_left col-sm-5 invisible" data-plugin="appear" data-animate="slide-right50" data-repeat="false">
+								<div class="row">
+									<div class="show_item_left_bor">
+										<!-- [IMG]/1560390389.jpg -->
+										<img src="{$about_desc.thumb}" style="width:129%;" class="invisible leftimg" alt="" data-plugin="appear" data-animate="slide-left50"
+										 data-repeat="false">
+									</div>
+								</div>
+							</div>
+							<div class="show_item_right col-sm-7 invisible" data-plugin="appear" data-animate="slide-bottom50" data-repeat="false">
+								<p>
+									<p style=" font-weight: normal;"> <b>{$about_desc.description}<p></p>
+									</p>
+									<h3><a href="{:U('Brand/index')}" target="_blank">MORE >></a></h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</main>
+
+			<!-- <div class="img_list_met_35_2_150 met-index-img met-index-body" m-id="150">
+				<div class="demo">
+					<div class="container">
+						<div class="row">
+							<div class="title invisible" data-plugin="appear" data-animate="fade" data-repeat="false">
+								<h2 class="mytitle">专业团队</h2>
+								<p class="mydesc">professional team</p>
+							</div>
+							<ul class="slickul     						blocks-100
+												blocks-md-2 blocks-lg-3 blocks-xxl-3					 	 no-space imagesize index-product-list tab-pane active animation-scale-up"
+							 role="tabpanel" data-scale='355x500'>
+								<li class="slideanim slick">
+									<div class="box">
+										<div class="box-img">
+											<img src="[IMG]/1544506038.jpg" alt="经顾问" />
+										</div>
+										<div class="box-content">
+											<h4 class="title">经顾问</h4>
+											<p class="description">专业经验具有二十多年代理机械、控制、机电一体化领域的专利申请和无效、侵权鉴定等的经验，以及企业知识产权战略咨询的经验，精通中日两国的知识产权制度。教育背景北京交通大学机械系学士
+												经济学院研究生班毕业中</p>
+			
+										</div>
+									</div>
+			
+								</li>
+								<li class="slideanim slick">
+									<div class="box">
+										<div class="box-img">
+											<img src="[IMG]/1544506473.jpg" alt="刘顾问" />
+										</div>
+										<div class="box-content">
+											<h4 class="title">刘顾问</h4>
+											<p class="description">专业经验顾问1988年毕业于河北工业大学，获工学学士学位。1998年获得律师资格，加入某涉外知识产权公司从事知识产权业务。2003年2月加入集佳。从业以来处理了大量涉及商标、著作权、专利、不正当竞争等</p>
+			
+										</div>
+									</div>
+			
+								</li>
+								<li class="slideanim slick">
+									<div class="box">
+										<div class="box-img">
+											<img src="[IMG]/1544356669.jpg" alt="谭顾问" />
+										</div>
+										<div class="box-content">
+											<h4 class="title">谭顾问</h4>
+											<p class="description">专业经验谭先生有超过20年的专利法领域顾问经验，在专利申请、争议、许可转让、侵权调查、行政执法和诉讼领域为众多高科技公司提供服务。他的客户，无论是财富500强企业还是初创公司，都受益于他对知识产权风险</p>
+			
+										</div>
+									</div>
+			
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div> -->
+
+			<section class="news_list_met_21_7_18  text-xs-left     bgcolor" m-id='18'>
+				<div class="container">
+					<div class="title-box clearfix">
+						<h2 class="title" data-plugin="appear" data-animate="slide-top" data-repeat="false">新闻资讯</h2>
+						<ul class="tabs clearfix">
+
+
+						<!-- 	<li class="active">
+							<a href="" title="新闻动态" target='_self'>
+								<h3>全部</h3>
+							</a>
+						</li> -->
+						
+						
+						</ul>
+					</div>
+					<div class="img-news clearfix">
+						<ul class="imgnews-list">
+
+							<li class="item-1">
+								<a href="{:U('News/index',array('id'=>$newsone['article_id']))}" title="" target=_self>
+									<div class="img">
+									<!-- 	[IMG]/1560232932.jpg -->
+										<img data-original="{$newsone.thumb}" alt="{$newsone.title}?">
+									</div>
+									<div class="text clearfix">
+										<div class="date">
+											<span class="day">11</span>
+											<span class="year">2018-12</span>
+										</div>
+										<div class="content">
+											<h3>{$newsone.title}</h3>
+											<p>{$newsone.description|mb_substr=###,0,50,"utf-8"}
+											</p>
+										</div>
+									</div>
+								</a>
+							</li>
+							<foreach name="newlist" item="v">
+							<li class="item-other">
+								<a href="{:U('News/index',array('id'=>$v['article_id']))}" title="{$v.title}" target=_self class="clearfix">
+									<h3 class="title">{$v.title}</h3>
+									<i class="fa fa-angle-right"></i>
+									<p><span class="item-other-desc">{$v.description|mb_substr=###,0,50,"utf-8"}</span><span class="time">{$v.publish_time|date="Y-m-d h:i:s",###}</span></p>
+
+								</a>
+							</li>
+							</foreach>
+							
+						</ul>
+					</div>
+					<a href="{:U('News/index')}" title="新闻动态" target='_self' class="btn-more">
+						MORE <i class="fa fa-angle-right"></i>
+					</a>
+				</div>
+			</section>
+
+<include file="Public/footer" />
+		</body>
+	<!-- 	<script>
+		var _hmt = _hmt || [];
+		(function() {
+			var hm = document.createElement("script");
+			hm.src = "https://hm.baidu.com/hm.js?0194d992571aff88fb86601b78023072";
+			var s = document.getElementsByTagName("script")[0];
+			s.parentNode.insertBefore(hm, s);
+		})();
+	</script> -->
+</html>

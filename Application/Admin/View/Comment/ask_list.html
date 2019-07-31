@@ -1,0 +1,119 @@
+<include file="Public/min-header"/>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 商品 <span class="c-gray en">&gt;</span> 商品咨询列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+<div class="col-xs-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title" style="padding:0px;"><i class="Hui-iconfont">&#xe681;</i> 商品咨询列表</h3>
+        </div>
+        <div class="page-container">        
+            <div class="navbar navbar-default">
+                <form action="{:U('Comment/index')}" id="search-form2" class="navbar-form form-inline l" method="post">
+                    <div class="formControls col-xs-8 col-sm-12">
+                            <input type="text" class="input-text l col-sm-4 mr-10" name="content" value="" placeholder="搜索评论内容">    
+                            <input type="text" class="input-text l col-sm-4 mr-10" name="nickname" value="" placeholder="搜索用户">                             
+                            <button type="button" class="btn btn-primary l" onclick="ajax_get_table('search-form2',1)"><i class="Hui-iconfont">&#xe665;</i> 筛选</button>
+                    </div>
+                </form>             
+            </div>
+            <div id="ajax_return"></div>          
+        </div>
+    </div>    
+</div>
+
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/Public/Admin/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/Public/Admin/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/Public/Admin/static/h-ui/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="/Public/Admin/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/Public/Admin/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
+<script type="text/javascript" src="/Public/Admin/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="/Public/Admin/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+/*管理员-删除*/
+function admin_del(url,obj,id){
+    layer.confirm('确认要删除吗？',function(index){
+        $.ajax({
+            type: 'POST',
+            url: url,
+            dataType: 'json',
+            data:{act:'del',comment_id:id},
+            success: function(data){
+                if (data.status==1) {
+                    $(obj).parents("tr").remove();
+                    window.location.reload(true);
+                    layer.msg('已删除!',{icon:1,time:1000});
+                }else{
+                    layer.msg(data.msg,{icon:2,time:1000});
+                }
+            },
+            error:function(data) {
+                console.log(data.msg);
+            },
+        });     
+    });
+}
+
+/*管理员-编辑*/
+function admin_edit(title,url,id,w,h){
+    layer_show(title,url,w,h);
+}
+
+$(document).ready(function(){
+    ajax_get_table('search-form2',1);
+});
+
+
+    // 删除操作
+    function del(id,t)
+    {
+        if(!confirm('确定要删除吗?'))
+            return false;
+        location.href = $(t).data('href');
+    }
+
+    function op(){
+        //获取操作
+        var op_type = $('#operate').find('option:selected').val();
+        if(op_type == 0){
+            layer.msg('请选择操作', {icon: 1,time: 1000});   //alert('请选择操作');
+            return;
+        }
+        //获取选择的id
+        var selected = $('input[name*="selected"]:checked');
+        var selected_id = [];
+        if(selected.length < 1){
+
+            layer.msg('请选择项目', {icon: 1,time: 1000}); //            alert('请选择项目');
+            return;
+        }
+        $(selected).each(function(){
+            selected_id.push($(this).val());
+        })
+        $('#op').find('input[name="selected"]').val(selected_id);
+        $('#op').find('input[name="type"]').val(op_type);
+        $('#op').submit();
+    }
+
+    $(document).ready(function(){
+        ajax_get_table('search-form2',1);
+    });
+
+
+    // ajax 抓取页面
+    function ajax_get_table(tab,page){
+        cur_page = page; //当前页面 保存为全局变量
+        $.ajax({
+            type : "POST",
+            url:"/index.php/Admin/Comment/ajax_ask_list/p/"+page,//+tab,
+            data : $('#'+tab).serialize(),// 你的formid
+            success: function(data){
+                $("#ajax_return").html('');
+                $("#ajax_return").append(data);
+            }
+        });
+    }
+</script>
+</body>
+</html>

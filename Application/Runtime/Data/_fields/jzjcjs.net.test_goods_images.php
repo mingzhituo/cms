@@ -1,0 +1,1 @@
+a:5:{i:0;s:6:"img_id";i:1;s:8:"goods_id";i:2;s:9:"image_url";s:3:"_pk";s:6:"img_id";s:5:"_type";a:3:{s:6:"img_id";s:21:"mediumint(8) unsigned";s:8:"goods_id";s:21:"mediumint(8) unsigned";s:9:"image_url";s:12:"varchar(255)";}}

@@ -1,0 +1,1 @@
+a:8:{i:0;s:6:"log_id";i:1;s:8:"admin_id";i:2;s:8:"log_info";i:3;s:6:"log_ip";i:4;s:7:"log_url";i:5;s:8:"log_time";s:3:"_pk";s:6:"log_id";s:5:"_type";a:6:{s:6:"log_id";s:19:"bigint(16) unsigned";s:8:"admin_id";s:7:"int(10)";s:8:"log_info";s:12:"varchar(255)";s:6:"log_ip";s:11:"varchar(30)";s:7:"log_url";s:11:"varchar(50)";s:8:"log_time";s:7:"int(10)";}}

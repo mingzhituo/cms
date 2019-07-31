@@ -1,0 +1,678 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0227)http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="[CSS]/lib.css">
+    <link rel="stylesheet" type="text/css" href="[CSS]/style.css">
+    <link rel="stylesheet" type="text/css" href="[CSS]/1362.css">
+      <script type="text/javascript" src="[JS]/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="[JS]/org1480746227.js" data-main="indexMain"></script>
+
+    <title>{$config2.store_title}</title>
+<meta name="keywords" content="{$config2.store_keyword}">
+<meta name="description" content="{nav_n.name}--{$config2.store_desc}">
+<meta name="author" content="{$config2.company_name}" />
+    
+  </head>
+
+  <body>
+    <div id="header" class="index_nav">
+      <div class="content">
+        <a href="/" id="logo"><img src="{$config2.store_logo}" height="40"></a>
+
+        <ul id="nav">
+          <li class="navitem">
+            <a class="nav-a  active " href="/" target="_self"><span data-title="首页">首页</span></a>
+          </li>
+
+    
+          <li class="navitem">
+            <a class="nav-a " href="" target=""><span data-title="关于我们">关于我们</span><i class="fa fa-angle-down"></i></a>
+            <ul class="subnav" style="top: 48px; left: -32px;">
+               <foreach name="about" item="vo">
+              <li>
+                <a href={:U('Home/Brand/page','catid='.$vo['cat_id'])}"" target="_self"><span data-title="{$vo.cat_name}">{$vo.cat_name}</span><i class="fa fa-angle-right"></i></a>
+              </li>
+              <foreach>
+            </ul>
+          </li>
+<!-- 
+           <li class="navitem">
+            <a class="nav-a " href="" target=""><span data-title="产品中心">产品中心</span><i class="fa fa-angle-down"></i></a>
+            <ul class="subnav" style="top: 48px; left: -32px;">
+              <foreach name="pro_show2" item="vo">
+              <li>
+                <a href="{:U('Home/Goods/column','catid='.$vo['id'])}" target="_self"><span data-title="{$vo.goods_name}">{$vo.goods_name}</span><i class="fa fa-angle-right"></i></a>
+              </li>
+            </foreach>
+            </ul>
+          </li>
+ -->
+
+
+          <li class="navitem">
+            <a class="nav-a " href="" target=""><span data-title="产品中心">产品中心</span><i class="fa fa-angle-down"></i></a>
+            <ul class="subnav" style="top: 48px; left: -32px;">
+              <foreach name="pro" item="vo">
+              <li>
+                <a href="{:U('Home/News/index','catid='.$vo['cat_id'])}" target="_self"><span data-title="{$vo[name]}">{$vo[name]}</span><i class="fa fa-angle-right"></i></a>
+              </li>
+            </foreach>
+            </ul>
+          </li>
+
+            <li class="navitem">
+            <a class="nav-a " href="" target=""><span data-title="新闻资讯">新闻资讯</span><i class="fa fa-angle-down"></i></a>
+            <ul class="subnav" style="top: 48px; left: -32px;">
+              <foreach name="newcat" item="vo">
+              <li>
+                <a href="{:U('Home/News/index','catid='.$vo['cat_id'])}" target="_self"><span data-title="{$vo.cat_name}">{$vo.cat_name}</span><i class="fa fa-angle-right"></i></a>
+              </li>
+            </foreach>
+            </ul>
+          </li>
+
+    
+           <li class="navitem">
+            <a class="nav-a " href="" target=""><span data-title="经典案例">经典案例</span><i class="fa fa-angle-down"></i></a>
+            <ul class="subnav" style="top: 48px; left: -32px;">
+              <foreach name="casecat" item="vo">
+              <li>
+                <a href="{:U('Home/case/list','catid='.$vo['cat_id'])}" target="_self"><span data-title="{$vo.cat_name}">{$vo.cat_name}</span><i class="fa fa-angle-right"></i></a>
+              </li>
+            </foreach>
+            </ul>
+          </li>
+
+           <li class="navitem">
+            <a class="nav-a " href="" target=""><span data-title="联系我们">联系我们</span><i class="fa fa-angle-down"></i></a>
+            <ul class="subnav" style="top: 48px; left: -32px;">
+              <foreach name="liuyan" item="vo">
+              <li>
+                <a href="{:U('Home/Contact/index','catid='.$vo['cat_id'])}" target="_self"><span data-title="{$vo.cat_name}">{$vo.cat_name}</span><i class="fa fa-angle-right"></i></a>
+              </li>
+            </foreach>
+            </ul>
+          </li>
+
+
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <a id="headSHBtn" href="javascript:;"><i class="fa fa-bars"></i></a>
+    </div>
+    <div id="sitecontent">
+      <div id="indexPage">
+        <div id="mslider" class="module" style="height: 580px;">
+
+
+          <script type="text/javascript">
+            $(function() {
+              $("#mslider li video").each(function(index, element) {
+                element.play();
+              });
+            })
+          </script>
+
+          <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 580px;">
+            <ul class="slider" data-options-height="580" data-options-auto="0" data-options-mode="0" data-options-pause="4" data-options-ease="ease-out" style="width: 515%; position: relative; transition-timing-function: ease-out; transition-duration: 0s; transform: translate3d(-5586px, 0px, 0px);">
+              <li style="background-image: url(&quot;./statics/images/1482740503271.jpg&quot;); height: 580px; float: left; list-style: none; position: relative; width: 1862px;" class="bx-clone">
+
+              <div id="tempImage_2"></div><img style="display:none" src="[IMG]/1482740503271.jpg" alt="">
+              <div class="mask"></div>
+              <a target="_blank">
+                <div>
+                  <p class="title ellipsis"></p>
+                </div>
+                <div class="sliderArrow fa fa-angle-down"></div>
+              </a>
+            </li>
+
+            <li style="background-image: url(&quot;{$banner[0].ad_code}&quot;); height: 580px; float: left; list-style: none; position: relative; width: 1862px;" class="">
+              <div id="tempImage_0"></div><img style="display:none" src="[IMG]/1482487629825.jpg" alt="">
+              <div class="mask"></div>
+              <a target="_blank">
+                <div>
+                  <p class="title ellipsis"></p>
+                </div>
+                <div class="sliderArrow fa fa-angle-down"></div>
+              </a>
+            </li>
+
+        <!--     <li style="background-image: url(&quot;./statics/images/1482728145994.jpg&quot;); height: 580px; float: left; list-style: none; position: relative; width: 1862px;" class="">
+              <div id="tempImage_1"></div><img style="display:none" src="[IMG]/1482728145994.jpg" alt="">
+              <div class="mask"></div>
+              <a target="_blank">
+                <div>
+                  <p class="title ellipsis"></p>
+                </div>
+                <div class="sliderArrow fa fa-angle-down"></div>
+              </a>
+            </li> -->
+
+            <li style="background-image: url(&quot;./statics/images/1482740503271.jpg&quot;); height: 580px; float: left; list-style: none; position: relative; width: 1862px;" class="active">
+              <div id="tempImage_2"></div><img style="display:none" src="[IMG]/1482740503271.jpg" alt="">
+              <div class="mask"></div>
+              <a target="_blank">
+                <div>
+                  <p class="title ellipsis"></p>
+                </div>
+                <div class="sliderArrow fa fa-angle-down"></div>
+              </a>
+            </li>
+          <li style="background-image: url(&quot;./statics/images/1482487629825.jpg&quot;); height: 580px; float: left; list-style: none; position: relative; width: 1862px;" class="bx-clone">
+              <div id="tempImage_0"></div><img style="display:none" src="[IMG]/1482487629825.jpg" alt="">
+              <div class="mask"></div>
+              <a target="_blank">
+                <div>
+                  <p class="title ellipsis"></p>
+                </div>
+                <div class="sliderArrow fa fa-angle-down"></div>
+              </a>
+            </li></ul></div>
+            <div class="bx-controls bx-has-pager bx-has-controls-direction"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="" data-slide-index="0" class="bx-pager-link">1</a></div><div class="bx-pager-item">
+
+            <a href="" data-slide-index="1" class="bx-pager-link">2</a></div>
+
+            <div class="bx-pager-item"><a href="" data-slide-index="2" class="bx-pager-link active">3</a></div></div>
+
+            <div class="bx-controls-direction"><a class="bx-prev" href=""><i class="fa fa-angle-left"></i></a>
+
+              <a class="bx-next" href=""><i class="fa fa-angle-right"></i></a></div></div></div>
+        </div>
+        
+        <div id="mservice" class="module">
+          <div class="bgmask"></div>
+          <div class="content layoutnone">
+            <div class="header wow fw" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+              <p class="title">服务范围</p>
+              <p class="subtitle">SERVICE</p>
+            </div>
+            <div class="module-content fw" id="servicelist">
+              <div class="wrapper">
+                <ul class="content_list" data-options-sliders="3" data-options-margin="10" data-options-ease="1" data-options-speed="1">
+                  <li id="serviceitem_0" class="serviceitem wow" style="visibility: visible; animation-name: slideInUp;">
+                    <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank">
+                      <p class="service_img"><img src="[IMG]/1481781330301.png" width="320" height="120" alt="生产经验"></p>
+                      <div class="service_info">
+                        <p class="title">生产经验</p>
+                        <p class="description">我们拥有8年生产及销售经验</p>
+                      </div>
+                    </a>
+                    <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                  </li>
+                  <li id="serviceitem_1" class="serviceitem wow" style="visibility: visible; animation-name: slideInUp;">
+                    <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank">
+                      <p class="service_img"><img src="[IMG]/1481772762811.png" width="320" height="120" alt="出口国家"></p>
+                      <div class="service_info">
+                        <p class="title">出口国家</p>
+                        <p class="description">进出口国家三十多个，多款产品获得国家专利认证 ... </p>
+                      </div>
+                    </a>
+                    <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                  </li>
+                  <li id="serviceitem_2" class="serviceitem wow" style="visibility: visible; animation-name: slideInUp;">
+                    <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank">
+                      <p class="service_img"><img src="[IMG]/1481772776706.png" width="320" height="120" alt="厂房面积"></p>
+                      <div class="service_info">
+                        <p class="title">厂房面积</p>
+                        <p class="description">厂房占地面积一万多平，高科技产业园区，现代化生产车间 ... </p>
+                      </div>
+                    </a>
+                    <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+            <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#service/" class="more wow animated" style="visibility: visible; animation-name: fadeInUp;">MORE<i class="fa fa-angle-right"></i></a>
+          </div>
+        </div>
+        <div id="mproject" class="module">
+          <div class="bgmask"></div>
+          <div class="content layoutnone">
+            <div class="header wow" style="visibility: visible; animation-name: fadeInUp;">
+              <p class="title">产品展示</p>
+              <p class="subtitle">PRODUCT</p>
+            </div>
+            <div id="category" class="hide wow" style="visibility: visible;">
+              <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#">零件加工</a>
+              <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#">机械加工</a>
+              <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#">五金加工</a>
+            </div>
+            <!--yyLayout masonry-->
+            <div class="module-content" id="projectlist">
+              <div class="projectSubList" id="projectSubList_">
+                <div class="projectSubHeader">
+                  <p class="title"></p>
+                  <p class="subtitle"></p>
+                </div>
+                <div class="wrapper">
+                  <ul class="content_list" data-options-sliders="3" data-options-margin="15" data-options-ease="1" data-options-speed="1">
+                    <li id="projectitem_0" class="projectitem wow" style="visibility: visible; animation-name: fadeInUp;">
+                      <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" class="projectitem_content" target="_blank">
+                        <div class="projectitem_wrapper">
+                          <div class="project_img"><img src="[IMG]/1482390911519.jpg" alt="金属机械配件" width="650" height="385"></div>
+                          <div class="project_info">
+                            <div>
+                              <p class="title">金属机械配件</p>
+                              <p class="subtitle">经久耐用</p>
+                              <p class="description hide">仪表车间备有25,30,50各种型号精密仪表车床20余台，率先通过ISO9001∶2008国际质量管理体系认证。现有仪表车...立即购买</p>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li id="projectitem_1" class="projectitem wow" style="visibility: visible; animation-name: fadeInUp;">
+                      <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" class="projectitem_content" target="_blank">
+                        <div class="projectitem_wrapper">
+                          <div class="project_img"><img src="[IMG]/1481699493347.jpg" alt="大型破碎机配件" width="650" height="385"></div>
+                          <div class="project_info">
+                            <div>
+                              <p class="title">大型破碎机配件</p>
+                              <p class="subtitle">性价比高</p>
+                              <p class="description hide">HPT液压圆锥破碎机配件是引进德国高端技术，并结合中国金属材料性能而设计的一款高性能配件更加耐用，主要用...立即购买</p>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li id="projectitem_2" class="projectitem wow" style="visibility: visible; animation-name: fadeInUp;">
+                      <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" class="projectitem_content" target="_blank">
+                        <div class="projectitem_wrapper">
+                          <div class="project_img"><img src="[IMG]/1482396291449.jpg" alt="破碎筛分设备配件" width="650" height="385"></div>
+                          <div class="project_info">
+                            <div>
+                              <p class="title">破碎筛分设备配件</p>
+                              <p class="subtitle">性能可靠</p>
+                              <p class="description hide">原装配件的使用是破碎筛分设备得以保持较长服务周期的关键要素。所有破碎筛分设备主要零部件和易损件均选用最...立即购买</p>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li id="projectitem_3" class="projectitem wow" style="visibility: visible; animation-name: fadeInUp;">
+                      <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" class="projectitem_content" target="_blank">
+                        <div class="projectitem_wrapper">
+                          <div class="project_img"><img src="[IMG]/1482397584514.jpg" alt="工业制砂设备配件" width="650" height="385"></div>
+                          <div class="project_info">
+                            <div>
+                              <p class="title">工业制砂设备配件</p>
+                              <p class="subtitle">耐磨性好</p>
+                              <p class="description hide">我们为客户提供型号齐全、品质卓越的工业制砂设备配件，并竭力使客户在最近的地方获得配件，确保每一个配件在...立即购买</p>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li id="projectitem_4" class="projectitem wow" style="visibility: visible; animation-name: fadeInUp;">
+                      <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" class="projectitem_content" target="_blank">
+                        <div class="projectitem_wrapper">
+                          <div class="project_img"><img src="[IMG]/1482399787487.jpg" alt="工业制粉设备配件" width="650" height="385"></div>
+                          <div class="project_info">
+                            <div>
+                              <p class="title">工业制粉设备配件</p>
+                              <p class="subtitle">型号齐全</p>
+                              <p class="description hide">工业制粉设备直接采用进口高质合金锻造，耐磨强度和韧性，在国内处于领先水平，大大提高了工作效率所有工业...立即购买</p>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li id="projectitem_5" class="projectitem wow" style="visibility: visible; animation-name: fadeInUp;">
+                      <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" class="projectitem_content" target="_blank">
+                        <div class="projectitem_wrapper">
+                          <div class="project_img"><img src="[IMG]/1482400455226.jpg" alt="VSI系列制砂机配件" width="650" height="385"></div>
+                          <div class="project_info">
+                            <div>
+                              <p class="title">VSI系列制砂机配件</p>
+                              <p class="subtitle">稳定耐用</p>
+                              <p class="description hide">制砂机冲击块直接采用进口高质合金锻造，耐磨强度和韧性，在国内处于领先水平，大大提高了工作效率，使用寿...立即购买</p>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <!--wrapper-->
+              </div>
+              <!--projectSubList-->
+              <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#project/" class="more wow" style="visibility: visible; animation-name: fadeInUp;">MORE<i class="fa fa-angle-right"></i></a>
+            </div>
+            <!--projectlist-->
+            <div class="clear"></div>
+          </div>
+        </div>
+        <!--project-->
+        <div id="mnews" class="module">
+          <div class="bgmask"></div>
+          <div class="content layoutnone">
+            <div class="header wow" style="visibility: visible;">
+              <p class="title">资讯中心</p>
+              <p class="subtitle">NEWS</p>
+            </div>
+            <div class="module-content" id="newslist">
+              <div class="wrapper">
+                <ul class="content_list" data-options-sliders="3" data-options-margin="40" data-options-ease="1" data-options-speed="0.5" data-options-mode="horizontal" data-options-wheel="0">
+                  <li id="newsitem_0" class="wow newstitem left" style="visibility: visible;">
+                    <a class="newscontent" target="_blank" href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#">
+                      <div class="news_wrapper">
+                        <div class="newsbody">
+                          <p class="date"><span class="md">2016<span>-</span></span><span class="year">12-21</span></p>
+                          <p class="title">教你如何选择最适合的自行车气嘴类型</p>
+                          <div class="separator"></div>
+                          <p class="description">法式气嘴倒是有长嘴规格的，因为气嘴比较细，用在刀形车圈上很合适，气闭性也很好 ...</p>
+                        </div>
+                      </div>
+                      <div class="newsimg" style="background-image:url(./statics/images/1482301928348.jpg)"></div>
+                    </a>
+                    <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                  </li>
+                  <li id="newsitem_1" class="wow newstitem right" style="visibility: visible; animation-name: fadeInUp;">
+                    <a class="newscontent" target="_blank" href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#">
+                      <div class="news_wrapper">
+                        <div class="newsbody">
+                          <p class="date"><span class="md">2015<span>-</span></span><span class="year">08-05</span></p>
+                          <p class="title">如何选择优质的机械加工公司</p>
+                          <div class="separator"></div>
+                          <p class="description">在日常生产过程中，众多的企业都会面临着各类不同的机械加工业务，对于这类业务 ...</p>
+                        </div>
+                      </div>
+                      <div class="newsimg" style="background-image:url(./statics/images/1482302216449.jpg)"></div>
+                    </a>
+                    <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                  </li>
+                  <li id="newsitem_2" class="wow newstitem left" style="visibility: visible; animation-name: fadeInUp;">
+                    <a class="newscontent" target="_blank" href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#news/post/8621/">
+                      <div class="news_wrapper">
+                        <div class="newsbody">
+                          <p class="date"><span class="md">2015<span>-</span></span><span class="year">07-30</span></p>
+                          <p class="title">机械加工中对对工件表面质量影响的因素</p>
+                          <div class="separator"></div>
+                          <p class="description">机械加工中对对工件表面质量影响的因素涉及几个方面：切削条件、切削速度、磨削加工。下面从这3个 ...</p>
+                        </div>
+                      </div>
+                      <div class="newsimg" style="background-image:url(./statics/images/148230751171.jpg)"></div>
+                    </a>
+                    <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#news/post/8621/" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                  </li>
+                  <li id="newsitem_3" class="wow newstitem right" style="visibility: visible; animation-name: fadeInUp;">
+                    <a class="newscontent" target="_blank" href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#news/post/8620/">
+                      <div class="news_wrapper">
+                        <div class="newsbody">
+                          <p class="date"><span class="md">2015<span>-</span></span><span class="year">06-18</span></p>
+                          <p class="title">成功开发饮用水AL高通量反渗透膜</p>
+                          <div class="separator"></div>
+                          <p class="description">从2012年起我们就有打造WEB的想法，这几年我们致力于对模板的研究与调查，于是在2014年7月我们最...</p>
+                        </div>
+                      </div>
+                      <div class="newsimg" style="background-image:url(./statics/images/1482307694843.jpg)"></div>
+                    </a>
+                    <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#news/post/8620/" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+            <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#news/" class="more wow" style="visibility: visible;">MORE<i class="fa fa-angle-right"></i></a>
+            <div style="height:0">&nbsp;</div>
+          </div>
+        </div>
+        <div id="mpage" class="module bgShow" style="background-image: url(&quot;./statics/images/1481873378797.jpg&quot;); background-position: center 1408px;">
+          <div class="bgmask"></div>
+          <div class="content">
+            <div class="module-content">
+              <div class="wrapper">
+                <ul class="slider one">
+                  <li>
+                    <div class="header wow" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
+                      <p class="title">关于我们</p>
+                      <p class="subtitle">ABOUT US</p>
+                    </div>
+                    <div class="des-wrap">
+                      <p class="description wow" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">专为热爱界面设计的你而倾力打造。这里拥有最无敌的创意、最精美的视觉、最具国际化的意识和前瞻性思维！在你最需要灵感的 也许在不知不觉中，它将成为你设计路上的一位好伙伴，在你最需要灵感的时候 ...</p>
+                    </div>
+                    <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#page/21418/" class="more wow" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInUp;">MORE<i class="fa fa-angle-right"></i></a>
+                    <div class="fimg wow" style="background-image: url(&quot;./statics/images/1481857800415.jpg&quot;); visibility: visible; animation-name: fadeInUp;"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="mteam" class="module">
+          <div class="bgmask"></div>
+          <div class="content layoutnone">
+            <div class="header wow" style="visibility: visible;">
+              <p class="title">我们团队</p>
+              <p class="subtitle">Team</p>
+            </div>
+            <div class="module-content fw">
+              <div class="wrapper">
+                <ul class="content_list" data-options-sliders="2" data-options-margin="140" data-options-ease="1" data-options-speed="0.5">
+                  <li id="teamitem_0" class="wow" style="visibility: visible;">
+                    <div class="header wow" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s;">
+                      <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank"><img src="[IMG]/1482544933322.jpg" alt="白研-Bang " width="180" height="180"></a>
+                    </div>
+                    <div class="summary wow" style="visibility: visible;">
+                      <p class="title">
+                        <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#">白研-Bang </a>
+                      </p>
+                      <p class="subtitle">事业部总监</p>
+                      <p class="description wow" style="visibility: visible;">必须有SaaS软件市场相关经验，协助策划公司线上线下产品推广和市场宣传活动，并具体执行
+                      </p>
+                    </div>
+                    <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                  </li>
+                  <li id="teamitem_1" class="wow" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="header wow" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s;">
+                      <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank"><img src="[IMG]/1482460834506.jpg" alt="慕容雅" width="180" height="180"></a>
+                    </div>
+                    <div class="summary wow" style="visibility: visible;">
+                      <p class="title">
+                        <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#">慕容雅</a>
+                      </p>
+                      <p class="subtitle">服装设计总监</p>
+                      <p class="description wow" style="visibility: visible;">7年前端开发经验曾服务搜狐奥运传递路线FLASH开发在代码中体验完美生活,汇总客户反馈意见</p>
+                    </div>
+                    <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                  </li>
+                  <li id="teamitem_2" class="wow" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="header wow" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s;">
+                      <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank"><img src="[IMG]/1482460690908.jpg" alt="文斌" width="180" height="180"></a>
+                    </div>
+                    <div class="summary wow" style="visibility: visible;">
+                      <p class="title">
+                        <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#">文斌</a>
+                      </p>
+                      <p class="subtitle">设计总监、资深设计</p>
+                      <p class="description wow" style="visibility: visible;">5年交互体验设计经验，层服务于北京建筑设计研究院（BIAD）、日本电通、联想集团具有</p>
+                    </div>
+                    <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                  </li>
+                  <li id="teamitem_3" class="wow" style="visibility: visible; animation-name: fadeInUp;">
+                    <div class="header wow" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s;">
+                      <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank"><img src="[IMG]/148246071298.jpg" alt="徐丽" width="180" height="180"></a>
+                    </div>
+                    <div class="summary wow" style="visibility: visible;">
+                      <p class="title">
+                        <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#">徐丽</a>
+                      </p>
+                      <p class="subtitle">设计师</p>
+                      <p class="description wow" style="visibility: visible;">9年交互体验设计经验，曾服务雅虎、腾讯、搜狐、新浪、民生银行,具备良好的执行力</p>
+                    </div>
+                    <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" target="_blank" class="details">more<i class="fa fa-angle-right"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="clear"></div>
+            <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#team/" class="more wow animated" style="visibility: visible;">MORE<i class="fa fa-angle-right"></i></a>
+          </div>
+        </div>
+        <div id="mpartner" class="module">
+          <div class="bgmask"></div>
+          <div class="content layoutslider">
+            <div class="header wow fw animated" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: slideInUp;">
+              <p class="title">合作伙伴</p>
+              <p class="subtitle">partner</p>
+            </div>
+            <div class="module-content fw">
+              <div class="wrapper">
+                <div class="bx-wrapper" style="max-width: 980px;"><div class="bx-viewport" style="width: 100%; overflow: hidden; position: relative; height: 80px;"><ul class="content_list" data-options-ease="1" data-options-speed="1" style="width: 415%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+                  <li id="partneritem_0" class="wow" data-wow-delay=".0s" style="width: 980px; float: left; list-style: none; position: relative; visibility: visible; animation-delay: 0s;">
+                    <a href="https://www.baidu.com/" title="WEB1" target="_blank">
+
+                      <p class="par_img"><img src="[IMG]/1460532929454.png" width="160" height="80" alt="WEB1"></p>
+                      <p class="par_title">WEB1</p>
+
+                    </a>
+                    <a href="https://www.baidu.com/" title="合作伙伴logo1" target="_blank">
+
+                      <p class="par_img"><img src="[IMG]/1451038650682.png" width="160" height="80" alt="合作伙伴logo1"></p>
+                      <p class="par_title">合作伙伴logo1</p>
+
+                    </a>
+                    <a href="https://www.baidu.com/" title="合作伙伴logo4" target="_blank">
+
+                      <p class="par_img"><img src="[IMG]/1451039311523.png" width="160" height="80" alt="合作伙伴logo4"></p>
+                      <p class="par_title">合作伙伴logo4</p>
+
+                    </a>
+                    <a href="https://www.baidu.com/" title="合作伙伴logo2" target="_blank">
+
+                      <p class="par_img"><img src="[IMG]/1451038889783.png" width="160" height="80" alt="合作伙伴logo2"></p>
+                      <p class="par_title">合作伙伴logo2</p>
+
+                    </a>
+                    <a href="https://www.baidu.com/" title="合作伙伴logo3" target="_blank">
+
+                      <p class="par_img"><img src="[IMG]/1451038998591.png" width="160" height="80" alt="合作伙伴logo3"></p>
+                      <p class="par_title">合作伙伴logo3</p>
+
+                    </a>
+                    <a href="https://www.baidu.com/" title="Google" target="_blank">
+
+                      <p class="par_img"><img src="[IMG]/1451039355850.png" width="160" height="80" alt="Google"></p>
+                      <p class="par_title">Google</p>
+
+                    </a>
+                    <a href="https://www.baidu.com/" title="合作伙伴logo" target="_blank">
+
+                      <p class="par_img"><img src="[IMG]/1451037714851.png" width="160" height="80" alt="合作伙伴logo"></p>
+                      <p class="par_title">合作伙伴logo</p>
+
+                    </a>
+                    <a href="https://www.baidu.com/" title="合作伙伴logo5" target="_blank">
+
+                      <p class="par_img"><img src="[IMG]/1451039609622.png" width="160" height="80" alt="合作伙伴logo5"></p>
+                      <p class="par_title">合作伙伴logo5</p>
+
+                    </a>
+                  </li>
+                  <li id="partneritem_8" class="" style="width: 980px; float: left; list-style: none; position: relative;">
+                    <a title="222" target="_blank">
+
+                      <p class="par_img"><img src="[IMG]/1495165212793.png" width="160" height="80" alt="222"></p>
+                      <p class="par_title">222</p>
+
+                    </a>
+                    <a title="111" target="_blank">
+
+                      <p class="par_img"><img src="[IMG]/1495165194271.png" width="160" height="80" alt="111"></p>
+                      <p class="par_title">111</p>
+
+                    </a>
+                  </li>
+                </ul></div><div class="bx-controls bx-has-pager bx-has-controls-direction"><div class="bx-pager bx-default-pager"><div class="bx-pager-item"><a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html" data-slide-index="0" class="bx-pager-link active">1</a></div><div class="bx-pager-item"><a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html" data-slide-index="1" class="bx-pager-link">2</a></div></div><div class="bx-controls-direction"><a class="bx-prev" href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html"><i class="fa fa-angle-left"></i></a><a class="bx-next" href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html"><i class="fa fa-angle-right"></i></a></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="mcontact" class="module">
+          <div class="bgmask"></div>
+          <div class="content">
+            <div class="header wow fadeInUp fw" data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s; animation-name: fadeInUp;">
+              <p class="title">联系</p>
+              <p class="subtitle">Contact</p>
+            </div>
+            <div id="contactlist" class="fw">
+              <div id="contactinfo" class="fl wow" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+
+                <h3 class="ellipsis name">网站建设文化传播有限公司</h3>
+                <p class="ellipsis add"><span>地点：</span>中国地区XX分区5A写字楼8-88室</p>
+                <p class="ellipsis zip"><span>邮编：</span>100000</p>
+                <p class="ellipsis tel"><span>电话：</span>400-888-8888</p>
+                <p class="ellipsis mobile"><span>手机：</span>188-6666-8888</p>
+                <p class="ellipsis fax"><span>传真：</span>000-66668888</p>
+                <p class="ellipsis email"><span>邮箱：</span>986482@qq.com</p>
+                <div>
+                  <a class="fl" target="_blank" href="http://weibo.com/web"><i class="fa fa-weibo"></i></a>
+                  <a class="fl" target="_blank" href="tencent://message/?uin=986482&amp;Site=uemo&amp;Menu=yes"><i class="fa fa-qq"></i></a>
+                  <a id="mpbtn" class="fl" href="[IMG]/1449307546350.jpg"><i class="fa fa-weixin"></i></a>
+                </div>
+              </div>
+              <div id="contactform" class="fr wow animated" data-wow-delay=".2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInRight;">
+                <form action="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#" method="post">
+                  <p>
+                    <input type="text" class="inputtxt name" name="name" placeholder="姓名" autocomplete="off">
+                  </p>
+                  <p>
+                    <input type="text" class="inputtxt email" name="email" placeholder="邮箱" autocomplete="off">
+                  </p>
+                  <p>
+                    <input type="text" class="inputtxt tel" name="tel" placeholder="电话" autocomplete="off">
+                  </p>
+                  <p>
+                    <textarea class="inputtxt cont" name="content" placeholder="内容" autocomplete="off"></textarea>
+                  </p>
+                  <p>
+                    <input class="inputsub" type="submit" value="提交">
+                  </p>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <p>COPYRIGHT (©) 2018 企业机械类网站.
+        技术支持：<a class="beian" href="http://www.wangdahai.cn/" style="display:inline; width:auto; color:#8e8e8e" target="_blank">站长资源</a>
+      </p>
+    </div>
+    <div id="shares">
+      <a id="sshare"><i class="fa fa-share-alt"></i></a>
+      <a href="http://www.17sucai.com/preview/1013072/2018-04-17/%E8%93%9D%E8%89%B2%E7%AE%80%E7%BA%A6%E5%A4%A7%E6%B0%94%E6%9C%BA%E6%A2%B0%E5%88%B6%E9%80%A0%E7%B1%BB%E9%80%9A%E7%94%A8%E4%BC%81%E4%B8%9A%E7%AB%99html%E6%A8%A1%E6%9D%BF/index.html#title=%E4%BC%81%E4%B8%9A%E6%9C%BA%E6%A2%B0%E7%B1%BB%E7%BD%91%E7%AB%99&amp;url=http%3A%2F%2Fwww.17sucai.com%2Fpreview%2F1013072%2F2018-04-17%2F%25E8%2593%259D%25E8%2589%25B2%25E7%25AE%2580%25E7%25BA%25A6%25E5%25A4%25A7%25E6%25B0%2594%25E6%259C%25BA%25E6%25A2%25B0%25E5%2588%25B6%25E9%2580%25A0%25E7%25B1%25BB%25E9%2580%259A%25E7%2594%25A8%25E4%25BC%2581%25E4%25B8%259A%25E7%25AB%2599html%25E6%25A8%25A1%25E6%259D%25BF%2Findex.html" target="_blank" id="sweibo"><i class="fa fa-weibo"></i></a>
+      <a href="javascript:;" id="sweixin"><i class="fa fa-weixin"></i></a>
+      <a href="javascript:;" id="gotop" style="display: none;"><i class="fa fa-angle-up"></i></a>
+    </div>
+    <div class="fixed" id="fixed_weixin">
+      <div class="fixed-container">
+        <div id="qrcode"></div>
+        <p>扫描二维码分享到微信</p>
+      </div>
+    </div>
+    <div id="online_open" style="right: 10px;"><i class="fa fa-comments-o"></i></div>
+    <div id="online_lx" style="right: -200px;">
+      <div id="olx_head">在线咨询<i class="fa fa-times fr" id="online_close"></i></div>
+      <ul id="olx_qq">
+        <li>
+          <a href="tencent://message/?uin=986482&amp;Site=wangdahai&amp;Menu=yes"><i class="fa fa-qq"></i>986482</a>
+        </li>
+      </ul>
+      <div id="olx_tel">
+        <div><i class="fa fa-phone"></i>联系电话</div>
+        <p>400-888-8888<br></p>
+      </div>
+    </div>
+    <div class="hide">
+    </div>
+  
+
+<div class="fixed" id="fixed_mp"><div class="fixed-container"><img src="[IMG]/1449307546350.jpg"><p>微信扫一扫</p></div></div><div id="qb-sougou-search" style="display: none; opacity: 0;"><p>搜索</p><p class="last-btn">复制</p><iframe src="[IMG]/saved_resource.html"></iframe></div></body></html>

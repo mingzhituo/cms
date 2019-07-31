@@ -1,0 +1,1 @@
+a:6:{i:0;s:2:"ip";i:1;s:4:"date";i:2;s:3:"sum";i:3;s:4:"time";i:4;s:10:"session_id";s:5:"_type";a:5:{s:2:"ip";s:11:"varchar(15)";s:4:"date";s:7:"int(10)";s:3:"sum";s:7:"int(10)";s:4:"time";s:7:"int(10)";s:10:"session_id";s:11:"varchar(26)";}}

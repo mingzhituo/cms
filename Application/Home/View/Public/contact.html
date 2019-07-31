@@ -1,0 +1,125 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<include file="Public/header" />
+
+
+	<div class="met-banner">
+		<div class="carousel slide" id="met-banner-slide" data-ride="carousel">
+
+			<div class="carousel-inner " role="listbox">
+
+				<div class="item active">
+
+					<picture>
+						<source srcset="{$banner2.ad_code}" media="(min-width: 768px)" />
+						<img 
+							class="cover-image overlay-scale" 
+							srcset="{$banner2.ad_code}" 
+							alt=""
+
+						/>
+					</picture>
+					<div class="carousel-caption p-">
+                          <h3 class="animation-slide-top animation-delay-300" style="color:"></h3>
+                          <p class="animation-slide-bottom animation-delay-600" style="color:"></p>
+                    </div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+
+<block name="location" item="v">
+		<div class="met-column-nav  ">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-12 sidebar_tile">
+						<div class="row">
+							<ul class="met-column-nav-ul">
+	
+
+					<li class="dropdown">
+
+						<a href="{:U('Brand/index')}" title="公司简介" class="link ">公司简介 </a>
+
+					</li>
+
+					<li class="dropdown">
+
+						<a href="{:U('Contact/index')}" title="联系我们" class="link active">联系我们</a>
+
+					</li>
+
+						</ul>
+						</div>
+					</div>
+
+	
+				</div>
+			</div>
+		</div>
+</block>
+
+
+<block name="content" >
+<section class="met-show animsition">
+	<div class="container">
+		<div class="row">
+			<div class="met-editor lazyload clearfix">
+	<p><div id="map" class="col-sm-12 col-md-6" style="margin-right: 50px;  height:400px;"></div></p>
+
+ <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=6d88e38ab7f507ee19cec46443691d95"></script>
+         
+            <script type="text/javascript">
+  
+            // 百度地图API功能
+            var map = new BMap.Map("map");    // 创建Map实例
+            var point = new BMap.Point(113.323793,23.133031);   //坐标拾取网址：http://api.map.baidu.com/lbsapi/getpoint/index.html
+        
+            var marker = new BMap.Marker(point);  // 创建标注
+            var mapStyle = {style:"normal"};
+            map.setMapStyle(mapStyle);
+  
+            var top_left_control = new BMap.ScaleControl({anchor: BMAP_ANCHOR_TOP_LEFT});// 左上角，添加比例尺
+            var top_left_navigation = new BMap.NavigationControl();  //左上角，添加默认缩放平移控件
+        
+            marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+            map.centerAndZoom(point, 12);  // 初始化地图,设置中心点坐标和地图级别
+            map.addOverlay(marker);               // 将标注添加到地图中
+            map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放
+            map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+            map.setCurrentCity("广州");          // 设置地图显示的城市 此项是必须设置的
+          
+            window.onresize = function(){
+        
+                map.centerAndZoom(point, 15);  // 重置窗口的时候 重新获取中心点坐标的位置
+        
+            }
+  
+          map.addControl(top_left_control);
+          map.addControl(top_left_navigation);
+          /*map.addControl(top_right_navigation);  */
+
+        </script>
+				<!-- <p><img data-original="{$confug2.store_logo}" alt="{$config2.company_name}" width="287" height="332" border="0" vspace="0" title="1525491814313564.jpg" style="white-space: normal; float: left; margin-right: 50px; width: 287px; height: 332px;"/></p>
+				 -->
+
+				 <p><img src="{$config2.store_logo}" class="col-md-6" style="display:block;"></p>
+
+			<!-- 	<p><span style="font-size: 20px;"><strong>{$config2.company_name}</strong></span></p> -->
+				<p><span style="font-size: 20px;"><strong><br/></strong></span></p><p><span style="font-size: 18px;">地址：{$place[$config2['province']]}{$place[$config2['city']]}{$place[$config2['district']]}{$config2['address']}</span></p><p><span style="font-size: 18px;">座机：{$config2.phone}&nbsp;</span></p><p><span style="font-size: 18px;">电话{$config2.mobile}</span></p><p><span style="font-size: 18px;">QQ客服:{$config2.qq}</span></p><p><span style="font-size: 18px;">邮箱：{$config2.email}</span></p><h4><br/></h4>
+			</div>
+		</div>
+	</div>
+</section>
+</block>
+
+<include file="Public/footer" />
+</body>
+</html>

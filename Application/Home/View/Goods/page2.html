@@ -1,0 +1,66 @@
+<extend name="Public:base-content" />
+<block name="webtitle"><title>{$goods.goods_name}-{$nav_n.name}-{$config2.store_title}</title></block>
+
+<block name="content2">
+        <main class="news_list_detail_met_16_1 met-shownews animsition     left">
+  <div class="container">
+    <div class="row">
+                <div class="col-md-9 met-shownews-body" m-id='20'>
+                <div class="row">
+                              <section class="details-title border-bottom1">
+            <h1 class='m-t-10 m-b-5'>{$goods[goods_name]}</h1>
+            <div class="info font-weight-300">
+              <span>{$goods.publish_time|date="y-m-d  h:i:s",###}</span>
+              <span style="padding:0px 20px;"> 当前位置：<i>您当前的位置:</i><a href="/">首页</a> > <a href="{:U('goods/index',array(catid=>$goods['cat_id']))}">{$nav_n.name}</a></span>
+                                                  <span>
+                    <i class="icon wb-eye m-r-5" aria-hidden="true"></i>
+                    {$goods.click}                 </span>
+                                        </div>
+          </section>
+          <section class="met-editor clearfix">
+           
+            
+         <img src="{$goods.original_img}" style="text-align:center;">
+          {$goods['goods_remark']|htmlspecialchars_decode}
+          <div style="height:800ox;">{$goods['goods_content']|htmlspecialchars_decode}</div>
+          </section>
+                                                                     
+      <div class='met-page p-y-30 border-top1'>
+    <div class="container p-t-30 ">
+    <ul class="pagination block blocks-2"'>
+
+<if condition="$prev eq ''">
+     <li class='page-item m-b-0 disable'>
+            <a href='javascript:;' title="" class='page-link text-truncate'>
+                上一页                <span aria-hidden="true" class='hidden-xs-down'>暂无</span>
+            </a>
+        </li>
+    <else/>
+
+        <li class='page-item m-b-0 disable'>
+            <a href='{:U(''.CONTROLLER_NAME.'/page',array('id'=>$prev['article_id']))}' title="" class='page-link text-truncate'>
+                上一页                <span aria-hidden="true" class='hidden-xs-down'>{$prev.title}</span>
+            </a>
+        </li>
+    </if>
+
+      <if condition="$next eq ''">
+     <li class='page-item m-b-0 disable'>
+            <a href='javascript:;' title="" class='page-link text-truncate'>
+                下一页                <span aria-hidden="true" class='hidden-xs-down'>暂无</span>
+            </a>
+        </li>
+    <else/>
+    
+        <li class='page-item m-b-0 disable'>
+            <a href='{:U(''.CONTROLLER_NAME.'/page',array('id'=>$next['article_id']))}' title="" class='page-link text-truncate'>
+               下一页                <span aria-hidden="true" class='hidden-xs-down'>{$next.title}</span>
+            </a>
+        </li>
+    </if>
+    </ul>
+</div>
+</div>
+        </div>
+        </div>
+</block>

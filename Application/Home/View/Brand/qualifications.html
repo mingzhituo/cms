@@ -1,0 +1,51 @@
+<extend name="Public:base-listPic" />
+
+<block name="webtitle"><title>{$now.cat_name}-{$config2.store_title}</title></block>
+
+
+<block name="list" >
+<div class="met-img animsition">
+    <div class="container">
+        <div class="row">
+            <ul class="blocks-100 blocks-sm-2 blocks-md-4 blocks-xlg-4  met-page-ajax" data-scale='0.76969696969697'>
+
+<foreach name="list" item="v">
+<li class="widget ">
+  <div class="cover overlay overlay-hover">
+    <img class="cover-image overlay-scale" data-original="{$v.ad_code}" alt="{$v.ad_title}" style='height:300px;'/>
+    <div class="overlay-panel overlay-fade overlay-background overlay-background-fixed text-center vertical-align">
+      <div class="vertical-align-middle">
+        <div class="widget-time widget-divider">
+          <span>{$v.publish_time|date="y-m-d",###}</span>
+        </div>
+        <h3 class="widget-title margin-bottom-20">{$v.ad_name}</h3>
+
+        <a href='#' title='{$v.ad_title}' class="btn btn-outline btn-inverse" target='_self'>详情</a>
+
+      </div>
+    </div>
+  </div>
+</li>
+ </foreach>
+
+            </ul>
+
+<div >
+        <div class='met_pager'>
+          {$page}
+    <!--   <span class='PreSpan'>上一页</span><a href=../case/ class='Ahover'>1</a><a href=img.php?lang=cn&class1=33&page=2 >2</a><a href=img.php?lang=cn&class1=33&page=3 >3</a><a href=img.php?lang=cn&class1=33&page=4 >4</a><a href=img.php?lang=cn&class1=33&page=5 >5</a><a href=img.php?lang=cn&class1=33&page=2 class='NextA'>下一页</a>
+          <span class='PageText'>转至第</span>
+          <input type='text' id='metPageT' data-pageurl='img.php?lang=cn&class1=33&page=||5' value='1' />
+          <input type='button' id='metPageB' value='页' /> -->
+        </div>
+    </div>
+
+
+<!-- <div class="met-page-ajax-body ">
+  <button type="button" class="btn btn-default btn-block btn-squared ladda-button" id="met-page-btn" data-style="slide-left" data-url="http://www.acknetworks.com/case/?lang=cn&class1=33&class2=0&class3=0&mbpagelist=1" data-page="1"><i class="icon wb-chevron-down margin-right-5" aria-hidden="true"></i>加载更多</button>
+</div> -->
+
+    </div>
+  </div>
+</div>
+</block>
