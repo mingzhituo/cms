@@ -53,12 +53,9 @@
                     <?php if(is_array($list)): foreach($list as $key=>$vo): ?><tr class="text-c">
                         <td class="va-m"><?php echo ($vo["name"]); ?></td>
                         <td class="va-m"><?php echo ($vo["url"]); ?></td>
-                        
                         <td class="va-m">
 							<img width="20" height="20" src="/Public/images/<?php if($vo[is_show] == 1): ?>yes.png<?php else: ?>cancel.png<?php endif; ?>" onclick="changeTableVal('navigation','id','<?php echo ($vo["id"]); ?>','is_show',this)"/>	                     
                         </td>
-
-
                         <td class="va-m">
 							<img width="20" height="20" src="/Public/images/<?php if($vo[is_new] == 1): ?>yes.png<?php else: ?>cancel.png<?php endif; ?>" onclick="changeTableVal('navigation','id','<?php echo ($vo["id"]); ?>','is_new',this)"/>	                     
                         </td>                        

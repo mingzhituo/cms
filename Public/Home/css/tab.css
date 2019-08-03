@@ -1,0 +1,31 @@
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+a{color:#333;text-decoration:none;}
+a:hover{color:#66C2A2;}
+/* demo */
+.demo{width: 96%;overflow: hidden; margin:2% auto;position:relative;}
+.demo h2{height:44px;color:#66C2A2;margin-top:20px;}
+.demo dl dt{color:#ff6600;margin-top:30px;font-weight:800;}
+.demo dl dt,.demo dl dd{line-height:22px;}
+/* tabbtn */.ico-img {
+display: flex;
+    flex-wrap: wrap;
+    align-items: center; border-bottom: 2px #ebebeb solid; border-top: 2px #ebebeb solid;	
+}
+.tabbtn{
+	height:50px;
+	}
+.tabbtn li{float:left;position:relative;margin:0 0 0 -1px;}
+.tabbtn li a{display:block;float:left;height:50px;line-height:50px;font-size: 18px; overflow:hidden;width:108px;text-align:center;cursor:pointer;}
+.tabbtn li.current{}
+.tabbtn li.current a{    background: #66c2a2;
+    color: #fff;}
+/* tabcon */
+.tabcon .subbox{position:absolute;/*必要元素*/left:0;top:0;}
+.tabcon .sublist{padding:5px 10px;}
+/* leftcon */
+#leftcon .subbox{width:9999em;}
+#leftcon .subbox .sublist{float:left;width:664px;}
+/* sublist */
+.sublist{padding:10px;}
+.sublist li{height:40px;line-height:40px;}

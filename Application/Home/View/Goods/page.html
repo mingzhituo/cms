@@ -1,2 +1,316 @@
-<extend name="Public:base-picContent" />
-<block name="webtitle"><title>{$goods.goods_name}-{$nav_n.name}-{$config2.store_title}</title></block>
+<!DOCTYPE html>
+<html>
+	<head>
+		 <link rel="stylesheet" href="[CSS]/style8.css">
+		<script type="text/javascript" src="[JS]/superslide.js"></script>
+		<include file="Public/header" />
+		<style type="text/css">
+			.table2 {
+				width: 100%;
+			}
+			.fu_right {width: 926px;}
+			.yxxz_left2 {width: 886px;}
+		</style>
+		<div class="auto nei">
+			<div class="fu">
+				<img src="[IMG]/a_17.png">
+				<a class="fua1" target="_blank" href="http://wpa.qq.com/msgrd?v=1&uin=3180235251&Site=http://www.ashangame.com/&Menu=yes"></a>
+				<a class="fua2" href="javascript:"></a>
+				<a class="fua3" href="javascript:"></a>
+
+
+				<div class="pa border er_wei" style="text-align:center;color:black;">
+					<b>阿闪游戏</b>
+					<br>微信公众号
+
+
+
+					<img style="width:99px;height:99px;" alt="" src="[IMG]/59b8deb699966.jpg">
+
+					<i class="pa bgPng"></i>
+				</div>
+
+			</div>
+
+			<p class="weizhi"> 当前位置：
+				<a href="#">首页</a>&gt;&gt;<a href="#">下载中心</a> </p>
+
+			<div class="fu_right">
+				<div class="yxxz_left">
+					<img class="last_iamg" src="[IMG]/5a950050a2655.png" alt="闪心牌圈">
+					<div class="last_ou last_ou2">
+						<p class="p1">
+							<h1>{$goods.goods_name}</h1>
+						</p>
+						<p class="xin_xi">大小：<span>{$goods.store_count}M</span></p>
+						<p class="xin_xi">版本：<span>{$goods.sales_sum}</span></p>
+						<p class="xin_xi">系统：<span>{$goods.consult}</span></p>
+						<!-- <p class="xin_xi">类型：<span>{$goods.goods_name}</span></p> 
+						<p class="xin_xi">语言：<span>{$goods.goods_name}</span></p>-->
+						<p class="xin_xi">时间：<span>{$goods.on_time|date="Y-m-s h:i",###}</span></p>
+						<br class="qc" />
+						<div class="yxxian"></div>
+					</div>
+					<br class="qc">
+
+					<p class="pf">评分：{$goods.click_count}</p>
+				
+					<div class="xz_p xz_p2">
+						<a href="{$goods.send_time}" class="xiazai-a">安卓下载</a>
+						<a href="{$goods.goods_name}" class="d_k"><img src="[IMG]/yx_04.png"></a>
+						<div class="er_xia"><img src="{$url1}">
+							<p>亲，微信扫码后，请务必在浏览器打开下载！</p>
+						</div>
+					</div>
+			
+					<div class="xz_p"> 
+							<a href="{$goods.sale_address}" class="xiazai-a ys">苹果下载</a>
+						<a href="{$goods.sale_address}" class="d_k">
+							<img src="[IMG]/yx_07.png">
+						</a>
+						<div class="er_xia"><img src="{$url2}">
+							<p>亲，微信扫码后，请务必在浏览器打开下载！</p>
+						</div>
+					</div>
+
+				</div>
+
+
+
+				<br class="qc">
+
+
+
+				<div class="yxxz_left yxxz_left2">
+					<p class="youxi">
+						<span>游戏截图</span>
+						<br class="qc">
+					</p>
+
+					<div class="gun_dong">
+						<div class="zou">
+							<ul class="waiul">
+							<foreach name="goods['images']" item="v">	
+								<li> <img src="{$v.image_url}" ></li>
+							</foreach>
+
+								<br class="qc">
+							</ul>
+							<a href="javascript:" class="prev"></a>
+							<a href="javascript:" class="next"></a>
+						</div>
+
+
+
+						<script type="text/javascript">
+							jQuery(".gun_dong").slide({
+								titCell: ".hd ul",
+								mainCell: ".zou ul",
+								autoPage: true,
+								effect: "left",
+								autoPlay: false,
+								vis: 4,
+								delayTime: 1000
+							});
+						</script>
+					</div>
+				</div>
+
+				<div class="yxxz_left yxxz_left2">
+					<p class="youxi">
+						<span>游戏简介</span>
+						<br class="qc">
+					</p>
+					<div class="download-index">
+						{$goods.goods_content|htmlspecialchars_decode}
+					</div>
+
+
+				</div>
+
+				<div class="yxxz_left yxxz_left2">
+					<p class="youxi">
+						<span>欢迎你评论</span>
+						<br class="qc">
+					</p>
+					<!-- 评论表单 -->
+				<include file="Public/pl" />
+				  </block>	
+
+
+				</div>
+
+
+
+		<include file="Public/conright" />
+	<include file="Public/footer" />
+	 <!-- 评论相关js -->
+	<script type="text/javascript" src="[JS]/jquery.flexText.js"></script>
+	<!--textarea高度自适应-->
+	<script type="text/javascript">
+	  $(function() {
+	    $('.content').flexText();
+	  });
+	</script>
+	<!--textarea限制字数-->
+	<script type="text/javascript">
+	  function keyUP(t) {
+	    var len = $(t).val().length;
+	    if (len >129) {
+	      $(t).val($(t).val().substring(0, 120));
+	    }
+	  }
+	</script>
+	<!--点击评论创建评论条-->
+	<script type="text/javascript">
+	  $('.commentAll').on('click', '.plBtn', function() {
+	    var myDate = new Date();
+	    //获取当前年
+	    var year = myDate.getFullYear();
+	    //获取当前月
+	    var month = myDate.getMonth() + 1;
+	    //获取当前日
+	    var date = myDate.getDate();
+	    var h = myDate.getHours(); //获取当前小时数(0-23)
+	    var m = myDate.getMinutes(); //获取当前分钟数(0-59)
+	    if (m < 10) m = '0' + m;
+	    var s = myDate.getSeconds();
+	    if (s < 10) s = '0' + s;
+	    var now = year + '-' + month + "-" + date + " " + h + ':' + m + ":" + s;
+	    //获取输入内容
+	    var oSize = $(this).siblings('.flex-text-wrap').find('.comment-input').val();
+	    console.log(oSize);
+	    //动态创建评论模块
+	    oHtml =
+	      '<div class="comment-show-con clearfix"><div class="comment-show-con-img pull-left"><img src="images/header-img-comment_03.png" alt=""></div> <div class="comment-show-con-list pull-left clearfix"><div class="pl-text clearfix"> <a href="#" class="comment-size-name">David Beckham : </a> <span class="my-pl-con">&nbsp;' +
+	      oSize + '</span> </div> <div class="date-dz"> <span class="date-dz-left pull-left comment-time">' + now +
+	      '</span> <div class="date-dz-right pull-right comment-pl-block"><a href="javascript:;" class="removeBlock">删除</a> <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a> <span class="pull-left date-dz-line">|</span> <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num">666</i>)</a> </div> </div><div class="hf-list-con"></div></div> </div>';
+	    if (oSize.replace(/(^\s*)|(\s*$)/g, "") != '') {
+	      $(this).parents('.reviewArea ').siblings('.comment-show').prepend(oHtml);
+	      $(this).siblings('.flex-text-wrap').find('.comment-input').prop('value', '').siblings('pre').find('span').text(
+	        '');
+	    }
+	  });
+	</script>
+	<!--点击回复动态创建回复块-->
+	<script type="text/javascript">
+	  $('.comment-show').on('click', '.pl-hf', function() {
+	    //获取回复人的名字
+	    var fhName = $(this).parents('.date-dz-right').parents('.date-dz').siblings('.pl-text').find('.comment-size-name')
+	      .html();
+	    //回复@
+	    var fhN = '回复@' + fhName;
+	    //var oInput = $(this).parents('.date-dz-right').parents('.date-dz').siblings('.hf-con');
+	    var fhHtml =
+	      '<div class="hf-con pull-left"> <textarea class="content comment-input hf-input" placeholder="" onkeyup="keyUP(this)"></textarea> <a href="javascript:;" class="hf-pl">评论</a></div>';
+	    //显示回复
+	    if ($(this).is('.hf-con-block')) {
+	      $(this).parents('.date-dz-right').parents('.date-dz').append(fhHtml);
+	      $(this).removeClass('hf-con-block');
+	      $('.content').flexText();
+	      $(this).parents('.date-dz-right').siblings('.hf-con').find('.pre').css('padding', '6px 15px');
+	      //console.log($(this).parents('.date-dz-right').siblings('.hf-con').find('.pre'))
+	      //input框自动聚焦
+	      $(this).parents('.date-dz-right').siblings('.hf-con').find('.hf-input').val('').focus().val(fhN);
+	    } else {
+	      $(this).addClass('hf-con-block');
+	      $(this).parents('.date-dz-right').siblings('.hf-con').remove();
+	    }
+	  });
+	</script>
+	<!--评论回复块创建-->
+	<script type="text/javascript">
+	  $('.comment-show').on('click', '.hf-pl', function() {
+	    var oThis = $(this);
+	    var myDate = new Date();
+	    //获取当前年
+	    var year = myDate.getFullYear();
+	    //获取当前月
+	    var month = myDate.getMonth() + 1;
+	    //获取当前日
+	    var date = myDate.getDate();
+	    var h = myDate.getHours(); //获取当前小时数(0-23)
+	    var m = myDate.getMinutes(); //获取当前分钟数(0-59)
+	    if (m < 10) m = '0' + m;
+	    var s = myDate.getSeconds();
+	    if (s < 10) s = '0' + s;
+	    var now = year + '-' + month + "-" + date + " " + h + ':' + m + ":" + s;
+	    //获取输入内容
+	    var oHfVal = $(this).siblings('.flex-text-wrap').find('.hf-input').val();
+	    console.log(oHfVal)
+	    var oHfName = $(this).parents('.hf-con').parents('.date-dz').siblings('.pl-text').find('.comment-size-name').html();
+	    var oAllVal = '回复@' + oHfName;
+	    if (oHfVal.replace(/^ +| +$/g, '') == '' || oHfVal == oAllVal) {
+	
+	    } else {
+	      $.getJSON("json/pl.json", function(data) {
+	        var oAt = '';
+	        var oHf = '';
+	        $.each(data, function(n, v) {
+	          delete v.hfContent;
+	          delete v.atName;
+	          var arr;
+	          var ohfNameArr;
+	          if (oHfVal.indexOf("@") == -1) {
+	            data['atName'] = '';
+	            data['hfContent'] = oHfVal;
+	          } else {
+	            arr = oHfVal.split(':');
+	            ohfNameArr = arr[0].split('@');
+	            data['hfContent'] = arr[1];
+	            data['atName'] = ohfNameArr[1];
+	          }
+	
+	          if (data.atName == '') {
+	            oAt = data.hfContent;
+	          } else {
+	            oAt = '回复<a href="#" class="atName">@' + data.atName + '</a> : ' + data.hfContent;
+	          }
+	          oHf = data.hfName;
+	        });
+	
+	        var oHtml =
+	          '<div class="all-pl-con"><div class="pl-text hfpl-text clearfix"><a href="#" class="comment-size-name">我的名字 : </a><span class="my-pl-con">' +
+	          oAt + '</span></div><div class="date-dz"> <span class="date-dz-left pull-left comment-time">' + now +
+	          '</span> <div class="date-dz-right pull-right comment-pl-block"> <a href="javascript:;" class="removeBlock">删除</a> <a href="javascript:;" class="date-dz-pl pl-hf hf-con-block pull-left">回复</a> <span class="pull-left date-dz-line">|</span> <a href="javascript:;" class="date-dz-z pull-left"><i class="date-dz-z-click-red"></i>赞 (<i class="z-num">666</i>)</a> </div> </div></div>';
+	        oThis.parents('.hf-con').parents('.comment-show-con-list').find('.hf-list-con').css('display', 'block').prepend(
+	            oHtml) && oThis.parents('.hf-con').siblings('.date-dz-right').find('.pl-hf').addClass('hf-con-block') &&
+	          oThis.parents('.hf-con').remove();
+	      });
+	    }
+	  });
+	</script>
+	<!--删除评论块-->
+	<script type="text/javascript">
+	  $('.commentAll').on('click', '.removeBlock', function() {
+	    var oT = $(this).parents('.date-dz-right').parents('.date-dz').parents('.all-pl-con');
+	    if (oT.siblings('.all-pl-con').length >= 1) {
+	      oT.remove();
+	    } else {
+	      $(this).parents('.date-dz-right').parents('.date-dz').parents('.all-pl-con').parents('.hf-list-con').css(
+	        'display', 'none')
+	      oT.remove();
+	    }
+	    $(this).parents('.date-dz-right').parents('.date-dz').parents('.comment-show-con-list').parents(
+	      '.comment-show-con').remove();
+	
+	  })
+	</script>
+	<!--点赞-->
+	<script type="text/javascript">
+	  $('.comment-show').on('click', '.date-dz-z', function() {
+	    var zNum = $(this).find('.z-num').html();
+	    if ($(this).is('.date-dz-z-click')) {
+	      zNum--;
+	      $(this).removeClass('date-dz-z-click red');
+	      $(this).find('.z-num').html(zNum);
+	      $(this).find('.date-dz-z-click-red').removeClass('red');
+	    } else {
+	      zNum++;
+	      $(this).addClass('date-dz-z-click');
+	      $(this).find('.z-num').html(zNum);
+	      $(this).find('.date-dz-z-click-red').addClass('red');
+	    }
+	  })
+	</script>
+</html>

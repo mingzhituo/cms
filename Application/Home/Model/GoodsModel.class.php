@@ -42,7 +42,7 @@ class GoodsModel extends Model {
     public function get_detail($id)
     {
     	$goods = $this->get_one($id);
-    	$goodsimgs = M('goods_images')->where('goods_id='.$id)->limit(4)->select();
+    	$goodsimgs = M('goods_images')->where('goods_id='.$id)->limit(20)->select();
     	$attr = M('goods_attr')->where('goods_id='.$id)->select();
     	$attr_name = M('goods_attribute')->where('type_id='.$goods['goods_type'])->getField('attr_id,attr_name');
         foreach ($attr as $key => $value) {

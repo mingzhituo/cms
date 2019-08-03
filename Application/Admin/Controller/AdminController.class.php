@@ -34,13 +34,13 @@ class AdminController extends BaseController {
 
 		if (IS_POST) {
 
-		/*	$captcha = check_verify(I('post.captcha'),1);
+			$captcha = check_verify(I('post.captcha'),1);
 
 			if (!$captcha) {
 
 				$this->error('验证码错误','',1);exit;
 
-			}*/
+			}
 
 			$data = I('post.');
 

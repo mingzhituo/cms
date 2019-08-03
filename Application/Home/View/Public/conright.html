@@ -1,0 +1,222 @@
+   <!-- 相关推荐 -->
+        <div class="nei_left tuijian">
+          <p class="youxi youxi3">
+            <span>相关推荐</span>
+            <br class="qc">
+            <ul class="nws nws2">
+                <foreach name="news2" item="v">
+              <a href="{:U('News/page',array('id'=>$v['article_id'],'catid'=>$v['cat_id']))}">
+                <li><span>热点推荐</span>{$v.title}</li>
+              </a>
+                </foreach>
+            </ul>
+          </p>
+        </div>
+        <!-- 评论表单 -->
+        <div class="nei_left tuijian">
+          <p class="youxi" style=" margin-left: 3.2%;">
+            <span>欢迎你评论</span>
+            <br class="qc">
+          </p>
+          <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/jquery.validate.min.js"></script>
+          <script src="https://static.runoob.com/assets/jquery-validation-1.14.0/dist/localization/messages_zh.js"></script>
+          <script>
+
+             function refresh () {
+      var src = '{:U('Home/Base/verify')}'+'?'+Math.random()*10000000;
+      $('#img').attr('src',src);
+    }
+        /*    $.validator.setDefaults({
+    submitHandler: function() {
+      alert("提交事件!");
+    }
+});*/
+
+  /*  function(result){
+        alert(result);
+        if(result==1){
+        $("#phonehint").html("<span style='color: rgb(255, 0, 0);'>*验证码正确！</span>");
+        }else{
+        $("#phonehint").html("<span style='color: rgb(0, 255, 0);'>*验证码错误</span>");
+        }
+*/  
+
+    
+/*    $(document).ready(function(){
+  $("#sub").click(function(){
+  $.ajax({
+    data: {captcha:$("#captcha").val()},
+    url:"{:U('Index/changeTableVal2')}",
+
+    async:flase,
+    success:function(data){
+      alert("1223");
+  
+    }
+
+
+    }
+
+
+    );
+  });
+});*/
+
+  
+ function majax(){  
+  $.ajax({  
+        type : "POST",  //提交方式  
+        url : "{:U('Index/changeTableVal2')}",//路径
+          dataType: "json",  
+        data : {captcha:$("#captcha").val()},//数据，这里使用的是Json格式进行传输  
+        success : function(result) {//返回数据根据结果进行相应的处理  
+            if ( result.success ) { 
+                 alert(result);       
+                   /* $("#tipMsg").text("删除数据成功");  
+                tree.deleteItem("${org.id}", true);  */
+            } else {  
+               alert(result); 
+              /*  $("#tipMsg").text("删除数据失败");  */
+            }  
+        }  
+         });}
+
+
+
+$().ready(function() {
+
+
+
+// 在键盘按下并释放及提交后验证提交表单
+  $("#signupForm").validate({
+      rules: {
+        name: {
+          required: true,
+          minlength: 2
+        },
+      www:{
+       minlength: 5 
+      },
+        email: {
+          email: true
+        },
+        message: {
+          required: true
+        }
+      },
+      messages: {
+      qname: {
+          required: "亲，请输入用户名哦！",
+          minlength: "用户名必需由两个字母组成"
+        },
+      www: {
+          minlength: "请输入合法网址"        
+      },
+        email: "请输入一个正确的邮箱",
+      }
+  });
+});
+</script>
+          <form class="cmxform" id="signupForm" method="post" action="{:U('Index/changeTableVal2')}" style=" width: 92%; margin: auto;">
+            <input type="hidden" name="table" value="cus_msg">
+            <p>
+              <label for="username">名称</label>
+              <input id="username" placeholder="请输入你的名称" required="required" name="name" type="text">(必填)
+            </p>
+            <p>
+              <label for="email">邮箱</label>
+              <input id="email" placeholder="请输入你的邮箱" name="email" type="email">
+            </p>
+            <p>
+              <label for="www">网址</label>
+              <input id="www" placeholder="请输入你的网址" name="www" type="text">
+            </p>
+            <p>
+              <textarea rows="5" cols="20" name="message" placeholder="留言不得为空"  required="required"></textarea>
+            </p>
+            <p><label for="www">验证码</label>
+<!--               <img src="{:U('Admin/Admin/captcha')}" >  -->
+                 <input class="input-text size-L" type="text" name="captcha" placeholder="验证码" onblur="if(this.value==''){this.value='验证码:'}" onclick="if(this.value=='验证码:'){this.value='';}" value="验证码:" style="width:150px;">
+            <img src="{:U('Base/verify')}" id="img" onclick="this.src=this.src+'?'+Math.random();"> 
+            <a id="kanbuq" href="javascript:;" onclick="refresh()">看不清，换一张</a>
+            </p>
+            <p>
+              <input class="button" type="submit" onclick="majax()"  value="提交评论">
+            </p>
+
+
+          </form>
+        </div>
+
+      </div>
+
+      <div class="fu_left shipin-right">
+        <div class="yxxz_right yxxz_right2" style=" position:relative">
+          <img src="[IMG]/a_20.png" class="ico2">
+          <p class="youxi youxi3">
+            <span>推荐游戏</span>
+            <br class="qc">
+          </p>
+
+          <ul class="left_yx">
+            <foreach name="down2" item="v">
+            <li><img class="le_ft_iamg" src="{$v.original_img}" alt="{$v.goods_name}">
+              <p>{$v.goods_name}<br />
+                <span>大小 {$v.store_count}M</span></p>
+              <div class="oz">
+                <a class="fl bgPng s_3 s_4" href="{:U('Goods-page',array('goodsid'=>$v['goods_id']))}">游戏下载</a>
+              </div>
+
+            </li>
+              </foreach>
+          </ul>
+        </div>
+
+        <div class="yxxz_right yxxz_right2" style="position:relative">
+          <img src="[IMG]/a_20.png" class="ico2">
+          <p class="youxi youxi3">
+            <span>热门文章</span>
+          </p>
+          <br class="qc">
+
+          <ul class="index-news majiang-right">
+            <foreach name="newshot" item="v">
+            <li>
+              <a href="">
+                <img class="" src="{$v.thumb}" alt="">
+                <h4>{$v.title}</h4>
+              <!--   <p>点赞：{$v.click}</p> -->
+                <time>{$v.publish_time|date="Y-m-d H:i",###}</time>
+              </a>
+            </li>
+            </foreach>
+            
+          </ul>
+        </div>
+
+        <div class="yxxz_right yxxz_right2" style="margin-top: 8px; position:relative">
+          <img src="[IMG]/a_20.png" class="ico2" data-bd-imgshare-binded="1">
+          <p class="youxi youxi3">
+            <span>热门视频</span>
+          </p>
+          <br class="qc">
+
+          <ul class="index-news majiang-right">
+            <foreach name="ship" item="v">
+            <li>
+              <a href="#">
+                <video src="{$v.link}" poster="[IMG]/5ad961c494ac3.jpg" controls=""></video>
+                <h4>{$v.title}</h4>
+                <time><span style="margin-right: 14px;">播放</span>{$v.publish_time|date="Y/m月/d日 h:i:s",###}</time>
+              </a>
+            </li>
+            </foreach>
+          </ul>
+        </div>
+
+      </div>
+      <br class="qc">
+    </div>
+    </div>
+
+  

@@ -1,177 +1,240 @@
-<!DOCTYPE HTML>
-<html class="">
-    <head>
+<!DOCTYPE html>
+<html>
+ <head>
+  <link rel="stylesheet" href="[CSS]/jsmodern.min.css">
+  <script src="[JS]/jquery-1.10.2.js"></script>
+  <script src="[JS]/jsmodern.min.js"></script>
+<script>
+        $(function () {
+            //视频
+            jsModern.video(".video");
 
-             <script src="[JS]/product_cn.js"></script>
-        <include file="Public/header" />
+            //监听视频的播放状态
+            var video = document.getElementById("videoShow");
+            // video.oncanplay = function () {
+            //     $(".VideoBtn").show();
+            //     //$("#video").attr("poster","");
+            // }
+            //视频播放事件
+            video.onplay = function () {
+                $("#videoShow").attr("poster", "");
+            };
+
+        })
+    </script>
+   <include file="Public/header" />
+   <style>
+ 	  .video-ul li {width: 46%; margin-right: 3%;}
+ 	  .video-ul li:nth-child(even) { margin-right:0;}
+ 	  div.video {position: relative;}
+ .jsmodern-video {max-height: 240px;}
+       #video {
+           width: 400px;
+           margin: 0 auto;
+           position: relative;
+       }
+ 
+       #video video {
+           width: 100%;
+           height: auto;
+           object-fit: fill;
+       }
+ 
+       .VideoBtn {
+           position: absolute;
+     left: 80%;
+     background-color: #ff6d00;
+     color: #fff;
+           display: block;
+           width: 110px;font-size: 16px; border-radius: 5px;
+           line-height: 40px;text-align: center;
+           margin-left: -35px;
+           margin-top: -41px;
+           z-index:0;
+       }
+ 		.jsmodern-video-panel b.jsmodern-video-play {
+ 			position: absolute;margin: 0;
+ 			width: 110px;
+ 			height: 40px; top: 48px;
+   right: 12px;z-index: 10;
+ 		}
+		.fu_right { width: 926px;}
+   </style>
+    
+
+        <div class="auto nei">
+            <div class="fu">
+                <img src="[IMG]/a_17.png">
+                <a class="fua1" target="_blank" href="tencent://message/?uin={$config2.qq}&Site=uemo&Menu=yes"></a>
+                <a class="fua2" href="javascript:"></a>
+                <a class="fua3" href="javascript:"></a>
 
 
-       <include file="Public/fuye" />
+                <div class="pa border er_wei" style="text-align:center;color:black;">
+                    <b>{$config2.company_name}</b>
+                    <br>微信公众号
 
 
-            <div class="subcolumn_nav_met_21_1_34" m-id='34' m-type='nocontent'>
-                <div class="container">
-                    <div class="row">
-                        <div class="clearfix">
-                            <div class="subcolumn-nav text-xs-left">
-                             <!--    <ul class="subcolumn_nav_met_21_1_34-ul m-b-0 p-y-10 p-x-0 ulstyle">
-                             
-                                 <li>
-                                     <a href="https://mb.mituo.cn/mui618/product/" title="全部" class="active link">全部</a>
-                                 </li>
-                                 <li>
-                                     <a href="https://mb.mituo.cn/mui618/product/product.php?class2=36" title="商标服务" class=' link'>商标服务</a>
-                                 </li>
-                             
-                             </ul> -->
-                            </div>
-                            <div class="subcolumn-nav-location clearfix ulstyle">
-                                <li class="location">
-                                    您的位置： </li>
-                                <li>
-                                    <a href="https://mb.mituo.cn/mui618/" title="网站首页">
-                                        网站首页 </a>
-                                    <i class="fa fa-angle-right"></i>
-                                </li>
-                                <li>
-                                    <a href="https://mb.mituo.cn/mui618/product/" target='_self' title="业务领域">业务领域</a>
-                                    <i class="fa fa-angle-right"></i>
-                                </li>
-                            </div>
-                        </div>
-                    </div>
+
+                    <img style="width:99px;height:99px;" alt="" src="{$weixin[0].ad_code}">
+
+                    <i class="pa bgPng"></i>
                 </div>
+
             </div>
 
-
-            <main class="product_list_page_met_21_2_31 met-product animsition " m-id='31'>
-                <div class="container">
-                    <div class="row clearfix     left">
-                        <div class="col-md-9 met-product-body">
-                            <div class="row">
-                                <ul class="             blocks-xs-2                     blocks-md-2 blocks-lg-4 blocks-xxl-4  met-pager-ajax imagesize cover met-product-list met-grid"
-                                 id="met-grid" data-scale='263x423'>
+            <p class="weizhi"> 当前位置：
+                <a href="/">首页</a>&gt;&gt;<a href="">{$now.cat_name}</a>
+            </p>
 
 
+<div class="fu_right">
+                    <div class="nei_left table1 table2" style="width: 100%;">
+                    <img src="[IMG]/a_45.png" class="ico">
+                    <p class="youxi youxi2" style="
+    margin-top: -10px;
+    width: 91%; 
+    font-size: 16px;
+    padding-top: 0px;
+">
+                        <!-- <a class="more" href="#">更多>></a> -->
+                        <b class="tab tab3">
 
-                                    <foreach name="list" item="v">
-                                    <li class="prd-li" data-plugin="appear" data-animate="slide-bottom50" data-repeat="false">
-                                        <div class="prd-box">
-                                            <a href="{:U('Goods/page',array('goodsid'=>$v['goods_id']))}" title="" class="img-url" target=_self>
-                                                <img class="img-con" data-original="{$v.original_img}" alt="{$v.goods_name}" style="width:100%;" />
-                                            </a>
-                                            <div class="prd-li-title">
-                                                <p>
-                                                    <a href="" title="{$v.goods_name}" target=_self>
-                                                        {$v.goods_name} </a>
-                                                </p>
-                                                <span class="bor-bot"></span>
-                                                <p class="prd-desc"></p>
-                                                <p class='m-b-0 m-t-5 price'></p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    </foreach>
-                                </ul>
-                                <div class='m-t-20 text-xs-center hidden-sm-down' m-type="nosysdata">
-                                    <div class='met_pager'>
-                                        {$page}
-                                <!--         <span class='PreSpan'>上一页</span><a href='https://mb.mituo.cn/mui618/product/product.php?class1=35'
-                                 class='Ahover'>1</a><a href='https://mb.mituo.cn/mui618/product/index.php?class1=35&page=2'>2</a><a href='https://mb.mituo.cn/mui618/product/index.php?class1=35&page=2'
-                                 class='NextA'>下一页</a>
-                                <span class='PageText'>转至第</span>
-                                <input type='text' id='metPageT' data-pageurl='index.php?lang=cn&class1=35&page=||2' value='1' />
-                                <input type='button' id='metPageB' value='页' />
-                                 -->
+                            <a class="zhong" href="javascript:">麻将视频</a>
 
-                                    </div>
-                                </div>
-                                <div class="met_pager met-pager-ajax-link hidden-md-up" data-plugin="appear" data-animate="slide-bottom"
-                                 data-repeat="false" m-type="nosysdata">
-                                    <button type="button" class="btn btn-primary btn-block btn-squared ladda-button" id="met-pager-btn"
-                                     data-plugin="ladda" data-style="slide-left" data-url="" data-page="1">
-                                        <i class="icon wb-chevron-down m-r-5" aria-hidden="true"></i>
-                                    </button>
-                                </div>
+                        </b>
+                    </p>
+                    <br class="qc">
 
-                            </div>
-                        </div>
-
-
-
-                        <div class="col-md-3">
-                       <div class="row">
-                           <aside class="sidebar_met_16_3_78 met-sidebar panel-body m-b-0     " boxmh-h m-id='78' m-type='nocontent'>
-                               <h2 class="sidebar-tile">
-                                   <a href="" tite="业务领域" class="                           active
-                   " target='_self'>业务领域
-                                   </a>
-                               </h2>
-                               <ul class="sidebar-column list-icons panel-group">
-
-                                <foreach name="location" item="v">
-                                   <li>
-                                       <a href="{:U('Goods/index',array(catid=>$v['id']))}" title="商标服务" class=''>{$v.name}<i class="wb-chevron-right-mini pull-xs-right m-r-20 m-t-0 font-size-16"></i></a>
-                                   </li>
-                                </foreach>
-                               </ul>
-
-
-                               <h2 class="sidebar-tile"><span>联系我们</span></h2>
-                  <div class="side-tel met-editor">
-                    <p style="white-space: normal; text-align: center;"><img src="[IMG]/1560239237281878.jpg" title="图片关键词" alt="图片关键词" /></p>
-                    <ul class=" list-paddingleft-2" style="width: 796.094px; white-space: normal;">
-                      <li>
-                        <p><span style="font-size: 14px;">{$config2.company_name}</span></p>
-                      </li>
-                      <li>
-                        <p><span style="font-size: 14px;">联系人：{$cinfig2.contact}</span></p>
-                      </li>
-                   
-                      <li>
-                        <p><span style="font-size: 14px;">座机：{$config2.phone}</span></p>
-                      </li>
-                      <li>
-                        <p><span style="font-size: 14px;">手机：{$config2.mobile}</span></p>
-                      </li>
-                      <li>
-                        <p><span style="font-size: 14px;">邮箱：{$config2.email}</span></p>
-                      </li>
-                      <li>
-                        <p><span style="font-size: 14px;">地址：{$place[$config2['province']]}{$place[$config2['city']]}{$place[$config2['district']]}{$config2['address']}</span></p>
-                        <div><br /></div>
-                      </li>
-                    </ul>
-                  </div>
-                           <!--     <h2 class="sidebar-tile m-t-25"><span></span></h2>
-                           <form class='sidebar-search' method='get' action="https://mb.mituo.cn/mui618/search/search.php">
-                               <input type='hidden' name='lang' value='cn' />
-                               <input type='hidden' name='class1' value='35' />
-                               <div class="form-group">
-                                   <div class="input-search">
-                                       <button type="submit" class="input-search-btn">
-                                           <i class="icon wb-search" aria-hidden="true"></i>
-                                       </button>
-                                       <input type="text" class="form-control" name="searchword" placeholder="search">
-                                   </div>
-                               </div>
-                           </form> -->
-                   
-                   
-                           </aside>
-                       </div>
-                   </div>
-                   
-
-
-                    </div>
+                   <div class="hide di3  show">
+            <ul class="hdlst video-ul">
+              <foreach name="ship" item="v">
+              <li>
+                <div class="video">
+                <section class="jsmodern-video" style="height:277px;">
+					<video src="{$v.link}" poster="[IMG]/5ad961c494ac3.jpg" id="videoShow" width="400" height="277"></video>
+					<section class="jsmodern-video-panel">
+						<b class="jsmodern-video-play"></b>
+						<span class="jsmodern-video-start">00:00</span>
+						<span>/</span>
+						<span class="jsmodern-video-end">03:46</span>
+						<div class="jsmodern-video-linebox">
+							<div class="jsmodern-video-pass"></div>
+							<b class="jsmodern-video-linedot"></b>
+						</div>
+						<b class="jsmodern-video-volume"></b>
+						<div class="jsmodern-video-volumebox">
+							<div class="jsmodern-video-volumeline"></div>
+							<b class="jsmodern-video-volumedot"></b>
+						</div>
+						<b class="jsmodern-video-fullin"></b>
+					</section>
+				</section>
+                <div class="hdbt"><a href="{:U('News/pic_page',array('id'=>$v['article_id'],'catid'=>$v['cat_id']))}">四川麻将视频教程</a></div>
+                <div class="hdsj">播放次数：17</div> 
+                <span class="VideoBtn">播放/暂停</span>
                 </div>
-            </main>
+              </li>
+            </foreach>
+
+            <!-- <li>
+                <div id="video">
+                <video src="http://www.songfeizh.com/Public/Home/img/wzhq.mp4" poster="img/5ad961c494ac3.jpg" id="videoShow"></video>
+                <div class="hdbt"><a href="majiangshipin-01.html">四川麻将视频教程</a></div>
+                <div class="hdsj">播放次数：17</div> 
+                <span class="VideoBtn">立即播放</span>
+                </div>
+              </li>
+ -->
+            <!--   <li>
+                <video src="http://www.songfeizh.com/Public/Home/img/wzhq.mp4" poster="img/5ad961c494ac3.jpg" controls=""></video>
+                <div class="hdbt"><a href="majiangshipin-01.html">四川麻将视频教程</a></div>
+                <div class="hdsj">播放次数：17</div> 
+              </li>
+              <li>
+                <video src="http://www.songfeizh.com/Public/Home/img/wzhq.mp4" poster="img/5ad961c494ac3.jpg" controls=""></video>
+                <div class="hdbt"><a href="majiangshipin-01.html">四川麻将视频教程</a></div>
+                <div class="hdsj">播放次数：17</div> 
+              </li>
+              <li>
+                <video src="http://www.songfeizh.com/Public/Home/img/wzhq.mp4" poster="img/5ad961c494ac3.jpg" controls=""></video>
+                <div class="hdbt"><a href="majiangshipin-01.html">四川麻将视频教程</a></div>
+                <div class="hdsj">播放次数：17</div> 
+              </li> -->
+
+            </ul>
+          </div>
+
+                        <ul class="page-ul">
+                            {$page}
+                           <!--  <li>上一页</li>                            
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li class="active"><a href="#">4</a></li>
+                            <li>下一页</li>
+                            <li>最后一页</li> -->
+                        </ul>
+                </div>      
+
+                </div>
+
+<include file="Public/con_right2" />
+            </div>  
+            
+                  
+
+<!-- 
+            <div class="fu_left">
+                <div class="yxxz_right yxxz_right2" style="position:relative">
+                    <img src="[IMG]/a_20.png" class="ico2">
+                    <p class="youxi youxi3">
+                        <span>热门文章</span>
+                    </p>
+                    <br class="qc">
+
+                    <ul class="index-news majiang-right">
+                        <foreach name="list" item="v">
+                        <li>
+                            <a href="">
+                                <img class="" src="{$v.thumb}" alt="">
+                                <h4>{$v.title}</h4>
+                                <time>06/27</time>
+                            </a>
+                        </li>
+                    </foreach>
+                    </ul>
+                </div>
+
+                <div class="yxxz_right yxxz_right2" style="position:relative">
+                    <img src="[IMG]/a_20.png" class="ico2">
+                    <p class="youxi youxi3">
+                        <span>游戏下载</span>
+                        <br class="qc">
+                    </p>
+
+                    <ul class="left_yx">
+                        <foreach name="down" item="v" >
+                        <li><img class="le_ft_iamg" src="[IMG]/5ad1a8e5ab439.png" alt="阿闪打拱">
+                            <p>{$v.file_name}<br />
+                                <span>{$v.cat_name}</span></p>
+                            <div class="oz">
+                                <a class="fl bgPng s_3 s_4" onclick=disp_confirm()>游戏下载</a>
+                            </div>
+
+                        </li>
+                        </foreach>
+                    </ul>
+                </div>
+
+            </div>
+     -->
+       <!--         <br class="qc"> </div>
+        </div>
+ -->  
+
+     <include file="Public/footer" />
 
 
-    <include file="Public/footer" />
-
-             <script src="[JS]/product_cn.js"></script>
-        </body>
 
 </html>

@@ -50,7 +50,7 @@ class ArticleController extends BaseController {
 
         $message = M('cus_msg');
 
-        $list = $message->where('1=1')->order('id asc')->page($p.','.$pageNum)->select();
+        $list = $message->where('1=1')->order('id desc')->page($p.','.$pageNum)->select();
         //dump($list);die;
 
         $this->assign('list',$list);
@@ -86,6 +86,70 @@ class ArticleController extends BaseController {
         $this->assign('msg',$result);
         $this->display('message');
     }
+
+    //删除留言
+    public function discard() {
+
+           $sstr = $_POST[str];//注意接收到的不是一个字符串！而是关联数组array(1) {["str"] => string(3) "2,1"},所以两种方式取值，1关联索引 2循环数组 取$v
+         /* foreach($str as $k => $v){
+            $sstr = $v;
+          }*/
+           $obj = M('cus_msg'); //实例化User对象,接着做批量删除
+       
+       /*  一定要注意数据格式 ，批量删除有好几种写法，用模型CURD的delete方法(返回结果条数)可以批量删除；也可以用in方法判断
+        */
+          $res=$obj->delete($sstr); 
+        //dump($res);die;
+       //$res=$obj->where(array(id=>array('in',$sstr)))->delete();
+   
+
+       //不为空或0就是成功了
+          if (!empty($res)) {
+          $this->ajaxReturn(array('state'=>1,'message'=>'删除成功！'));
+            }else{
+          $this->ajaxReturn(array('state'=>0,'message'=>'删除未成功！'));
+            }
+
+       
+          
+
+
+        //dump($str);die;
+        // $str=explode('&',$str);
+        //dump($str);die;
+         /*  if ($str !=="") {
+        $ids = explode ('&', $str);
+
+                    }else{
+            echo "kong";
+                    }*/
+         
+          //$deleteArr = I('post.data');
+         // $ids=
+        
+        /*  for($i=0;$i<count($deleteArr);$i++) {
+            $contact->delete($deleteArr[$i]['value']);
+          }
+          $this->ajaxReturn(array('message'=>'删除成功！'));*/
+        }
+    //批量删除留言
+    public function pdel()
+        {
+
+            $article = D('cus_msg');
+            $ids = I('value');
+            dump($ids);die;
+            $ids = implode(',', $ids);
+            if ($ids) {
+                if ($article->delete($ids)) {
+                    $this->success('批量删除文章成功！', U('lst'));
+                } else {
+                    $this->error('批量删除文章失败！');
+                }
+            } else {
+                $this->error('未选中任何数据！');
+            }
+        }
 
     public function messageHandle()
 

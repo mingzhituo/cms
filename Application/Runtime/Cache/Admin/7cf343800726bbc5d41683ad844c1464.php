@@ -9,7 +9,7 @@
                 <th>可选值列表</th>
                 
                 <th>排序</th>
-                <th>操作</th> 
+                <th>操作22</th> 
             </tr>
         </thead>
         <tbody>
@@ -25,7 +25,8 @@
                 </td>
                 <td>
                     <a title="编辑" href="javascript:;" onclick="admin_edit('规格编辑','<?php echo U("Admin/Goods/goodsAttribute/attr_id/".$list['attr_id']);?>','1','800','500')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont btn btn-info radius">&#xe6df;</i></a>
-                    <a title="删除" href="javascript:;" onclick="admin_del('<?php echo U("Admin/Goods/goodsAttributeHandle");?>',this,<?php echo ($vo['attr_id']); ?>)" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont btn btn-danger radius">&#xe6e2;</i></a>
+                    <!-- "admin_del('<?php echo U("Admin/Ad/positionHandle");?>',this,<?php echo ($vo['position_id']); ?>)" -->
+                    <a title="删除" href="javascript:;" onclick="admin_del('<?php echo U("Admin/Goods/goodsAttributeHandle");?>',this,<?php echo ($list['attr_id']); ?>)" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont btn btn-danger radius">&#xe6e2;</i></a>
                 </td>
             </tr><?php endforeach; endif; else: echo "" ;endif; ?>
         </tbody>
@@ -42,4 +43,30 @@
         ajax_get_table('search-form2',cur_page);
     });
           
+</script>
+<script type="text/javascript">
+    /*管理员-删除*/
+function admin_del(url,obj,id){
+    layer.confirm('确认要删除吗？',function(index){
+
+        $.ajax({
+            type: 'POST',
+            url: url,
+            dataType: 'json',
+            data:{act:'del',attr_id:id},
+            success: function(data){
+                if (data.status==1) {
+                    $(obj).parents("tr").remove();
+                    window.location.reload(true);
+                    layer.msg('已删除!',{icon:1,time:1000});
+                }else{
+                    layer.msg(data.msg,{icon:2,time:1000});
+                }
+            },
+            error:function(data) {
+                console.log(data.msg);
+            },
+        });     
+    });
+}
 </script>

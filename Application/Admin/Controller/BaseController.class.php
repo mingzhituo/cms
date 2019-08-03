@@ -30,7 +30,10 @@ class BaseController extends Controller {
     }
     
 
+
+  
     //检查管理员菜单操作权限
+
     public function check_priv()
     {
         $ctl = CONTROLLER_NAME;

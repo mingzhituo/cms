@@ -1,433 +1,342 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
-<html class="">
-  <head>
-    <link rel="stylesheet" type="text/css" href="/Public/Home/css/news_cn.css">
-   <meta charset="utf-8">
-<meta name="renderer" content="webkit">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,minimal-ui">
-<meta name="format-detection" content="telephone=no">
-<meta header
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+ <head>
+   
+        <meta charset="utf-8" />
+        <title><?php echo ($config2["store_title"]); ?></title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <link rel="stylesheet" href="/Public/Home/css/init.css" />
+        <link rel="stylesheet" href="/Public/Home/css/main.css" />
+        
+        <link rel="stylesheet" href="/Public/Home/css/jsmodern.min.css">
+        <link rel="stylesheet" href="/Public/Home/css/comment.css">
+        <link rel="stylesheet" type="text/css" href="/Public/Home/css/tab.css"/>
+        <script type="text/javascript" src="/Public/Home/js/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="/Public/Home/js/jquery.jslides.js"></script>
+        <script type="text/javascript" src="/Public/Home/js/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="/Public/Home/js/jquery.touchslider.js"></script>
+				<script type="text/javascript" src="/Public/Home/js/superslide.js"></script>
+      
+    <!--移动代码适配开始-->
+        <script type="text/javascript">
+            var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito",
+                "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
 
+            var browser = navigator.userAgent.toLowerCase();
 
-<meta name="generator" content="" data-variable=""
-data-user_name="">
+            var isMobile = false;
 
-<link rel="stylesheet" type="text/css" href="/Public/Home/css/basic.css">
-<link rel="stylesheet" type="text/css" href="/Public/Home/css/index_cn.css">
-<link rel="stylesheet" type="text/css" href="/Public/Home/css/news_cn.css">
-<link rel="stylesheet" type="text/css" href="/Public/Home/css/shownews_cn.css">
-<link rel="stylesheet" type="text/css" href="/Public/Home/css/show_cn.css">
-<link rel="stylesheet" type="text/css" href="/Public/Home/css/product_cn.css">
-<link href="https://cdn.bootcss.com/font-awesome/5.10.0-11/css/all.css" rel="stylesheet">
-<style>
-body{
-    background-color:#ffffff !important;font-family: !important;}
-</style>
-        <!-- https://mb.mituo.cn/mui618/|cn|cn|mui618|10001|10001|0 [if lte IE 9]>
-<script src="/Public/Home/js/lteie9.js"></script>
-<![endif]-->
-<script src="/Public/Home/js/met_temdemo.js"></script>
-</head>
-    <!--[if lte IE 8]>
-<div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
-    <button type="button" class="close" aria-label="Close" data-dismiss="alert">
-        <span aria-hidden="true">×</span>
-    </button>
-    你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank>升级您的浏览器</a>，以提高您的体验。</div>
-<![endif]-->
-<body>
-    <body class="met-navfixed" style="padding-top: 100px;">
-        <div hidden>
-            <p>后台-营销-SEO-头部优化文字处修改</p>
-        </div>
-        <header class='head_nav_met_16_3_36 met-head navbar-fixed-top' m-id='36' m-type='head_nav'>
-            <div id="header" class="    header-fixed">
-                <div class="container">
-                    <ul class="head-list ulstyle clearfix p-l-0">
-                        <li class="left tel">
-                            <img src="" alt="">
-                            <span>联系电话：</span>
-                            <em><?php echo ($config2["mobile"]); ?></em>
-                        </li>
-                        <!-- 右边的边框 -->
-                        <li class="right">
-                            <ul>
-                                <li>
-                                    <span>资深专业团队</span>
-                                </li>
-                                <li>
-                                    <span>专注知识产权行业10余年</span>
-                                </li>
-                                <li>
-                                    <span>500余家业内资深合作伙伴</span>
-                                </li>
-                                <li>
-                                    <span>全国3000多个成功案例</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+            for (var i = 0; i < mobileAgent.length; i++) {
+                if (browser.indexOf(mobileAgent[i]) != -1) {
+                    isMobile = true;
+
+                    //alert(mobileAgent[i]); 
+
+                    location.href = '/';
+
+                    break;
+                }
+            }
+        </script>
+        <!--移动代码适配结束-->
+         
+        
+     <!--    <script type="text/javascript">
+            var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos","incognito",
+                "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+
+            var browser = navigator.userAgent.toLowerCase();
+
+            var isMobile = false;
+
+            for (var i = 0; i < mobileAgent.length; i++) {
+                if (browser.indexOf(mobileAgent[i]) != -1) {
+                    isMobile = true;
+
+                    //alert(mobileAgent[i]); 
+
+                    location.href = './m/index.html';
+
+                    break;
+                }
+            }
+        </script> -->
+    </head>
+    <body>
+		<!-- 侧边栏 -->
+		<!-- <div class="fu">
+			<img src="/Public/Home/images/a_17.png">
+			<a class="fua1" target="_blank" href="http://wpa.qq.com/msgrd?v=1&uin=3180235251&Site=http://www.ashangame.com/&Menu=yes"></a>
+			<a class="fua2" href="javascript:"></a>
+			<a class="fua3" href="javascript:"></a>
+			<div class="pa border er_wei" style="text-align:center;color:black;">
+				<b>阿闪游戏</b>
+				<br>微信公众号
+				<img style="width:99px;height:99px;" alt="" src="/Public/Home/images/59b8deb699966.jpg">
+				<i class="pa bgPng"></i>
+			</div>
+		</div>		
+		 -->
+        <div class="head">
+             <div class="auto headtop">
+                <p>咨询电话:<?php echo ($config2["phone"]); ?>
+                <!--     <?php echo LOG_PATH; ?> -->
+                </p>
+                <div class="kefu">
+                    <a href="javascript:void(0)" class="gzhao"><img src="/Public/Home/images/a_06.png"></a>
+                    <a rel="nofollow" href="tencent://message/?uin=<?php echo ($config2["qq"]); ?>&Site=QQ交谈&Menu=yes"> <img src="/Public/Home/images/a_03.png"></a>
+                    <div class="gzh">
+                        <span>扫码关注微信公众号</span>
+                        <img src="<?php echo ($weixin[0]["ad_code"]); ?>" class="toperwei" style="width: 190px;"> </div>
                 </div>
             </div>
-            <nav class="navbar navbar-default box-shadow-none head_nav_met_16_3_36">
-                <div class="container">
-                    <div class="row nav-height">
+            <div class="xian"></div>
+            <div class="auto headlogo">
+                <a href="/">
+            <img src="<?php echo ($config2["store_logo"]); ?>" alt="<?php echo ($config2["compay_name"]); ?>" style="widt:15%">
 
+                </a>
+                <ul class="dh">
+                    <a href="/">
+                        <li <?php if(CONTROLLER_NAME == Index ): ?>class="xz"<?php endif; ?>>网站首页</li>
+                    </a>
 
-                        <h1 hidden>知识产权服务公司</h1>
-
-
-                        <!-- logo -->
-                        <div class="navbar-header pull-xs-left  asssd">
-                            <a href="/" class="met-logo vertical-align block pull-xs-left p-y-5" title="知识产权服务公司">
-                                <div class="vertical-align-middle">
-                                    <img src="<?php echo ($config2["store_logo"]); ?>" alt="<?php echo ($config2["store_logo"]); ?>"></div>
-                                </a>
-                            </div>
-
-
-
-                            <!-- logo -->
-                            <button type="button" class="navbar-toggler hamburger hamburger-close collapsed p-x-5 head_nav_met_16_3_36-toggler"
-                            data-target="#head_nav_met_16_3_36-collapse" data-toggle="collapse">
-                            <span class="sr-only"></span>
-                            <span class="hamburger-bar"></span>
-                        </button>
-
-
-                        <!-- 导航 -->
-                        <div class="collapse navbar-collapse navbar-collapse-toolbar pull-md-right p-0" id="head_nav_met_16_3_36-collapse">
-                            <ul class="nav navbar-nav navlist">
-
-
-                                <li class='nav-item'>
-                                    <a href="/" title="网站首页" class="nav-link
-                                    active
-                                    ">网站首页</a>
-                                </li>
-
-                                <li class="nav-item dropdown m-l-0">
-                                    <a href="<?php echo U('Goods/index');?>" target='_self' title="" class="nav-link dropdown-toggle "  data-toggle="dropdown" data-hover="dropdown" 0>
-                                    业务展示</a>
-
-
-                                    <div class="dropdown-menu dropdown-menu-right animate two-menu">
-                                        <?php if(is_array($tree)): foreach($tree as $key=>$vo): ?><a href="<?php echo U('Goods/index',array('id'=>$vo['id']));?>" target='_self' 0 title="<?php echo ($vo["name"]); ?>" class='dropdown-item hassub '><?php echo ($vo["name"]); ?></a><?php endforeach; endif; ?>
-                                    </div>
-                                </li>
-
-<!--  data-toggle="dropdown"  dropdown-toggle -->
-                                <?php if(is_array($nav)): foreach($nav as $key=>$v): ?><li class="nav-item dropdown m-l-0">
-                                    <a href="<?php echo ($v["url"]); ?>" target='_self' title="" class="nav-link "  data-hover="dropdown" 0>
-                                    <?php echo ($v["name"]); ?></a>
-
-                                </li><?php endforeach; endif; ?>
-                           
-                          <!--       <?php if(is_array($artTree)): foreach($artTree as $key=>$v): ?><li class="nav-item dropdown m-l-0">
-                                  <a href="<?php echo ($v["cat_alias"]); ?>" target='_self' title="" class="nav-link dropdown-toggle "
-                                  data-toggle="dropdown" data-hover="dropdown" 0>
-                              <?php echo ($v["cat_name"]); ?></a>
-                          
-                          
-                              <div class="dropdown-menu dropdown-menu-right animate two-menu">
-                                  <?php if(is_array($v['son'])): foreach($v['son'] as $key=>$vo): ?><a href="<?php echo ($v["cat_alias"]); ?>" target='_self' 0 title="<?php echo ($vo["cat_name"]); ?>" class='dropdown-item hassub '><?php echo ($vo["cat_name"]); ?></a><?php endforeach; endif; ?>
-                              </div>
-                          </li><?php endforeach; endif; ?> -->
-
-                                  <!--   <li class='nav-item m-l-0'>
-                                      <a href="https://mb.mituo.cn/mui618/img1/" target='_self' 0 title="专业团队" class="nav-link ">专业团队</a>
-                                  </li>
-                                  <li class="nav-item dropdown m-l-0">
-                                      <a href="https://mb.mituo.cn/mui618/news/" target='_self' title="新闻动态" class="nav-link dropdown-toggle "
-                                       data-toggle="dropdown" data-hover="dropdown" 0>
-                                          新闻动态</a>
-                                      <div class="dropdown-menu dropdown-menu-right animate two-menu">
-                                          <a href="https://mb.mituo.cn/mui618/news/" target='_self' 0 title="全部" class='dropdown-item nav-parent hidden-lg-up'>全部</a>
-                                          <a href="https://mb.mituo.cn/mui618/news/news.php?class2=11" target='_self' 0 title="最新政策解读" class='dropdown-item hassub '>最新政策解读</a>
-                                          <a href="https://mb.mituo.cn/mui618/news/news.php?class2=12" target='_self' 0 title="知识干货" class='dropdown-item hassub '>知识干货</a>
-                                          <a href="https://mb.mituo.cn/mui618/news/news.php?class2=13" target='_self' 0 title="行业资讯" class='dropdown-item hassub '>行业资讯</a>
-                                          <a href="https://mb.mituo.cn/mui618/news/news.php?class2=14" target='_self' 0 title="公司动态" class='dropdown-item hassub '>公司动态</a>
-                                      </div>
-                                  </li>
-                                  
-                                  
-                                  <li class="nav-item dropdown m-l-0">
-                                      <a href="https://mb.mituo.cn/mui618/news1/" target='_self' title="常见问题" class="nav-link dropdown-toggle "
-                                       data-toggle="dropdown" data-hover="dropdown" 0>
-                                          常见问题</a>
-                                      <div class="dropdown-menu dropdown-menu-right animate two-menu">
-                                          <a href="https://mb.mituo.cn/mui618/news1/" target='_self' 0 title="全部" class='dropdown-item nav-parent hidden-lg-up'>全部</a>
-                                          <a href="https://mb.mituo.cn/mui618/news1/news.php?class2=8" target='_self' 0 title="知识产权" class='dropdown-item hassub '>知识产权</a>
-                                         
-                                      </div>
-                                  </li>
-                                  
-                                  
-                                  <li class="nav-item dropdown m-l-0">
-                                      <a href="https://mb.mituo.cn/mui618/about/" target='_self' title="关于我们" class="nav-link dropdown-toggle "
-                                       data-toggle="dropdown" data-hover="dropdown" 0>
-                                          关于我们</a>
-                                      <div class="dropdown-menu dropdown-menu-right animate two-menu">
-                                  
-                                          <a href="https://mb.mituo.cn/mui618/about/show.php?id=22" target='_self' 0 title="公司简介" class='dropdown-item hassub '>公司简介</a>
-                                                                
-                                      </div>
-                                  </li> -->
-                              </ul>
-                          </div>
-                          <!-- 导航 -->
-                      </div>
-                  </div>
-              </nav>
-          </header>
-
-   <div class="banner_met_16_3_71box">
-        <div class="banner_met_16_3_71 page-bg" data-height='' style='' m-id='71' m-type='banner'>
-          <div class="slick-slide">
-            <img class="cover-image" src="<?php echo ($banner2["ad_code"]); ?>" srcset='<?php echo ($banner2["ad_code"]); ?>'
-             sizes="(max-width: 767px) 767px" alt="" data-height='0|0|0'>
-          </div>
-        </div>
-        <div class="met-index-case">
-          <div class="container">
-            <div class="case" id="case">
-              <ul class="sliderbox row">
-                <?php if(is_array($news2)): foreach($news2 as $key=>$v): ?><li class="a-list">
-                  <a href=""><?php echo ($v["title"]); ?>?</a>
-                </li><?php endforeach; endif; ?>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="subcolumn_nav_met_21_1_39" m-id='39' m-type='nocontent'>
-        <div class="container">
-          <div class="row">
-            <div class="clearfix">
-              <div class="subcolumn-nav text-xs-left">
-                <ul class="subcolumn_nav_met_21_1_39-ul m-b-0 p-y-10 p-x-0 ulstyle">
-
-                  <li>
-                    <a href="<?php echo U('News/index',array("catid"=>"00"));?>" title="全部" class="active link">全部</a>
-                  </li>
-                  <?php if(is_array($location)): foreach($location as $key=>$v): ?><li>
-                    <a href="<?php echo U('News/index',array("catid"=>$v['cat_id']));?>" title="<?php echo ($v["cat_name"]); ?>" class='link'><?php echo ($v["cat_name"]); ?></a>
-                  </li><?php endforeach; endif; ?>
+                    <?php if(is_array($nav)): foreach($nav as $key=>$v): ?><a href="<?php echo ($v["url"]); ?>">
+                        <li <?php if(__INFO__ == $v["location"] ): ?>class="xz"<?php endif; ?>><?php echo ($v["name"]); ?></li>
+                    </a><?php endforeach; endif; ?>
+               
                 </ul>
-              </div>
-              <div class="subcolumn-nav-location clearfix ulstyle">
-                <li class="location">
-                  您的位置： </li>
-                <li>
-                  <a href="/" title="网站首页">
-                    网站首页 </a>
-                  <i class="fa fa-angle-right"></i>
-                </li>
-                <li>
-                  <a href="" target='_self' title="新闻动态"><?php echo ($now["cat_name"]); ?></a>
-                  <i class="fa fa-angle-right"></i>
-                </li>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
 
-<!-- 
-      <div class="para_search_met_16_1_77" m-id='77'>
-        <div class="    container">
-          <div class="">
-            <div class="clearfix p-y-10">
-              <ul class="order inline-block p-0 m-y-10 m-r-10">
-                <li class="order-list inline-block m-r-10"><a href="https://mb.mituo.cn/mui618/news/index.php?class1=3&page=&search=search&order=com"
-                   class="p-x-10 p-y-5">推荐<i class="icon wb-triangle-up" aria-hidden="true"></i></a></li>
-                <li class="order-list inline-block m-r-10"><a href="https://mb.mituo.cn/mui618/news/index.php?class1=3&page=&search=search&order=hit"
-                   class="p-x-10 p-y-5">热门<i class="icon wb-triangle-up" aria-hidden="true"></i></a></li>
-                <li class="order-list inline-block m-r-10"><a href="https://mb.mituo.cn/mui618/news/index.php?class1=3&page=&search=search&order=new"
-                   class="p-x-10 p-y-5">最新<i class="icon wb-triangle-up" aria-hidden="true"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div> -->
+ 
+    
+
+        <div class="auto nei">
+            <div class="fu">
+                <img src="/Public/Home/images/a_17.png">
+                <a class="fua1" target="_blank" href="tencent://message/?uin=<?php echo ($config2["qq"]); ?>&Site=uemo&Menu=yes"></a>
+                <a class="fua2" href="javascript:"></a>
+                <a class="fua3" href="javascript:"></a>
 
 
-      <main class="news_list_page_met_21_3_69 met-news" m-id='69'>
-        <div class="container">
-          <div class="row">
-            <div class="news-title-bor">
-              <div class="">
-                <div class="news-title-con">
-                  <span class="news-top">新闻动态</span>
-                  <span class="news-hr"></span>
-                  <p class="news-xs"></p>
-                </div>
-              </div>
-            </div>
+                <div class="pa border er_wei" style="text-align:center;color:black;">
+                    <b><?php echo ($config2["company_name"]); ?></b>
+                    <br>微信公众号
 
-            <div class="met-news-list">
-              <ul class="ulstyle met-pager-ajax imagesize invisible" data-scale='266x457' m-id='69' data-plugin="appear"
-               data-animate="slide-bottom50" data-repeat="false">
-               <?php if(is_array($list)): foreach($list as $key=>$v): ?><li class='border-bottom1'>
-                  <h4>
-                    <a href="<?php echo U('Home/News/page',array('id'=>$v['article_id']));?>" title="<?php echo ($v["title"]); ?>" target=_self><?php echo ($v["title"]); ?></a>
-                  </h4>
-                  <div class="time">
-                    <span class="author"> </span>
-                    <span class="times"><?php echo (date("y-m-d h:i:s",$v["publish_time"])); ?> 发表</span>
-                  </div>
-                  <p class="des font-weight-300"><?php echo (mb_substr($v["description"],0,100,'utf-8')); ?></p>
-                  <p class="info font-weight-300">
-                    <span><i class="icon wb-eye m-r-5 font-weight-300" aria-hidden="true"></i><?php echo ($v["click"]); ?>人看过</span>
-                  </p>
-                </li><?php endforeach; endif; ?>
 
-              </ul>
-              <div class='m-t-20 text-xs-center hidden-sm-down' m-type="nosysdata">
-                <div class='met_pager'>
-                  <?php echo ($page); ?>
-           <!--        <span class='PreSpan'>上一页</span><a href='https://mb.mituo.cn/mui618/news/news.php?class1=3'
-            class='Ahover'>1</a><a href='https://mb.mituo.cn/mui618/news/index.php?class1=3&page=2'>2</a><a href='https://mb.mituo.cn/mui618/news/index.php?class1=3&page=3'>3</a><a
-            href='https://mb.mituo.cn/mui618/news/index.php?class1=3&page=4'>4</a><a href='https://mb.mituo.cn/mui618/news/index.php?class1=3&page=2'
-            class='NextA'>下一页</a>
-           <span class='PageText'>转至第</span>
-           <input type='text' id='metPageT' data-pageurl='index.php?lang=cn&class1=3&page=||4' value='1' />
-           <input type='button' id='metPageB' value='页' /> -->
+
+                    <img style="width:99px;height:99px;" alt="" src="<?php echo ($weixin[0]["ad_code"]); ?>">
+
+                    <i class="pa bgPng"></i>
                 </div>
 
-
-              </div>
-              <div class="met_pager met-pager-ajax-link hidden-md-up" data-plugin="appear" data-animate="slide-bottom"
-               data-repeat="false" m-type="nosysdata">
-                <button type="button" class="btn btn-primary btn-block btn-squared ladda-button" id="met-pager-btn" data-plugin="ladda"
-                 data-style="slide-left" data-url="" data-page="1">
-                  <i class="icon wb-chevron-down m-r-5" aria-hidden="true"></i>
-                </button>
-              </div>
             </div>
-          </div>
-        </div>
-      </main>
+
+            <p class="weizhi"> 当前位置：
+                <a href="/">首页</a>&gt;&gt;<a href=""><?php echo ($now["cat_name"]); ?></a>
+            </p>
 
 
 
-            <footer class='foot_info_met_21_2_27 met-foot  border-top1' m-id='27' m-type='foot'>
-                <div class="foot">
-                    <ul class="foot-nav">
-                        <?php if(is_array($nav)): foreach($nav as $key=>$v): ?><li class="">
-                            <a href="<?php echo ($v["url"]); ?>" target='_blank' title="<?php echo ($v["name"]); ?>"><?php echo ($v["name"]); ?></a>
+                <div class="nei_left table1 table2">
+                    <img src="/Public/Home/images/a_45.png" class="ico">
+                    <p class="youxi youxi2" style="margin-top: -10px; width: 931px; font-size: 16px;padding-top: 0px; margin-left: 10px;">
+                        <b class="tab tab3">
+                            <span class="zhong"><?php echo ($now["cat_name"]); ?> </span>
+
+                        </b>
+                    </p>
+                    <br class="qc" />
+                    <div class="hide show d1">
+                        <ul class="new_lst hidden">
+                            <?php if(is_array($list)): foreach($list as $key=>$v): ?><li>
+                                <div class="lst_left">
+                                    <a href="<?php echo U('News/page',array('id'=>$v['article_id'],'catid'=>$v['cat_id']));?>"><img src="<?php echo ($v["thumb"]); ?>" alt="<?php echo ($v["title"]); ?>"></a>
+                                </div>
+                                <div class="lst_right">
+                                    <a href="<?php echo U('News/page',array('id'=>$v['article_id'],'catid'=>$v['cat_id']));?>">
+                                        <div class="hhh1"><?php echo ($v["title"]); ?></div>
+                                        <div class="hhh2">
+                                           <?php echo ($v["description"]); ?></div>
+                                    </a>
+                                    <div class="hhh3"><a href="<?php echo U('News/page',array('id'=>$v['article_id'],'catid'=>$v['cat_id']));?>">查看详情>></a> 发布时间：<?php echo (date("Y-m-d h:i:s",$v["publish_time"])); ?></div>
+                                </div>
+                            </li><?php endforeach; endif; ?>
+
+
+                            <br class="qc" />
+                        </ul>
+
+                        <ul class="page-ul">
+                            <?php echo ($page); ?>
+                 
+                        </ul>
+
+                    </div>
+               
+                </div>
+				
+				
+            <div class="fu_left">
+                <div class="yxxz_right yxxz_right2" style="position:relative">
+                    <img src="/Public/Home/images/a_20.png" class="ico2">
+                    <p class="youxi youxi3">
+                        <span>热门文章</span>
+                    </p>
+                    <br class="qc">
+
+                    <ul class="index-news majiang-right">
+                        <?php if(is_array($list)): foreach($list as $key=>$v): ?><li>
+                            <a href="">
+                                <img class="" src="<?php echo ($v["thumb"]); ?>" alt="">
+                                <h4><?php echo ($v["title"]); ?></h4>
+                                <time>06/27</time>
+                            </a>
                         </li><?php endforeach; endif; ?>
                     </ul>
                 </div>
-                <div class="container">
-                    <div class="col-md-12">
-                        <div class="foot-logo-img">
-                            <img src="/Public/Home/images/1560239129.png" alt="知识产权服务公司响应式网站模板" />
-                        </div>
-                        <div class="foot-con col-sm-5 col-lg-6">
-                            <div class="foot-about">
-                                <p style="text-align: left; margin-bottom: 5px;"><span style="color: rgb(255, 255, 255);"><strong><?php echo ($config2["company_name"]); ?></strong></span></p>
-                                <p style="text-align: left; margin-bottom: 5px;"><span style="color: rgb(255, 255, 255);">电话：<?php echo ($config2["mobile"]); ?>
-                                                   座机：<?php echo ($config2["phone"]); ?></span></p>
-                                <p style="text-align: left; margin-bottom: 5px;"><span style="color: rgb(255, 255, 255);">邮箱：<?php echo ($config2["email"]); ?>   <br>  地址：<?php echo ($place[$config2['province']]); echo ($place[$config2['city']]); echo ($place[$config2['district']]); echo ($config2['address']); ?></span></p>
-                                <div id="baidu_pastebin" style="position: absolute; width: 1px; height: 1px; overflow: hidden; left: -1000px; top: 30px;">email@email.m</div>
-                            </div>
-                            <div class="tex-link">
-                                <ul class="breadcrumb p-0 link-img m-0">
-                                </ul>
-                            </div>
-                            <div class="foot_box">
-                               <!--  本站涵盖的内容、图片、视频等部分来源自网上，部分未能与原作者取得联系。若涉及版权问题，请及时通知我们并提供相关证明材料，我们将支付合理报酬或立即予以删除！ -->
-                                <span style="margin-left: 5px;">
-                                    <a href="https://mb.mituo.cn/mui618/about/show.php?id=21">联系我们</a>
-                                </span>
-                                <div>
-                                </div>
-                            </div>
-                            <div class="powered_by_metinfo">
-                                Powered by <b></b> &copy;<?php echo ($config2["copyright"]); ?>  <br><a href="http://www.beian.miit.gov.cn/"> 备案号<?php echo ($config2["record_no"]); ?></a>
-                                &nbsp; </div>
-                        </div>
-                        <div class="foot-ewm-img">
-                            <div>
-                                <img src="<?php echo ($weixin[0]["ad_code"]); ?>" alt="关注我们">
-                                <p>关注我们</p>
-                            </div>
-                 <!--   <div>
-                    <img src="/Public/Home/images/1560232146.png" alt="微信二维码">
-                    <p>微信二维码</p>
-                                   </div> -->
-                        </div>
-                    </div>
 
-                </div>
-            </footer>
+                <div class="yxxz_right yxxz_right2" style="position:relative">
+                    <img src="/Public/Home/images/a_20.png" class="ico2">
+                    <p class="youxi youxi3">
+                        <span>游戏下载</span>
+                        <br class="qc">
+                    </p>
 
-            <div class="foot_info_met_21_2_27_bottom text-xs-center     " m-id='27' data-bgs="|#007fd3|1" data-ifbotc="">
-                <div class="main">
-                    <div class="">
-                        <a href="tel:0000000000" class="item" target="_blank">
-                            <i class="fa fa-phone"></i>
-                            <span>电话咨询</span>
-                        </a>
-                    </div>
-                    <div class="">
-                        <a href="https://mb.mituo.cn/mui618/img1/" class="item" target="_blank">
-                            <i class="fa fa-user"></i>
-                            <span>专业团队</span>
-                        </a>
-                    </div>
-                    <div class="">
-                        <a href="https://mb.mituo.cn/mui618/product/" class="item" target="_blank">
-                            <i class="fa fa-paste"></i>
-                            <span>业务领域</span>
-                        </a>
-                    </div>
-                    <div class="">
-                        <a href="http://wpa.qq.com/msgrd?v=3&uin=00000000&site=qq&menu=yes" class="item" target="_blank">
-                            <i class="fa fa-qq"></i>
-                            <span>QQ客服</span>
-                        </a>
-                    </div>
+                    <ul class="left_yx">
+                        <?php if(is_array($down)): foreach($down as $key=>$v): ?><li><img class="le_ft_iamg" src="/Public/Home/images/5ad1a8e5ab439.png" alt="阿闪打拱">
+                            <p><?php echo ($v["file_name"]); ?><br />
+                                <span><?php echo ($v["cat_name"]); ?></span></p>
+                            <div class="oz">
+                                <a class="fl bgPng s_3 s_4" onclick=disp_confirm()>游戏下载</a>
+                            </div>
+
+                        </li><?php endforeach; endif; ?>
+                    </ul>
                 </div>
+
+            </div>				
+            </div>  
+            
+    
+       <!--         <br class="qc"> </div>
+        </div>
+ -->
+
+     
+            </div>
+            <br class="qc" />
+
+        </div>
+
+
+        <div class="dibu">
+            <div class="auto">
+                <img class="dilogo" src="<?php echo ($config2["store_logo"]); ?>">
+                <div class="abo">
+                    <p>
+
+                        <a href="/sitemap.xml" style="margin-left:0px">网站地图</a>
+                        <?php if(is_array($aba)): foreach($aba as $key=>$v): ?><a href="<?php echo U('Brand/page_q',array('id'=>$v['article_id'],'catid'=>$v['cat_id']));?>"><?php echo ($v["title"]); ?></a><?php endforeach; endif; ?>
+
+                    </p>
+                    <p class="mc"><?php echo ($config2["company_name"]); ?><br/></p> 
+                    
+                </div>
+
+                <div class="erwei">
+
+
+<!-- /Public/Home/images/59c47ee41d6b0.png -->
+                    <img alt="" src="<?php echo ($weixin[0]["ad_code"]); ?>" style="width: 190px;"> </div>
+
+            </div>
+        </div>
+
+        <div class="zuidi">
+            <div class="auto auto3">
+                <a class="jubao jubao1" href="javascript:void(0)" style="margin-left:125px;"><img src="/Public/Home/images/ico_03.png">不良信息举报</a>
+                <a class="jubao" href="javascript:void(0)"><img src="/Public/Home/images/ico_07.png">粤网文[2017]9258-2347号</a><!-- -->
+                <a class="jubao" <a rel="nofollow" href="http://www.beian.miit.gov.cn" target="_blank"><img src="/Public/Home/images/ico_07.png"><?php echo ($config2["record_no"]); ?></a>
+                <a class="jubao" <a rel="nofollow" href="http://gsxt.gdgs.gov.cn/" target="_blank"><img src="/Public/Home/images/ico_09.png">广东省工商行政管理局</a>
             </div>
 
-            <button type="button" class="btn btn-icon btn-primary btn-squared back_top_met_16_1_70 met-scroll-top     " hidden
-             m-id='70' m-type='nocontent'>
-                <i class="icon wb-chevron-up" aria-hidden="true"></i>
-            </button>
 
-            <input type="hidden" name="met_lazyloadbg" value="">
-            <script src="/Public/Home/js/basic.js"></script>
-            <script>
-                var metpagejs = "/Public/Home/js/index_cn.js";
-                if (typeof jQuery != "undefined") {
-                    metPageJs(metpagejs);
-                } else {
-                    var metPageInterval = setInterval(function() {
-                        if (typeof jQuery != "undefined") {
-                            metPageJs(metpagejs);
-                            clearInterval(metPageInterval);
-                        }
-                    }, 50)
-                }
-            </script>
-            <script src="/Public/Home/js/lang_json_cn.js"></script>
-      <script>
-        var metpagejs = "/Public/Home/js/product_cn.js";
-        if (typeof jQuery != "undefined") {
-          metPageJs(metpagejs);
-        } else {
-          var metPageInterval = setInterval(function() {
-            if (typeof jQuery != "undefined") {
-              metPageJs(metpagejs);
-              clearInterval(metPageInterval);
-            }
-          }, 50)
-        }
-      </script>
+        </div>
+    
+
+
+
+
+
     </body>
+    
+    <script type="text/javascript" src="/Public/Home/js/min.js"></script>
+    <!-- 选项卡 -->
+<script type="text/javascript" src="/Public/Home/js/jquery.tabso_yeso.js"></script>
+<!-- 下载js -->
+   <script type="text/javascript">
+                            function disp_confirm()
+                              {
+                              var r=confirm("确认下载？")
+                              if (r==true)
+                                {
+                                window.location.assign('<?php echo U('Base/download',array('fid'=>$v['fid']));?>')
+                                }
+                              else
+                                {
+                                return false;
+                                }
+                              }
+    </script>
+    <!-- 滑动js -->
+        <script type="text/javascript">
+        $(function() {
+            $(window).scroll(function() {
+                if ($(window).scrollTop() >= 46) { //向下滚动像素大于这个值时，即出现小火箭~
+                    $('.fu').addClass('fu1'); //火箭淡入的时间，越小出现的越快~
+                } else {
+                    $('.fu').removeClass('fu1'); //火箭淡出的时间，越小消失的越快~
+                }
+            });
+            $('.fua3').click(function() {
+                $('html,body').animate({
+                    scrollTop: '0px'
+                }, 800);
+            }); //火箭动画停留时间，越小消失的越快~
+        });
+
+
+        $('.xzph li').hover(function() {
+            $(this).removeClass('m_ei').siblings().addClass('m_ei')
+        })
+    </script>
+
+    <!--移动代码适配开始-->
+    <script type="text/javascript">
+        var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito",
+            "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+
+        var browser = navigator.userAgent.toLowerCase();
+
+        var isMobile = false;
+
+        for (var i = 0; i < mobileAgent.length; i++) {
+            if (browser.indexOf(mobileAgent[i]) != -1) {
+                isMobile = true;
+
+                //alert(mobileAgent[i]); 
+
+                location.href = 'm/xiazaizhongxin-01.html';
+
+                break;
+            }
+        }
+    </script>
+    <!--移动代码适配结束-->
+
+
 
 </html>

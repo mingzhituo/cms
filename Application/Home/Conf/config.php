@@ -11,12 +11,12 @@ return array(
          '[STATIC]'    => '/Public/Home/Static',//static路径
        
     ),
-	
-	 'URL_ROUTER_ON'   => true, 
+    
+        'URL_ROUTER_ON'   => true, 
         'URL_MODEL' => 2,
        define('BIND_MODULE', 'Home'),
     'URL_PATHINFO_DEPR' => '-',
-      
+
    //路由配置
     //'URL_ROUTER_ON'   => true,
      //'URL_MODEL' => 2,

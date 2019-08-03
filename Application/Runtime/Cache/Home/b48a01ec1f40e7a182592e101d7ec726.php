@@ -4,37 +4,6 @@
   <link rel="stylesheet" href="/Public/Home/css/jsmodern.min.css">
   <script src="/Public/Home/js/jquery-1.10.2.js"></script>
   <script src="/Public/Home/js/jsmodern.min.js"></script>
-  <style>
-  .jsmodern-video {max-height: 240px;}
-        #video {
-            width: 400px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        #video video {
-            width: 100%;
-            height: auto;
-            object-fit: fill;
-        }
-
-        .VideoBtn {
-            position: relative;
-      left: 73%;
-      background-color: #ff6d00;
-      color: #fff;
-            display: block;
-            width: 110px;font-size: 16px; border-radius: 5px;
-            line-height: 40px;text-align: center;
-            margin-left: -35px;
-            margin-top: -41px;
-            cursor: pointer;
-            z-index: 10;
-        }
-		.jsmodern-video-panel b {
-			
-		}
-    </style>
 <script>
         $(function () {
             //视频
@@ -53,25 +22,45 @@
 
         })
     </script>
-
    
         <meta charset="utf-8" />
         <title><?php echo ($config2["store_title"]); ?></title>
         <meta name="keywords" content="" />
         <meta name="description" content="" />
-        <link href="/App/favicon.ico" rel="shortcut icon" />
         <link rel="stylesheet" href="/Public/Home/css/init.css" />
         <link rel="stylesheet" href="/Public/Home/css/main.css" />
         
-    <link rel="stylesheet" href="/Public/Home/css/jsmodern.min.css">
+        <link rel="stylesheet" href="/Public/Home/css/jsmodern.min.css">
         <link rel="stylesheet" href="/Public/Home/css/comment.css">
         <link rel="stylesheet" type="text/css" href="/Public/Home/css/tab.css"/>
         <script type="text/javascript" src="/Public/Home/js/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="/Public/Home/js/jquery.jslides.js"></script>
         <script type="text/javascript" src="/Public/Home/js/jquery-1.8.0.min.js"></script>
         <script type="text/javascript" src="/Public/Home/js/jquery.touchslider.js"></script>
+				<script type="text/javascript" src="/Public/Home/js/superslide.js"></script>
       
-  
+    <!--移动代码适配开始-->
+        <script type="text/javascript">
+            var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito",
+                "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+
+            var browser = navigator.userAgent.toLowerCase();
+
+            var isMobile = false;
+
+            for (var i = 0; i < mobileAgent.length; i++) {
+                if (browser.indexOf(mobileAgent[i]) != -1) {
+                    isMobile = true;
+
+                    //alert(mobileAgent[i]); 
+
+                    location.href = '/';
+
+                    break;
+                }
+            }
+        </script>
+        <!--移动代码适配结束-->
          
         
      <!--    <script type="text/javascript">
@@ -96,6 +85,20 @@
         </script> -->
     </head>
     <body>
+		<!-- 侧边栏 -->
+		<!-- <div class="fu">
+			<img src="/Public/Home/images/a_17.png">
+			<a class="fua1" target="_blank" href="http://wpa.qq.com/msgrd?v=1&uin=3180235251&Site=http://www.ashangame.com/&Menu=yes"></a>
+			<a class="fua2" href="javascript:"></a>
+			<a class="fua3" href="javascript:"></a>
+			<div class="pa border er_wei" style="text-align:center;color:black;">
+				<b>阿闪游戏</b>
+				<br>微信公众号
+				<img style="width:99px;height:99px;" alt="" src="/Public/Home/images/59b8deb699966.jpg">
+				<i class="pa bgPng"></i>
+			</div>
+		</div>		
+		 -->
         <div class="head">
              <div class="auto headtop">
                 <p>咨询电话:<?php echo ($config2["phone"]); ?>
@@ -111,7 +114,7 @@
             </div>
             <div class="xian"></div>
             <div class="auto headlogo">
-                <a href="#">
+                <a href="/">
             <img src="<?php echo ($config2["store_logo"]); ?>" alt="<?php echo ($config2["compay_name"]); ?>" style="widt:15%">
 
                 </a>
@@ -128,7 +131,43 @@
             </div>
         </div>
 
+   <style>
+ 	  .video-ul li {width: 46%; margin-right: 3%;}
+ 	  .video-ul li:nth-child(even) { margin-right:0;}
+ 	  div.video {position: relative;}
+ .jsmodern-video {max-height: 240px;}
+       #video {
+           width: 400px;
+           margin: 0 auto;
+           position: relative;
+       }
  
+       #video video {
+           width: 100%;
+           height: auto;
+           object-fit: fill;
+       }
+ 
+       .VideoBtn {
+           position: absolute;
+     left: 80%;
+     background-color: #ff6d00;
+     color: #fff;
+           display: block;
+           width: 110px;font-size: 16px; border-radius: 5px;
+           line-height: 40px;text-align: center;
+           margin-left: -35px;
+           margin-top: -41px;
+           z-index:0;
+       }
+ 		.jsmodern-video-panel b.jsmodern-video-play {
+ 			position: absolute;margin: 0;
+ 			width: 110px;
+ 			height: 40px; top: 48px;
+   right: 12px;z-index: 10;
+ 		}
+		.fu_right { width: 926px;}
+   </style>
     
 
         <div class="auto nei">
@@ -158,11 +197,11 @@
 
 
 <div class="fu_right">
-                    <div class="nei_left table1 table2">
+                    <div class="nei_left table1 table2" style="width: 100%;">
                     <img src="/Public/Home/images/a_45.png" class="ico">
                     <p class="youxi youxi2" style="
     margin-top: -10px;
-    width: 931px; 
+    width: 91%; 
     font-size: 16px;
     padding-top: 0px;
 ">
@@ -179,7 +218,7 @@
             <ul class="hdlst video-ul">
               <?php if(is_array($ship)): foreach($ship as $key=>$v): ?><li>
                 <div class="video">
-                <section class="jsmodern-video" style="width:400px;height:277px;">
+                <section class="jsmodern-video" style="height:277px;">
 					<video src="<?php echo ($v["link"]); ?>" poster="/Public/Home/images/5ad961c494ac3.jpg" id="videoShow" width="400" height="277"></video>
 					<section class="jsmodern-video-panel">
 						<b class="jsmodern-video-play"></b>
@@ -198,9 +237,9 @@
 						<b class="jsmodern-video-fullin"></b>
 					</section>
 				</section>
-                <div class="hdbt"><a href="majiangshipin-01.html">四川麻将视频教程</a></div>
+                <div class="hdbt"><a href="<?php echo U('News/pic_page',array('id'=>$v['article_id'],'catid'=>$v['cat_id']));?>">四川麻将视频教程</a></div>
                 <div class="hdsj">播放次数：17</div> 
-                <span class="VideoBtn">立即播放</span>
+                <span class="VideoBtn">播放/暂停</span>
                 </div>
               </li><?php endforeach; endif; ?>
 
@@ -233,71 +272,19 @@
           </div>
 
                         <ul class="page-ul">
-                            <li>上一页</li>                            
+                            <?php echo ($page); ?>
+                           <!--  <li>上一页</li>                            
                             <li><a href="#">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
                             <li class="active"><a href="#">4</a></li>
                             <li>下一页</li>
-                            <li>最后一页</li>
+                            <li>最后一页</li> -->
                         </ul>
-                </div>
-
- 
-               
-
-
+                </div>      
 
                 </div>
 
-            </div>  
-            
-                  
-
-<!-- 
-            <div class="fu_left">
-                <div class="yxxz_right yxxz_right2" style="position:relative">
-                    <img src="/Public/Home/images/a_20.png" class="ico2">
-                    <p class="youxi youxi3">
-                        <span>热门文章</span>
-                    </p>
-                    <br class="qc">
-
-                    <ul class="index-news majiang-right">
-                        <?php if(is_array($list)): foreach($list as $key=>$v): ?><li>
-                            <a href="">
-                                <img class="" src="<?php echo ($v["thumb"]); ?>" alt="">
-                                <h4><?php echo ($v["title"]); ?></h4>
-                                <time>06/27</time>
-                            </a>
-                        </li><?php endforeach; endif; ?>
-                    </ul>
-                </div>
-
-                <div class="yxxz_right yxxz_right2" style="position:relative">
-                    <img src="/Public/Home/images/a_20.png" class="ico2">
-                    <p class="youxi youxi3">
-                        <span>游戏下载</span>
-                        <br class="qc">
-                    </p>
-
-                    <ul class="left_yx">
-                        <?php if(is_array($down)): foreach($down as $key=>$v): ?><li><img class="le_ft_iamg" src="/Public/Home/images/5ad1a8e5ab439.png" alt="阿闪打拱">
-                            <p><?php echo ($v["file_name"]); ?><br />
-                                <span><?php echo ($v["cat_name"]); ?></span></p>
-                            <div class="oz">
-                                <a class="fl bgPng s_3 s_4" onclick=disp_confirm()>游戏下载</a>
-                            </div>
-
-                        </li><?php endforeach; endif; ?>
-                    </ul>
-                </div>
-
-            </div>
-     -->
-       <!--         <br class="qc"> </div>
-        </div>
- -->  
 
  <div class="fu_left shipin-right">
         <div class="yxxz_right yxxz_right2" style=" position:relative">
@@ -362,6 +349,55 @@
       <br class="qc">
     </div>
     </div>
+            </div>  
+            
+                  
+
+<!-- 
+            <div class="fu_left">
+                <div class="yxxz_right yxxz_right2" style="position:relative">
+                    <img src="/Public/Home/images/a_20.png" class="ico2">
+                    <p class="youxi youxi3">
+                        <span>热门文章</span>
+                    </p>
+                    <br class="qc">
+
+                    <ul class="index-news majiang-right">
+                        <?php if(is_array($list)): foreach($list as $key=>$v): ?><li>
+                            <a href="">
+                                <img class="" src="<?php echo ($v["thumb"]); ?>" alt="">
+                                <h4><?php echo ($v["title"]); ?></h4>
+                                <time>06/27</time>
+                            </a>
+                        </li><?php endforeach; endif; ?>
+                    </ul>
+                </div>
+
+                <div class="yxxz_right yxxz_right2" style="position:relative">
+                    <img src="/Public/Home/images/a_20.png" class="ico2">
+                    <p class="youxi youxi3">
+                        <span>游戏下载</span>
+                        <br class="qc">
+                    </p>
+
+                    <ul class="left_yx">
+                        <?php if(is_array($down)): foreach($down as $key=>$v): ?><li><img class="le_ft_iamg" src="/Public/Home/images/5ad1a8e5ab439.png" alt="阿闪打拱">
+                            <p><?php echo ($v["file_name"]); ?><br />
+                                <span><?php echo ($v["cat_name"]); ?></span></p>
+                            <div class="oz">
+                                <a class="fl bgPng s_3 s_4" onclick=disp_confirm()>游戏下载</a>
+                            </div>
+
+                        </li><?php endforeach; endif; ?>
+                    </ul>
+                </div>
+
+            </div>
+     -->
+       <!--         <br class="qc"> </div>
+        </div>
+ -->  
+
      
             </div>
             <br class="qc" />
@@ -375,18 +411,11 @@
                 <div class="abo">
                     <p>
 
-                        <a href="#" style="margin-left:0px">关于我们</a>
-                        <a href="#">联系我们</a>
-                 
-
-                        <a href="#">代理游戏</a>
-                        <a href="#">服务条款</a>
-                        <a href="#">家长监护</a>
-                        <a href="#">网站地图</a>
-
+                        <a href="/sitemap.xml" style="margin-left:0px">网站地图</a>
+                        <?php if(is_array($aba)): foreach($aba as $key=>$v): ?><a href="<?php echo U('Brand/page_q',array('id'=>$v['article_id'],'catid'=>$v['cat_id']));?>"><?php echo ($v["title"]); ?></a><?php endforeach; endif; ?>
 
                     </p>
-                    <p class="mc"><?php echo ($config2["company_name"]); ?><br /></p> 
+                    <p class="mc"><?php echo ($config2["company_name"]); ?><br/></p> 
                     
                 </div>
 
@@ -457,6 +486,29 @@
             $(this).removeClass('m_ei').siblings().addClass('m_ei')
         })
     </script>
+
+    <!--移动代码适配开始-->
+    <script type="text/javascript">
+        var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito",
+            "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+
+        var browser = navigator.userAgent.toLowerCase();
+
+        var isMobile = false;
+
+        for (var i = 0; i < mobileAgent.length; i++) {
+            if (browser.indexOf(mobileAgent[i]) != -1) {
+                isMobile = true;
+
+                //alert(mobileAgent[i]); 
+
+                location.href = 'm/xiazaizhongxin-01.html';
+
+                break;
+            }
+        }
+    </script>
+    <!--移动代码适配结束-->
 
 
 

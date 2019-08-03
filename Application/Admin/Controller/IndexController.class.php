@@ -9,9 +9,11 @@ class IndexController extends BaseController {
     public function index(){
         
         $act_list = session('act_list');
+       // dump($act_list);die;
         $login = session('Login');
+
         $logo = M('config')->where("name = 'store_logo'")->find();
-        //var_dump($last_log);exit;
+
         $menu_list = getMenuList($act_list);
         
         $data = [

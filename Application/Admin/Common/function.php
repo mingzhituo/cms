@@ -241,7 +241,7 @@ function getAllMenu(){
 function getAdminInfo($admin_id){
 
 	return D('admin')->where("admin_id=$admin_id")->find();
-	
+
 }
 
 

@@ -1,0 +1,129 @@
+@charset "utf-8";input{margin:0;padding:0;border:0}
+
+a{color:#4377dc}
+.fl{float: left;}
+.fr{float: right;}
+i{font-style: normal;}
+.dibu{margin-top: 0px !important;}
+#wrap{padding-top: 35px;}
+.mainContent{width: 910px;background: #f7f7f7;border: 1px solid #c8c8c8;}
+.registered_box{width:979px;margin:0 auto;padding-top:31px;background:#fff;font-family:Microsoft YaHei}
+
+.register_wid{width:750px;margin:40px auto;background: #f7f7f7;}
+
+.registered_title{width:954px;margin:0 auto;height:24px;background:url(../img/news_title_fen.png) repeat-x bottom 0;line-height:24px}
+
+.registered_title a{color:#ec4c0f;text-decoration:none}
+
+.registered_btn_title{overflow:hidden;zoom:1;}
+
+#btn_register_t_iphone,#btn_register_t_genercal{cursor:pointer;display:block;width:375px;height:58px;float:left;text-align:center;
+
+line-height:58px;
+
+font-size:18px;
+
+color:#7e7e7e;
+
+background: #ddd;
+
+}
+
+#btn_register_t_iphone:hover,#btn_register_t_genercal:hover,#btn_register_t_iphone.btn_hover,#btn_register_t_genercal.btn_hover{background: #66c2a2;color:#FFF;}
+
+#btn_register_t_iphone span,#btn_register_t_genercal span{display:block;width:108px;height:58px;margin:0 auto;background:url(../img/btn_register_title.png) no-repeat left top}
+
+#btn_register_t_iphone:hover span,#btn_register_t_iphone.btn_hover span{background-position:left -58px}
+
+#btn_register_t_genercal span{background-position:-108px top}
+
+#btn_register_t_genercal:hover span,#btn_register_t_genercal.btn_hover span{background-position:-108px -58px}
+
+.registered_right{background-color:#f7f7f7;font-size:16px;color:#4b4b4b;padding:20px 0 15px 0;height:auto!important;min-height:260px;letter-spacing:1px;}
+
+.registered_right table{margin-left:70px}
+
+.registered_right_c{color:#ff0006;position:relative;top:5px}
+
+.registered_right_l{width:196px;height:28px;background:#e6edfd;border:1px solid #9caff5}
+
+.registered_right_h{width:196px;height:28px;background:#ffeaf7;border:1px solid #f3b1b1}
+
+.registered_right_k input{width:186px;height:34px;line-height:34px;background-color:#fff;border:1px solid #d7d7d7;color:#000;padding: 0px 5px;}
+.registered_right_k input:focus{border: 1px solid #66c2a2;}
+
+.registered_right_l input{width:180px;height:21px;margin:3px 4px;display:inline;background:#e6edfd;color:#000}
+
+.registered_right_h input{width:180px;height:21px;margin:3px 4px;display:inline;background:#ffeaf7;color:#000}
+
+.registered_right_k_02{margin-right:4px}
+
+.registered_right_k_02 input{width:64px;height:28px;line-height:28px;background-color:#fff;border:1px solid #d7d7d7;color:#000}
+
+.registered_right .btn_hyz{width:40px;display:block;text-decoration:underline;cursor:pointer;font-size:12px;float:left;line-height:35px;padding-left:5px}
+
+.registered_right .user_box{position:relative;font-size:12px;z-index: 0;}
+
+.registered_right .user_box a{color:#66c2a2}
+
+.registered_right .user_checkbox{position:relative;top:3px;margin-right:5px}
+
+.registered_right .user_bnt{width:197px;height:45px;display:block;background:url(../img/btn_re_register_v1.png) no-repeat;margin-top:16px}
+
+.registered_right .user_bnt:hover{background-position:left -45px}
+
+.recom_pbox .recom_wid{width:181px;padding:5px 5px 5px 10px;margin-top:5px;border:1px solid #ffe8c0;background-color:#fffbe4;font-size:12px;color:#ba8f5c}
+
+.recom_pbox .recom_wid p{margin-bottom:5px}
+
+.recom_pbox .recom_wid li{line-height:16px;font-family:Microsoft YaHei;color:#b4b4b4}
+
+.recom_pbox .recom_wid li .recom_radio{position:relative;top:2px;margin-right:3px}
+
+.registered_right .btn_note_yzm{float:left;display:block;width:126px;height:28px;border:1px solid #dfdfdf;background:url(../img/bg_btn_jh_note_v1.gif) repeat-x left center;color:#258db8;font-size:14px;text-decoration:none;text-align:center;line-height:28px}
+
+.registered_right_d{width:509px;height:37px;display:block;background:url(../img/registered_hover_r.jpg) no-repeat}
+
+.registered_right_d:hover{width:509px;height:37px;display:block;background:url(../img/registered_hover_02.jpg) no-repeat}
+
+.registered_right_d_02{width:509px;height:37px;display:block;background:url(../img/registered_hover_02.jpg) no-repeat}
+
+.registered_right_d_02:hover{width:509px;height:37px;display:block;background:url(../img/registered_hover_r.jpg) no-repeat}
+
+.registered_tip{display:block;color:#9e9e9e;line-height:17px;background: url(../img/ico_error_v1.png) no-repeat 5px center;
+    float: left;
+    padding-left: 30px;font-size:14px}
+
+.registered_tip_02{font-size:12px;color:#666;line-height:18px;margin:0 auto;border:1px solid #ececd5;background:#fffceb;padding-left:5px}
+
+.registered_tip_03{background:url(../img/ico_right_v1.png) no-repeat 5px center;width:30px;margin-top:5px;height:18px;float:left}
+
+.registered_right_k_s_01{font-size:12px;width:150px;height:20px;display:block;background:url(../img/registered_s_01_v1.gif) no-repeat;margin-left:35px}
+
+.registered_right_k_s_02{font-size:12px;width:150px;height:20px;display:block;background:url(../img/registered_s_02_v1.gif) no-repeat;margin-left:35px}
+
+.registered_right_k_s_03{font-size:12px;width:150px;height:20px;display:block;background:url(../img/registered_s_03_v1.gif) no-repeat;margin-left:35px}
+
+.register_nore_con{height:105px;margin-top:13px;padding-top:24px}
+
+.register_nore_con h4{text-align:center}
+
+.register_nore_btn{width:708px;margin:0 auto;padding-top:22px}
+
+.btn_nore_guide,.btn_contact_ESQ,.btn_ESQ_tel{display:block;height:36px;line-height:36px;float:left;font-size:16px;color:#238dba!important;text-decoration:underline;font-family:simsun}
+
+.btn_nore_guide{width:105px;background:url(../img/ico_register_guide.gif) no-repeat left center;padding-left:46px;margin-right:80px}
+
+.btn_contact_ESQ{width:105px;background:url(../img/ico_contact_esq.gif) no-repeat left center;padding-left:46px;margin-right:80px}
+
+.btn_ESQ_tel{width:199px;background:url(../img/ico_esq_tel.gif) no-repeat left center;padding-left:46px;text-decoration:none}
+
+.btn_ESQ_tel strong{color:#bd3e41;font-size:18px;font-family:Arial,"Microsoft YaHei"}
+
+.alert{font-size:14px;margin-top:1px}
+
+.prompt_box{background:url("../img/bg_prompt_05.png") no-repeat scroll 0 0;font-size:14px;height:46px;left:55px;padding:8px 6px;top:265px}
+
+.prompt_box01{background:url("../img/bg_prompt_05.png") no-repeat scroll 0 0;font-size:14px;height:35px;left:482px;line-height:28px;padding:9px 4px;top:373px;width:195px}
+
+.color_red{color:#c64343}

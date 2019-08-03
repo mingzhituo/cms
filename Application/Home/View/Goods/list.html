@@ -1,1 +1,94 @@
-<extend name="Public:base-listPic" />
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<include file="Public/header" />
+	<div class="auto nei">
+
+				 <div class="fu">
+		 <img src="[IMG]/a_17.png">
+		 <a class="fua1" target="_blank" href="http://wpa.qq.com/msgrd?v=1&uin=3180235251&Site=http://www.ashangame.com/&Menu=yes"></a>
+		 <a class="fua2" href="javascript:"></a>
+		 <a class="fua3" href="javascript:"></a>
+
+
+		 <div class="pa border er_wei" style="text-align:center;color:black;">
+            <b>阿闪游戏</b>
+            <br>微信公众号
+
+            
+
+<img style="width:99px;height:99px;" alt="" src="[IMG]/59b8deb699966.jpg">        
+
+            <i class="pa bgPng"></i>
+        </div>
+
+		 </div>
+
+		 <p class="weizhi"> 当前位置：
+		 	<a href="/">首页</a>&gt;&gt;<a href=>下载中心</a>		 </p>
+
+		 <div class="yxfl">
+		 	<p class="youxi">
+		 	<span>游戏分类</span>
+		 	<br class="qc">
+		 	</p>
+		<br class="qc">
+
+		<p class="chaxv chaxv1">游戏类型：
+<!-- {:U(''.CONTROLLER_NAME.'/column',array('catid'=>$cats))} -->
+		<a href="{:U(''.CONTROLLER_NAME.'/index')}" class="on" >全部</a>
+		<foreach name="location" item="v">
+
+		<a href="{:U(''.CONTROLLER_NAME.'/column',array('catid'=>$v['id']))}" >{$v.name}</a>
+		
+			</foreach>
+                                                                   <br/>
+
+		</p>
+
+	<ul class="waitbal">
+		<li class="lanren d1">
+		<ul class="xzyx_last hidden">
+
+			<foreach name="list" item="v">
+			<li>
+				 <a href="{:U('Home/'.CONTROLLER_NAME.'/page',array('goodsid'=>$v['goods_id']))}" rel="nofollow">	<img class="last_iamg" src="{$v.original_img}" alt="{$v.goods_name}"></a>
+			 	<div class="last_ou">
+			 	 <a href="{:U('Home/'.CONTROLLER_NAME.'/page',array('goodsid'=>$v['goods_id']))}">
+			 	<p class="last_p1">{$v.goods_name}</p></a>
+			 	<!-- <p class="last_p2">类型：棋牌<span>大小：34.5M</span></p> -->
+				<p class="last_p2">{$v['goods_remark']|htmlspecialchars_decode|mb_substr=###,0,39,"utf-8"}</p>
+			<div class="oz">
+               <!--   <a class="fl bgPng s_1" href="/paohuzi/41.html">已经上线</a>
+               -->
+                  <a class="fl bgPng s_3" href="{:U('Home/'.CONTROLLER_NAME.'/page',array('goodsid'=>$v['goods_id']))}" rel="nofollow">游戏下载</a>
+           </div>
+			 	</div>
+			 	<!-- <img class="j_b" src="[IMG]/jbnew.png"> -->
+			</li>
+		</foreach>
+
+		</ul>
+		<br class="qc"/>
+	 	<ul class="xzyx_last xzyx_last2"></ul>
+	 	<br class="qc"/>
+		<!-- <div class="more2"><a  class="ckgd" href="javascript:;">查看更多</a></div> -->
+		</li>
+
+	
+</ul>
+
+<!-- 分页 -->
+<ul class="page-ul">
+	{$page}
+
+</ul>
+
+
+</div>
+</div>
+
+<include file="Public/footer" />
+
+</html>

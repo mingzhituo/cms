@@ -1,0 +1,68 @@
+
+ <div class="fu_left shipin-right">
+        <div class="yxxz_right yxxz_right2" style=" position:relative">
+          <img src="[IMG]/a_20.png" class="ico2">
+          <p class="youxi youxi3">
+            <span>推荐游戏</span>
+            <br class="qc">
+          </p>
+
+          <ul class="left_yx">
+
+            <li><img class="le_ft_iamg" src="[IMG]/5ad1a8e5ab439.png" alt="阿闪打拱">
+              <p>阿闪打拱<br />
+                <span>棋牌 34.5M</span></p>
+              <div class="oz">
+                <a class="fl bgPng s_3 s_4" href="/paohuzi/41.html">游戏下载</a>
+              </div>
+
+            </li>
+         
+          </ul>
+        </div>
+
+        <div class="yxxz_right yxxz_right2" style="position:relative">
+          <img src="[IMG]/a_20.png" class="ico2">
+          <p class="youxi youxi3">
+            <span>热门文章</span>
+          </p>
+          <br class="qc">
+
+          <ul class="index-news majiang-right">
+            <foreach name="newshot" item="v">
+            <li>
+              <a href="">
+                <img class="" src="{$v.thumb}" alt="">
+                <h4>{$v.title}</h4>
+                <time>06/27</time>
+              </a>
+            </li>
+            </foreach>
+            
+          </ul>
+        </div>
+
+        <div class="yxxz_right yxxz_right2" style="margin-top: 8px; position:relative">
+          <img src="[IMG]/a_20.png" class="ico2" data-bd-imgshare-binded="1">
+          <p class="youxi youxi3">
+            <span>热门视频</span>
+          </p>
+          <br class="qc">
+
+          <ul class="index-news majiang-right">
+            <foreach name="ship" item="v">
+            <li>
+              <a href="#">
+                <video src="{$v.link}" poster="[IMG]/5ad961c494ac3.jpg" controls=""></video>
+                <h4>{$v.title}</h4>
+                <time><span style="margin-right: 14px;">播放</span>{$v.publish_time|date="Y/m月/d日 h:i:s",###}</time>
+              </a>
+            </li>
+            </foreach>
+          </ul>
+        </div>
+
+      </div>
+      <br class="qc">
+    </div>
+    </div>

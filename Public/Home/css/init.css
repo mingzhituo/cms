@@ -1,0 +1,38 @@
+/* CSS Document初始化样式 */
+body{margin:0px auto; padding:0; background: #f0f0f0;
+ color: #333; font-size: 12px;font-family:"微软雅黑","Microsoft YaHei";}
+div,dl,dt,dd,ul,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input, textarea,blockquote,p{padding:0;margin:0;} 
+table,td,tr,th{font-size:12px;} li{list-style:none;vertical-align:bottom;} img{Vertical-aliagn:top; border:0;} 
+ol,ul{list-style:none;} 
+a{color: #333;text-decoration:none;} 
+a:visited{text-decoration:none;} 
+
+a:active{color:#0078c8;}
+.clear{ clear:both;}
+.left{float:left;}
+.right{float:right;}
+.dis{display:none;}
+.block{display:block;}
+.line{ width:100%; height:1px; border-bottom:#ccc 1px solid; float:left; margin:5px 0 5px 0;}
+.dotted{ width:100%; height:1px; border-bottom:#999 1px dashed; float:left; margin:5px 0 5px 0;}
+.clearfix:after {visibility: hidden;display: block;font-size: 0;content: " ";clear: both;height: 0;}
+/* Hides from IE-mac \*/
+*:first-child+html .clearfix{zoom:1;} /* IE7 */
+* html .clearfix { height: 1%;zoom:1;}
+.clearfix {display: block;}
+.left{float: left;}
+.right{float: right;}
+h3{font-size: 14px;}
+h2{font-size: 16px;}
+h1{font-size: 18px;}
+.about1 p { line-height: 26px;
+    font-size: 16px;
+    text-indent: 2em;
+    margin-bottom: 12px;
+	}
+.about1 h4 {font-size: 17px;line-height: 40px;}
+.about1 dl {margin-bottom: 2%;margin-top: 2%;}
+.about1 dt {font-size: 15px;font-weight: 600;}
+.about1 dd { line-height: 22px;
+    font-size: 15px;
+	}

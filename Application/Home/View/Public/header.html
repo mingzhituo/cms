@@ -1,183 +1,110 @@
-<meta charset="utf-8">
-<meta name="renderer" content="webkit">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,minimal-ui">
-<meta name="format-detection" content="telephone=no">
-<meta header
 
+        <meta charset="utf-8" />
+        <title>{$config2.store_title}</title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <link rel="stylesheet" href="[CSS]/init.css" />
+        <link rel="stylesheet" href="[CSS]/main.css" />
+        
+        <link rel="stylesheet" href="[CSS]/jsmodern.min.css">
+        <link rel="stylesheet" href="[CSS]/comment.css">
+        <link rel="stylesheet" type="text/css" href="[CSS]/tab.css"/>
+        <script type="text/javascript" src="[JS]/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript" src="[JS]/jquery.jslides.js"></script>
+        <script type="text/javascript" src="[JS]/jquery-1.8.0.min.js"></script>
+        <script type="text/javascript" src="[JS]/jquery.touchslider.js"></script>
+				<script type="text/javascript" src="[JS]/superslide.js"></script>
+      
+    <!--移动代码适配开始-->
+        <script type="text/javascript">
+            var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos", "incognito",
+                "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
 
-<meta name="generator" content="" data-variable=""
-data-user_name="">
+            var browser = navigator.userAgent.toLowerCase();
 
-<link rel="stylesheet" type="text/css" href="[CSS]/basic.css">
-<link rel="stylesheet" type="text/css" href="[CSS]/index_cn.css">
-<link rel="stylesheet" type="text/css" href="[CSS]/news_cn.css">
-<link rel="stylesheet" type="text/css" href="[CSS]/shownews_cn.css">
-<link rel="stylesheet" type="text/css" href="[CSS]/show_cn.css">
-<link rel="stylesheet" type="text/css" href="[CSS]/product_cn.css">
-<link href="https://cdn.bootcss.com/font-awesome/5.10.0-11/css/all.css" rel="stylesheet">
-<style>
-body{
-    background-color:#ffffff !important;font-family: !important;}
-</style>
-        <!-- https://mb.mituo.cn/mui618/|cn|cn|mui618|10001|10001|0 [if lte IE 9]>
-<script src="[JS]/lteie9.js"></script>
-<![endif]-->
-<script src="[JS]/met_temdemo.js"></script>
-</head>
-    <!--[if lte IE 8]>
-<div class="text-xs-center m-b-0 bg-blue-grey-100 alert">
-    <button type="button" class="close" aria-label="Close" data-dismiss="alert">
-        <span aria-hidden="true">×</span>
-    </button>
-    你正在使用一个 <strong>过时</strong> 的浏览器。请 <a href=https://browsehappy.com/ target=_blank>升级您的浏览器</a>，以提高您的体验。</div>
-<![endif]-->
-<body>
-    <body class="met-navfixed" style="padding-top: 100px;">
-        <div hidden>
-            <p>后台-营销-SEO-头部优化文字处修改</p>
-        </div>
-        <header class='head_nav_met_16_3_36 met-head navbar-fixed-top' m-id='36' m-type='head_nav'>
-            <div id="header" class="    header-fixed">
-                <div class="container">
-                    <ul class="head-list ulstyle clearfix p-l-0">
-                        <li class="left tel">
-                            <img src="" alt="">
-                            <span>联系电话：</span>
-                            <em>{$config2.mobile}</em>
-                        </li>
-                        <!-- 右边的边框 -->
-                        <li class="right">
-                            <ul>
-                                <li>
-                                    <span>资深专业团队</span>
-                                </li>
-                                <li>
-                                    <span>专注知识产权行业10余年</span>
-                                </li>
-                                <li>
-                                    <span>500余家业内资深合作伙伴</span>
-                                </li>
-                                <li>
-                                    <span>全国3000多个成功案例</span>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
+            var isMobile = false;
+
+            for (var i = 0; i < mobileAgent.length; i++) {
+                if (browser.indexOf(mobileAgent[i]) != -1) {
+                    isMobile = true;
+
+                    //alert(mobileAgent[i]); 
+
+                    location.href = '/';
+
+                    break;
+                }
+            }
+        </script>
+        <!--移动代码适配结束-->
+         
+        
+     <!--    <script type="text/javascript">
+            var mobileAgent = new Array("iphone", "ipod", "ipad", "android", "mobile", "blackberry", "webos","incognito",
+                "webmate", "bada", "nokia", "lg", "ucweb", "skyfire");
+
+            var browser = navigator.userAgent.toLowerCase();
+
+            var isMobile = false;
+
+            for (var i = 0; i < mobileAgent.length; i++) {
+                if (browser.indexOf(mobileAgent[i]) != -1) {
+                    isMobile = true;
+
+                    //alert(mobileAgent[i]); 
+
+                    location.href = './m/index.html';
+
+                    break;
+                }
+            }
+        </script> -->
+    </head>
+    <body>
+		<!-- 侧边栏 -->
+		<!-- <div class="fu">
+			<img src="[IMG]/a_17.png">
+			<a class="fua1" target="_blank" href="http://wpa.qq.com/msgrd?v=1&uin=3180235251&Site=http://www.ashangame.com/&Menu=yes"></a>
+			<a class="fua2" href="javascript:"></a>
+			<a class="fua3" href="javascript:"></a>
+			<div class="pa border er_wei" style="text-align:center;color:black;">
+				<b>阿闪游戏</b>
+				<br>微信公众号
+				<img style="width:99px;height:99px;" alt="" src="[IMG]/59b8deb699966.jpg">
+				<i class="pa bgPng"></i>
+			</div>
+		</div>		
+		 -->
+        <div class="head">
+             <div class="auto headtop">
+                <p>咨询电话:{$config2.phone}
+                <!--     <php>echo LOG_PATH;</php> -->
+                </p>
+                <div class="kefu">
+                    <a href="javascript:void(0)" class="gzhao"><img src="[IMG]/a_06.png"></a>
+                    <a rel="nofollow" href="tencent://message/?uin={$config2.qq}&Site=QQ交谈&Menu=yes"> <img src="[IMG]/a_03.png"></a>
+                    <div class="gzh">
+                        <span>扫码关注微信公众号</span>
+                        <img src="{$weixin[0].ad_code}" class="toperwei" style="width: 190px;"> </div>
                 </div>
             </div>
-            <nav class="navbar navbar-default box-shadow-none head_nav_met_16_3_36">
-                <div class="container">
-                    <div class="row nav-height">
+            <div class="xian"></div>
+            <div class="auto headlogo">
+                <a href="/">
+            <img src="{$config2.store_logo}" alt="{$config2.compay_name}" style="widt:15%">
 
+                </a>
+                <ul class="dh">
+                    <a href="/">
+                        <li <if condition="CONTROLLER_NAME eq Index ">class="xz"</if>>网站首页</li>
+                    </a>
 
-                        <h1 hidden>知识产权服务公司</h1>
-
-
-                        <!-- logo -->
-                        <div class="navbar-header pull-xs-left  asssd">
-                            <a href="/" class="met-logo vertical-align block pull-xs-left p-y-5" title="知识产权服务公司">
-                                <div class="vertical-align-middle">
-                                    <img src="{$config2.store_logo}" alt="{$config2.store_logo}"></div>
-                                </a>
-                            </div>
-
-
-
-                            <!-- logo -->
-                            <button type="button" class="navbar-toggler hamburger hamburger-close collapsed p-x-5 head_nav_met_16_3_36-toggler"
-                            data-target="#head_nav_met_16_3_36-collapse" data-toggle="collapse">
-                            <span class="sr-only"></span>
-                            <span class="hamburger-bar"></span>
-                        </button>
-
-
-                        <!-- 导航 -->
-                        <div class="collapse navbar-collapse navbar-collapse-toolbar pull-md-right p-0" id="head_nav_met_16_3_36-collapse">
-                            <ul class="nav navbar-nav navlist">
-
-
-                                <li class='nav-item'>
-                                    <a href="/" title="网站首页" class="nav-link
-                                    active
-                                    ">网站首页</a>
-                                </li>
-
-                                <li class="nav-item dropdown m-l-0">
-                                    <a href="{:U('Goods/index')}" target='_self' title="" class="nav-link dropdown-toggle "  data-toggle="dropdown" data-hover="dropdown" 0>
-                                    业务展示</a>
-
-
-                                    <div class="dropdown-menu dropdown-menu-right animate two-menu">
-                                        <foreach name="tree" item="vo"> <a href="{:U('Goods/index',array('id'=>$vo['id']))}" target='_self' 0 title="{$vo.name}" class='dropdown-item hassub '>{$vo.name}</a> </foreach>
-                                    </div>
-                                </li>
-
-<!--  data-toggle="dropdown"  dropdown-toggle -->
-                                <foreach name="nav" item="v">
-                                <li class="nav-item dropdown m-l-0">
-                                    <a href="{$v.url}" target='_self' title="" class="nav-link "  data-hover="dropdown" 0>
-                                    {$v.name}</a>
-
-                                </li>
-                                </foreach>
-                           
-                          <!--       <foreach name="artTree" item="v">
-                              <li class="nav-item dropdown m-l-0">
-                                  <a href="{$v.cat_alias}" target='_self' title="" class="nav-link dropdown-toggle "
-                                  data-toggle="dropdown" data-hover="dropdown" 0>
-                              {$v.cat_name}</a>
-                          
-                          
-                              <div class="dropdown-menu dropdown-menu-right animate two-menu">
-                                  <foreach name="v['son']" item="vo"> <a href="{$v.cat_alias}" target='_self' 0 title="{$vo.cat_name}" class='dropdown-item hassub '>{$vo.cat_name}</a> </foreach>
-                              </div>
-                          </li>
-                                                      </foreach> -->
-
-                                  <!--   <li class='nav-item m-l-0'>
-                                      <a href="https://mb.mituo.cn/mui618/img1/" target='_self' 0 title="专业团队" class="nav-link ">专业团队</a>
-                                  </li>
-                                  <li class="nav-item dropdown m-l-0">
-                                      <a href="https://mb.mituo.cn/mui618/news/" target='_self' title="新闻动态" class="nav-link dropdown-toggle "
-                                       data-toggle="dropdown" data-hover="dropdown" 0>
-                                          新闻动态</a>
-                                      <div class="dropdown-menu dropdown-menu-right animate two-menu">
-                                          <a href="https://mb.mituo.cn/mui618/news/" target='_self' 0 title="全部" class='dropdown-item nav-parent hidden-lg-up'>全部</a>
-                                          <a href="https://mb.mituo.cn/mui618/news/news.php?class2=11" target='_self' 0 title="最新政策解读" class='dropdown-item hassub '>最新政策解读</a>
-                                          <a href="https://mb.mituo.cn/mui618/news/news.php?class2=12" target='_self' 0 title="知识干货" class='dropdown-item hassub '>知识干货</a>
-                                          <a href="https://mb.mituo.cn/mui618/news/news.php?class2=13" target='_self' 0 title="行业资讯" class='dropdown-item hassub '>行业资讯</a>
-                                          <a href="https://mb.mituo.cn/mui618/news/news.php?class2=14" target='_self' 0 title="公司动态" class='dropdown-item hassub '>公司动态</a>
-                                      </div>
-                                  </li>
-                                  
-                                  
-                                  <li class="nav-item dropdown m-l-0">
-                                      <a href="https://mb.mituo.cn/mui618/news1/" target='_self' title="常见问题" class="nav-link dropdown-toggle "
-                                       data-toggle="dropdown" data-hover="dropdown" 0>
-                                          常见问题</a>
-                                      <div class="dropdown-menu dropdown-menu-right animate two-menu">
-                                          <a href="https://mb.mituo.cn/mui618/news1/" target='_self' 0 title="全部" class='dropdown-item nav-parent hidden-lg-up'>全部</a>
-                                          <a href="https://mb.mituo.cn/mui618/news1/news.php?class2=8" target='_self' 0 title="知识产权" class='dropdown-item hassub '>知识产权</a>
-                                         
-                                      </div>
-                                  </li>
-                                  
-                                  
-                                  <li class="nav-item dropdown m-l-0">
-                                      <a href="https://mb.mituo.cn/mui618/about/" target='_self' title="关于我们" class="nav-link dropdown-toggle "
-                                       data-toggle="dropdown" data-hover="dropdown" 0>
-                                          关于我们</a>
-                                      <div class="dropdown-menu dropdown-menu-right animate two-menu">
-                                  
-                                          <a href="https://mb.mituo.cn/mui618/about/show.php?id=22" target='_self' 0 title="公司简介" class='dropdown-item hassub '>公司简介</a>
-                                                                
-                                      </div>
-                                  </li> -->
-                              </ul>
-                          </div>
-                          <!-- 导航 -->
-                      </div>
-                  </div>
-              </nav>
-          </header>
+                    <foreach name="nav" item="v">
+                    <a href="{$v.url}">
+                        <li <if condition="__INFO__ eq $v.location ">class="xz"</if>>{$v.name}</li>
+                    </a>    
+                     </foreach>
+               
+                </ul>
+            </div>
+        </div>
